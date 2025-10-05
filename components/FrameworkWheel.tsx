@@ -7,6 +7,7 @@ interface Segment {
   name: string;
   color: string;
   arcLabel: string;
+  centerLabel: string;
   startAngle: number;
   endAngle: number;
 }
@@ -15,32 +16,36 @@ const segments: Segment[] = [
   {
     id: 1,
     name: 'Security & Data Protection',
-    color: '#10B981',
+    color: '#059669',
     arcLabel: 'Technical Governance Backbone',
+    centerLabel: 'Security &\nData',
     startAngle: -90,
     endAngle: -18,
   },
   {
     id: 2,
     name: 'Governance & Regulatory Assurance',
-    color: '#3B82F6',
+    color: '#2563EB',
     arcLabel: 'Legal & Regulatory Obligations',
+    centerLabel: 'Governance &\nRegulatory',
     startAngle: -18,
     endAngle: 54,
   },
   {
     id: 3,
     name: 'Ethical & Human Impact',
-    color: '#A855F7',
-    arcLabel: 'Legal & Regulatory Obligations',
+    color: '#7C3AED',
+    arcLabel: 'Ethical Considerations',
+    centerLabel: 'Ethical &\nHuman',
     startAngle: 54,
     endAngle: 126,
   },
   {
     id: 4,
     name: 'Accountable Operations',
-    color: '#EF4444',
+    color: '#DC2626',
     arcLabel: 'Operational Readiness',
+    centerLabel: 'Accountable\nOps',
     startAngle: 126,
     endAngle: 198,
   },
@@ -48,7 +53,8 @@ const segments: Segment[] = [
     id: 5,
     name: 'Trust & Safety Culture',
     color: '#84CC16',
-    arcLabel: 'Operational Readiness',
+    arcLabel: 'Trust & Safety',
+    centerLabel: 'Trust &\nSafety',
     startAngle: 198,
     endAngle: 270,
   },
@@ -59,9 +65,10 @@ export default function FrameworkWheel() {
 
   const centerX = 250;
   const centerY = 250;
-  const innerRadius = 80;
+  const innerRadius = 120;
   const outerRadius = 200;
   const arcRadius = 220;
+  const labelRadius = 155;
 
   const polarToCartesian = (
     centerX: number,
@@ -150,6 +157,7 @@ export default function FrameworkWheel() {
 
           const midAngle = (segment.startAngle + segment.endAngle) / 2;
           const arcLabelPos = polarToCartesian(centerX, centerY, arcRadius, midAngle);
+          const centerLabelPos = polarToCartesian(centerX, centerY, labelRadius, midAngle);
 
           return (
             <g key={segment.id}>
@@ -170,14 +178,14 @@ export default function FrameworkWheel() {
               <text
                 x={arcLabelPos.x}
                 y={arcLabelPos.y}
-                fill="white"
+                fill="#0F172A"
                 fontSize="11"
-                fontWeight="600"
+                fontWeight="700"
                 textAnchor="middle"
                 dominantBaseline="middle"
                 className="pointer-events-none select-none"
                 style={{
-                  textShadow: '0 1px 3px rgba(0, 0, 0, 0.5)',
+                  textShadow: '0 1px 2px rgba(255, 255, 255, 0.8)',
                 }}
               >
                 <tspan x={arcLabelPos.x} dy="-6">
@@ -186,6 +194,26 @@ export default function FrameworkWheel() {
                 <tspan x={arcLabelPos.x} dy="14">
                   {segment.arcLabel.split(' ').slice(2).join(' ')}
                 </tspan>
+              </text>
+
+              <text
+                x={centerLabelPos.x}
+                y={centerLabelPos.y}
+                fill="white"
+                fontSize="12"
+                fontWeight="700"
+                textAnchor="middle"
+                dominantBaseline="middle"
+                className="pointer-events-none select-none"
+                style={{
+                  textShadow: '0 2px 4px rgba(0, 0, 0, 0.4)',
+                }}
+              >
+                {segment.centerLabel.split('\n').map((line, i) => (
+                  <tspan key={i} x={centerLabelPos.x} dy={i === 0 ? -7 : 14}>
+                    {line}
+                  </tspan>
+                ))}
               </text>
             </g>
           );
@@ -196,32 +224,55 @@ export default function FrameworkWheel() {
           cy={centerY}
           r={innerRadius}
           fill="white"
-          stroke="#14B8A6"
+          stroke="#0891B2"
           strokeWidth="4"
           className="drop-shadow-lg"
         />
 
         <text
           x={centerX}
-          y={centerY - 10}
-          fill="#000"
-          fontSize="22"
-          fontWeight="bold"
+          y={centerY - 30}
+          fill="#0F172A"
+          fontSize="16"
+          fontWeight="700"
           textAnchor="middle"
           dominantBaseline="middle"
         >
-          GenAI
+          Controls You Can
         </text>
         <text
           x={centerX}
-          y={centerY + 15}
-          fill="#14B8A6"
-          fontSize="22"
+          y={centerY - 12}
+          fill="#0F172A"
+          fontSize="16"
+          fontWeight="700"
+          textAnchor="middle"
+          dominantBaseline="middle"
+        >
+          Enforce. Evidence
+        </text>
+        <text
+          x={centerX}
+          y={centerY + 6}
+          fill="#0F172A"
+          fontSize="16"
+          fontWeight="700"
+          textAnchor="middle"
+          dominantBaseline="middle"
+        >
+          Auditors Accept.
+        </text>
+
+        <text
+          x={centerX}
+          y={centerY + 32}
+          fill="#0891B2"
+          fontSize="24"
           fontWeight="bold"
           textAnchor="middle"
           dominantBaseline="middle"
         >
-          Assure
+          GenAI Assure
         </text>
       </svg>
 
