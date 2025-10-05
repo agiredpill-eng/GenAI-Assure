@@ -1,4 +1,4 @@
-import { Shield, Search, ClipboardList, CheckCircle2 } from 'lucide-react';
+import { Shield, Search, ClipboardList, CircleCheck as CheckCircle2 } from 'lucide-react';
 import FrameworkWheel from '@/components/FrameworkWheel';
 
 export default function SolutionPage() {

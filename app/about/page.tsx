@@ -1,4 +1,4 @@
-import { Shield, Target, Users, Award, Mail, CheckCircle2 } from 'lucide-react';
+import { Shield, Target, Users, Award, Mail, CircleCheck as CheckCircle2 } from 'lucide-react';
 
 export default function AboutPage() {
   return (
