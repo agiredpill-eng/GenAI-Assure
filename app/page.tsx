@@ -1,4 +1,4 @@
-import { TriangleAlert as AlertTriangle, Shield, FileCheck } from 'lucide-react';
+import { TriangleAlert as AlertTriangle, Shield, FileCheck, Search, Lock, CircleCheck as CheckCircle2, ClipboardList, ShieldCheck, Eye } from 'lucide-react';
 import FrameworkWheel from '@/components/FrameworkWheel';
 
 export default function Home() {
@@ -218,6 +218,162 @@ export default function Home() {
                 Comprehensive audit trail and documentation ready for regulatory review
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative bg-white py-20 lg:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+              How GenAI Assure Works: Our 3-Step Path to Confident AI Adoption
+            </h2>
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mt-6">
+              GenAI Assure transforms AI governance from a compliance burden into a practical, scalable advantage. By applying our framework of{' '}
+              <strong className="font-semibold text-teal">principles → controls → evidence</strong>, we guide organisations through a structured{' '}
+              <strong className="font-semibold text-gray-900">90-day journey</strong> that enables safe, compliant, and auditable AI adoption.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div className="group relative bg-gradient-to-br from-teal-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-teal-100 hover:border-teal-300">
+              <div className="absolute -top-6 -left-6 w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+                1
+              </div>
+
+              <div className="mb-6 pt-6">
+                <div className="w-20 h-20 bg-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="relative">
+                    <Search className="h-10 w-10 text-teal-600" strokeWidth={2} />
+                    <ClipboardList className="h-6 w-6 text-teal-700 absolute -bottom-1 -right-1" strokeWidth={2.5} />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Assess & Govern</h3>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Establish a robust foundation for ethical and compliant AI by understanding your current landscape and mapping out a strategic path forward.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-sm text-gray-700">
+                    Define and implement comprehensive AI Use Policies tailored to your enterprise.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-sm text-gray-700">
+                    Discover and classify all AI tools and applications in use across your organisation.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-sm text-gray-700">
+                    Establish an AI governance framework with clear roles, responsibilities, and oversight.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300">
+              <div className="absolute -top-6 -left-6 w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+                2
+              </div>
+
+              <div className="mb-6 pt-6">
+                <div className="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="relative">
+                    <ShieldCheck className="h-10 w-10 text-blue-600" strokeWidth={2} />
+                    <Lock className="h-6 w-6 text-blue-700 absolute -bottom-1 -right-1" strokeWidth={2.5} />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Implement Smart Guardrails</h3>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Deploy advanced technical controls and automated protections to ensure your AI systems operate securely and within defined ethical boundaries.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-sm text-gray-700">
+                    Secure AI access and usage with granular controls and identity management.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-sm text-gray-700">
+                    Prevent sensitive data leaks and unauthorised information disclosure in AI interactions.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-sm text-gray-700">
+                    Monitor for anomalous AI behaviour, security threats, and policy violations in real-time.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300">
+              <div className="absolute -top-6 -left-6 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+                3
+              </div>
+
+              <div className="mb-6 pt-6">
+                <div className="w-20 h-20 bg-green-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="relative">
+                    <FileCheck className="h-10 w-10 text-green-600" strokeWidth={2} />
+                    <Eye className="h-6 w-6 text-green-700 absolute -bottom-1 -right-1" strokeWidth={2.5} />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Achieve Audit-Ready Assurance</h3>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Make compliance straightforward and transparent, ensuring you're always prepared for audits and can demonstrate responsible AI practices with ease.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-sm text-gray-700">
+                    Align AI controls with regulatory requirements (e.g., EU AI Act, NIST AI RMF).
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-sm text-gray-700">
+                    Deploy AI transparency labels and usage disclosures for user trust and clarity.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-sm text-gray-700">
+                    Automate the generation of comprehensive "Evidence Packs" for regulatory audits.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+            <a
+              href="/free-assessment"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              Get Free Emergency Assessment
+            </a>
+            <a
+              href="/see-the-risks"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal bg-white hover:bg-gray-50 rounded-lg transition-all border-2 border-teal shadow-sm hover:shadow-md"
+            >
+              See The Risks Now
+            </a>
           </div>
         </div>
       </section>
