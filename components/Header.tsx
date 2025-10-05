@@ -28,24 +28,25 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-md' : 'bg-white border-b border-gray-200'
+        scrolled ? 'bg-white shadow-lg' : 'bg-white border-b border-gray-200'
       }`}
+      style={{ boxShadow: scrolled ? '0 1px 3px rgba(0,0,0,0.1)' : 'none' }}
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-3">
             <Link href="/" className="flex items-center gap-2 group">
               <div className="relative">
-                <Compass className="h-7 w-7 text-black" strokeWidth={2.5} />
-                <CheckCircle2 className="h-3 w-3 text-teal absolute -bottom-0.5 -right-0.5" strokeWidth={3} />
+                <Compass className="h-7 w-7 text-[#0F172A]" strokeWidth={2.5} />
+                <CheckCircle2 className="h-3 w-3 text-[#0891B2] absolute -bottom-0.5 -right-0.5" strokeWidth={3} />
               </div>
               <div className="flex items-baseline gap-1.5">
-                <span className="text-xl font-bold text-black tracking-tight">ELSA</span>
-                <span className="text-xl font-bold text-teal tracking-tight">AI</span>
+                <span className="text-xl font-bold text-[#0F172A] tracking-tight">ELSA</span>
+                <span className="text-xl font-bold text-[#0891B2] tracking-tight">AI</span>
               </div>
             </Link>
             <div className="hidden lg:block h-6 w-px bg-gray-300 mx-2"></div>
-            <p className="hidden lg:block text-xs text-gray-600 font-medium">
+            <p className="hidden lg:block text-xs text-[#64748B] font-medium">
               Ethical · Legal · Societal · Accountable AI Operations
             </p>
           </div>
@@ -55,7 +56,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-teal hover:bg-gray-50 rounded-md transition-colors"
+                className="px-3 py-2 text-sm font-medium text-[#475569] hover:text-[#0891B2] hover:bg-gray-50 rounded-md transition-colors"
               >
                 {item.name}
               </Link>
@@ -83,7 +84,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="px-3 py-2 text-base font-medium text-gray-700 hover:text-teal hover:bg-gray-50 rounded-md transition-colors"
+                  className="px-3 py-2 text-base font-medium text-[#475569] hover:text-[#0891B2] hover:bg-gray-50 rounded-md transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
