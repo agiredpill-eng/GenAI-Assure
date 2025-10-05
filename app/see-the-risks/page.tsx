@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { Search, X, ChevronDown, ChevronUp, AlertTriangle, Shield, TrendingUp } from 'lucide-react';
+import { Search, X, ChevronDown, ChevronUp, TriangleAlert as AlertTriangle, Shield, TrendingUp } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
