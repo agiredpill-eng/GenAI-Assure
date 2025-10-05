@@ -1,4 +1,4 @@
-import { TriangleAlert as AlertTriangle, Shield, FileCheck, Search, Lock, CircleCheck as CheckCircle2, ClipboardList, ShieldCheck, Eye } from 'lucide-react';
+import { TriangleAlert as AlertTriangle, Shield, FileCheck, Search, Lock, CircleCheck as CheckCircle2, ClipboardList, ShieldCheck, Eye, Scale, ShieldAlert, DollarSign, Rocket } from 'lucide-react';
 import FrameworkWheel from '@/components/FrameworkWheel';
 
 export default function Home() {
@@ -353,6 +353,178 @@ export default function Home() {
                     Automate the generation of comprehensive "Evidence Packs" for regulatory audits.
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+            <a
+              href="/free-assessment"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              Get Free Emergency Assessment
+            </a>
+            <a
+              href="/see-the-risks"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal bg-white hover:bg-gray-50 rounded-lg transition-all border-2 border-teal shadow-sm hover:shadow-md"
+            >
+              See The Risks Now
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative bg-gradient-to-br from-gray-50 to-gray-100 py-20 lg:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+              Benefits of GenAI Assure for Your Business
+            </h2>
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mt-6">
+              GenAI Assure delivers more than compliance. It provides a practical pathway to safe, auditable, and value-driven AI adoption — helping you accelerate innovation while maintaining trust and resilience.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-teal-300">
+              <div className="mb-6">
+                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Scale className="h-8 w-8 text-blue-600" strokeWidth={2} />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Navigate Regulatory Complexity</h3>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-3 pb-3 border-b border-gray-100">
+                  <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900 mb-1">EU AI Act (Article 26)</p>
+                    <p className="text-sm text-gray-600">
+                      Deployer duties for logging, oversight, and transparency.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 pb-3 border-b border-gray-100">
+                  <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900 mb-1">GDPR/UK GDPR</p>
+                    <p className="text-sm text-gray-600">
+                      Lawful basis, DPIAs, and data rights protections.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900 mb-1">Global Standards</p>
+                    <p className="text-sm text-gray-600">
+                      Mapped to ISO/IEC 42001, NIST AI RMF, NIST CSF 2.0, and SOC 2.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-teal-300">
+              <div className="mb-6">
+                <div className="w-16 h-16 bg-teal-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <ShieldAlert className="h-8 w-8 text-teal-600" strokeWidth={2} />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Mitigate Security & Data Risks</h3>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-3 pb-3 border-b border-gray-100">
+                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900 mb-1">AI-aware DLP & Redaction</p>
+                    <p className="text-sm text-gray-600">
+                      Prevent leaks of PII, credentials, or regulated data.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 pb-3 border-b border-gray-100">
+                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900 mb-1">Shadow AI Playbook</p>
+                    <p className="text-sm text-gray-600">
+                      Discover and control unsanctioned AI tools.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900 mb-1">Enterprise SSO & Secrets Vaults</p>
+                    <p className="text-sm text-gray-600">
+                      Secure access and enforce token rotation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-red-300">
+              <div className="mb-6">
+                <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <DollarSign className="h-8 w-8 text-red-600" strokeWidth={2} />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Protect Against Heavy Fines</h3>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-3 pb-3 border-b border-gray-100">
+                  <AlertTriangle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900 mb-1">GDPR Fines</p>
+                    <p className="text-sm text-gray-600">
+                      Up to <span className="font-bold text-red-600">4% of global annual turnover</span> for unlawful AI data use or data breaches.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 pb-3 border-b border-gray-100">
+                  <AlertTriangle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900 mb-1">EU AI Act Penalties</p>
+                    <p className="text-sm text-gray-600">
+                      Up to <span className="font-bold text-red-600">€35 million or 7% of global turnover</span> for failing to meet deployer duties.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <AlertTriangle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900 mb-1">Audit-Ready Proof Required</p>
+                    <p className="text-sm text-gray-600">
+                      Regulators demand audit-ready proof, not promises.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="group bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-teal-400 text-white">
+              <div className="mb-6">
+                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                  <Rocket className="h-8 w-8 text-white" strokeWidth={2} />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Faster, Safer AI Adoption</h3>
+              </div>
+
+              <p className="text-white/95 leading-relaxed text-base mb-4">
+                Enable your teams to use AI tools with confidence. Our framework establishes clear governance, guardrails, and oversight in just{' '}
+                <span className="font-bold text-white bg-white/20 px-2 py-1 rounded">90 days</span>, removing uncertainty and shadow AI risks.
+              </p>
+
+              <div className="flex items-center gap-2 pt-4 border-t border-white/30">
+                <CheckCircle2 className="h-5 w-5 text-white" strokeWidth={2.5} />
+                <p className="text-sm font-semibold text-white">
+                  Transform compliance from a burden into a strategic advantage
+                </p>
               </div>
             </div>
           </div>
