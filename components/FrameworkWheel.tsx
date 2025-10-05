@@ -176,27 +176,6 @@ export default function FrameworkWheel() {
               />
 
               <text
-                x={arcLabelPos.x}
-                y={arcLabelPos.y}
-                fill="#0F172A"
-                fontSize="11"
-                fontWeight="700"
-                textAnchor="middle"
-                dominantBaseline="middle"
-                className="pointer-events-none select-none"
-                style={{
-                  textShadow: '0 1px 2px rgba(255, 255, 255, 0.8)',
-                }}
-              >
-                <tspan x={arcLabelPos.x} dy="-6">
-                  {segment.arcLabel.split(' ').slice(0, 2).join(' ')}
-                </tspan>
-                <tspan x={arcLabelPos.x} dy="14">
-                  {segment.arcLabel.split(' ').slice(2).join(' ')}
-                </tspan>
-              </text>
-
-              <text
                 x={centerLabelPos.x}
                 y={centerLabelPos.y}
                 fill="white"
@@ -231,48 +210,25 @@ export default function FrameworkWheel() {
 
         <text
           x={centerX}
-          y={centerY - 30}
+          y={centerY - 10}
           fill="#0F172A"
-          fontSize="16"
-          fontWeight="700"
-          textAnchor="middle"
-          dominantBaseline="middle"
-        >
-          Controls You Can
-        </text>
-        <text
-          x={centerX}
-          y={centerY - 12}
-          fill="#0F172A"
-          fontSize="16"
-          fontWeight="700"
-          textAnchor="middle"
-          dominantBaseline="middle"
-        >
-          Enforce. Evidence
-        </text>
-        <text
-          x={centerX}
-          y={centerY + 6}
-          fill="#0F172A"
-          fontSize="16"
-          fontWeight="700"
-          textAnchor="middle"
-          dominantBaseline="middle"
-        >
-          Auditors Accept.
-        </text>
-
-        <text
-          x={centerX}
-          y={centerY + 32}
-          fill="#0891B2"
-          fontSize="24"
+          fontSize="22"
           fontWeight="bold"
           textAnchor="middle"
           dominantBaseline="middle"
         >
-          GenAI Assure
+          GenAI
+        </text>
+        <text
+          x={centerX}
+          y={centerY + 15}
+          fill="#0891B2"
+          fontSize="22"
+          fontWeight="bold"
+          textAnchor="middle"
+          dominantBaseline="middle"
+        >
+          Assure
         </text>
       </svg>
 
