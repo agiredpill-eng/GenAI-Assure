@@ -58,15 +58,13 @@ export default function ContactPage() {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      const mailtoLink = `mailto:contact@elsaai.co.uk?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      )}`;
 
-      if (response.ok) {
+      window.location.href = mailtoLink;
+
+      setTimeout(() => {
         setSubmitStatus('success');
         setFormData({
           name: '',
@@ -74,13 +72,11 @@ export default function ContactPage() {
           subject: '',
           message: '',
         });
-      } else {
-        throw new Error('Submission failed');
-      }
+        setIsSubmitting(false);
+      }, 1000);
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
-    } finally {
       setIsSubmitting(false);
     }
   };

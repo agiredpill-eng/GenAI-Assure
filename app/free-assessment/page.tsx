@@ -118,15 +118,36 @@ export default function FreeAssessmentPage() {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('/api/free-assessment', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      const emailBody = `
+Free Assessment Request
 
-      if (response.ok) {
+Full Name: ${formData.fullName}
+Email: ${formData.email}
+Company: ${formData.company}
+Role: ${formData.role}
+Company Size: ${formData.companySize}
+Phone: ${formData.phone || 'Not provided'}
+
+AI Stack: ${formData.aiStack.join(', ')}
+Data Types: ${formData.dataTypes.join(', ')}
+Controls in Place: ${formData.controlsInPlace.length > 0 ? formData.controlsInPlace.join(', ') : 'None selected'}
+
+Governance Status: ${formData.governanceStatus}
+Data Residency: ${formData.dataResidency}
+Urgency: ${formData.urgency}
+Decision Speed: ${formData.decisionSpeed || 'Not provided'}
+
+Biggest Concerns:
+${formData.concerns}
+
+Consent: ${formData.consent ? 'Yes' : 'No'}
+      `.trim();
+
+      const mailtoLink = `mailto:contact@elsaai.co.uk?subject=${encodeURIComponent('Free Assessment Request')}&body=${encodeURIComponent(emailBody)}`;
+
+      window.location.href = mailtoLink;
+
+      setTimeout(() => {
         setSubmitStatus('success');
         setFormData({
           fullName: '',
@@ -145,13 +166,11 @@ export default function FreeAssessmentPage() {
           concerns: '',
           consent: false,
         });
-      } else {
-        throw new Error('Submission failed');
-      }
+        setIsSubmitting(false);
+      }, 1000);
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
-    } finally {
       setIsSubmitting(false);
     }
   };
