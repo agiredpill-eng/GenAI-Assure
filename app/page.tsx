@@ -71,58 +71,15 @@ export default function Home() {
             </div>
 
             <div className="relative lg:h-[600px] h-[400px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-100 via-teal-50 to-gray-100 rounded-2xl overflow-hidden shadow-2xl">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative w-full h-full p-8 flex flex-col items-center justify-center space-y-6">
-                    <div className="absolute top-8 right-8 w-24 h-24 bg-teal-200 rounded-full opacity-40 blur-2xl"></div>
-                    <div className="absolute bottom-12 left-12 w-32 h-32 bg-teal-300 rounded-full opacity-30 blur-3xl"></div>
-
-                    <div className="relative z-10 bg-white rounded-xl shadow-xl p-6 max-w-sm transform rotate-2 hover:rotate-0 transition-transform">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
-                          <Shield className="h-6 w-6 text-teal-600" />
-                        </div>
-                        <div>
-                          <div className="font-bold text-gray-900">Enterprise AI Governance</div>
-                          <div className="text-xs text-gray-600">Audit-Ready Proof</div>
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                          <div className="text-sm text-gray-700">SSO Integration Active</div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                          <div className="text-sm text-gray-700">DLP Monitoring Enabled</div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                          <div className="text-sm text-gray-700">Audit Trail Complete</div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                          <div className="text-sm text-gray-700">GDPR Compliant</div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="relative z-10 bg-white rounded-xl shadow-xl p-6 max-w-sm transform -rotate-2 hover:rotate-0 transition-transform">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
-                          <FileCheck className="h-6 w-6 text-gray-600" />
-                        </div>
-                        <div>
-                          <div className="font-bold text-gray-900">Evidence Pack</div>
-                          <div className="text-xs text-gray-600">Ready for Auditors</div>
-                        </div>
-                      </div>
-                      <div className="text-sm text-gray-700">
-                        Complete documentation and compliance records
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-gray-900">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/lCtUhGMo_Oc"
+                  title="GenAI Assure Overview"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
           </div>
