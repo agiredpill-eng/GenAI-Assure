@@ -25,7 +25,8 @@ export default function FrameworkPage() {
   };
 
   const handleDownload = () => {
-    alert('PDF download functionality - connect to your PDF file');
+    const pdfUrl = 'https://raw.githubusercontent.com/elsasecure/GenAI_Assure_Framework/main/downloads/GenAI_Assure_Framework_v1.0.pdf';
+    window.open(pdfUrl, '_blank');
   };
 
   return (
