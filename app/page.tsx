@@ -153,68 +153,68 @@ export default function Home() {
           </div>
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-              <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center" style={{ backgroundColor: '#10B981' }}>
-                <Shield className="h-6 w-6 text-white" />
+            <div className="group relative bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 cursor-pointer">
+              <div className="w-16 h-16 rounded-xl mb-4 flex items-center justify-center bg-green-100 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#10B981' }}>
+                <Shield className="h-8 w-8 text-white" />
               </div>
-              <h4 className="text-lg font-bold text-gray-900 mb-2">Security & Data Protection</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">Security & Data Protection</h4>
+              <p className="text-gray-700 text-base leading-relaxed">
                 Technical governance backbone for enterprise AI security
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-              <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center" style={{ backgroundColor: '#3B82F6' }}>
-                <FileCheck className="h-6 w-6 text-white" />
+            <div className="group relative bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300 cursor-pointer">
+              <div className="w-16 h-16 rounded-xl mb-4 flex items-center justify-center bg-blue-100 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#3B82F6' }}>
+                <FileCheck className="h-8 w-8 text-white" />
               </div>
-              <h4 className="text-lg font-bold text-gray-900 mb-2">Governance & Regulatory Assurance</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">Governance & Regulatory Assurance</h4>
+              <p className="text-gray-700 text-base leading-relaxed">
                 Legal and regulatory obligations management
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-              <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center" style={{ backgroundColor: '#A855F7' }}>
-                <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group relative bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-orange-100 hover:border-orange-300 cursor-pointer">
+              <div className="w-16 h-16 rounded-xl mb-4 flex items-center justify-center bg-orange-100 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#F97316' }}>
+                <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
-              <h4 className="text-lg font-bold text-gray-900 mb-2">Ethical & Human Impact</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">Ethical & Human Impact</h4>
+              <p className="text-gray-700 text-base leading-relaxed">
                 Legal and regulatory obligations for ethical AI
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-              <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center" style={{ backgroundColor: '#EF4444' }}>
-                <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group relative bg-gradient-to-br from-red-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-red-100 hover:border-red-300 cursor-pointer">
+              <div className="w-16 h-16 rounded-xl mb-4 flex items-center justify-center bg-red-100 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#EF4444' }}>
+                <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h4 className="text-lg font-bold text-gray-900 mb-2">Accountable Operations</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">Accountable Operations</h4>
+              <p className="text-gray-700 text-base leading-relaxed">
                 Operational readiness and accountability frameworks
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-              <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center" style={{ backgroundColor: '#84CC16' }}>
-                <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group relative bg-gradient-to-br from-lime-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-lime-100 hover:border-lime-300 cursor-pointer">
+              <div className="w-16 h-16 rounded-xl mb-4 flex items-center justify-center bg-lime-100 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#84CC16' }}>
+                <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h4 className="text-lg font-bold text-gray-900 mb-2">Trust & Safety Culture</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">Trust & Safety Culture</h4>
+              <p className="text-gray-700 text-base leading-relaxed">
                 Operational readiness for building trust
               </p>
             </div>
 
-            <div className="bg-teal-50 rounded-xl p-6 shadow-sm border-2 border-teal-200 md:col-span-2 lg:col-span-1">
-              <div className="w-12 h-12 rounded-lg bg-teal-500 mb-4 flex items-center justify-center">
-                <FileCheck className="h-6 w-6 text-white" />
+            <div className="group relative bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-teal-400 text-white md:col-span-2 lg:col-span-1 cursor-pointer">
+              <div className="w-16 h-16 rounded-xl bg-white/20 mb-4 flex items-center justify-center group-hover:scale-110 transition-transform backdrop-blur-sm">
+                <FileCheck className="h-8 w-8 text-white" />
               </div>
-              <h4 className="text-lg font-bold text-gray-900 mb-2">Evidence Pack</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h4 className="text-xl font-bold mb-3">Evidence Pack</h4>
+              <p className="text-white/95 text-base leading-relaxed">
                 Comprehensive audit trail and documentation ready for regulatory review
               </p>
             </div>
