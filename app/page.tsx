@@ -390,38 +390,41 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-teal-300">
-              <div className="mb-6">
-                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Scale className="h-8 w-8 text-blue-600" strokeWidth={2} />
+            <div className="group relative bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-400 text-white overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+
+              <div className="relative z-10 mb-6">
+                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                  <Scale className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Navigate Regulatory Complexity</h3>
+                <h3 className="text-2xl font-bold mb-4">Navigate Regulatory Complexity</h3>
               </div>
 
-              <div className="space-y-4">
-                <div className="flex items-start gap-3 pb-3 border-b border-gray-100">
-                  <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+              <div className="relative z-10 space-y-4">
+                <div className="flex items-start gap-3 pb-4 border-b border-white/20">
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <div>
-                    <p className="text-sm font-semibold text-gray-900 mb-1">EU AI Act (Article 26)</p>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm font-semibold text-white mb-1">EU AI Act (Article 26)</p>
+                    <p className="text-sm text-white/90">
                       Deployer duties for logging, oversight, and transparency.
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 pb-3 border-b border-gray-100">
-                  <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                <div className="flex items-start gap-3 pb-4 border-b border-white/20">
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <div>
-                    <p className="text-sm font-semibold text-gray-900 mb-1">GDPR/UK GDPR</p>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm font-semibold text-white mb-1">GDPR/UK GDPR</p>
+                    <p className="text-sm text-white/90">
                       Lawful basis, DPIAs, and data rights protections.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <div>
-                    <p className="text-sm font-semibold text-gray-900 mb-1">Global Standards</p>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm font-semibold text-white mb-1">Global Standards</p>
+                    <p className="text-sm text-white/90">
                       Mapped to ISO/IEC 42001, NIST AI RMF, NIST CSF 2.0, and SOC 2.
                     </p>
                   </div>
@@ -429,38 +432,41 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-teal-300">
-              <div className="mb-6">
-                <div className="w-16 h-16 bg-teal-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <ShieldAlert className="h-8 w-8 text-teal-600" strokeWidth={2} />
+            <div className="group relative bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-teal-400 text-white overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+
+              <div className="relative z-10 mb-6">
+                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                  <ShieldAlert className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Mitigate Security & Data Risks</h3>
+                <h3 className="text-2xl font-bold mb-4">Mitigate Security & Data Risks</h3>
               </div>
 
-              <div className="space-y-4">
-                <div className="flex items-start gap-3 pb-3 border-b border-gray-100">
-                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+              <div className="relative z-10 space-y-4">
+                <div className="flex items-start gap-3 pb-4 border-b border-white/20">
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <div>
-                    <p className="text-sm font-semibold text-gray-900 mb-1">AI-aware DLP & Redaction</p>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm font-semibold text-white mb-1">AI-aware DLP & Redaction</p>
+                    <p className="text-sm text-white/90">
                       Prevent leaks of PII, credentials, or regulated data.
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 pb-3 border-b border-gray-100">
-                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                <div className="flex items-start gap-3 pb-4 border-b border-white/20">
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <div>
-                    <p className="text-sm font-semibold text-gray-900 mb-1">Shadow AI Playbook</p>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm font-semibold text-white mb-1">Shadow AI Playbook</p>
+                    <p className="text-sm text-white/90">
                       Discover and control unsanctioned AI tools.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <div>
-                    <p className="text-sm font-semibold text-gray-900 mb-1">Enterprise SSO & Secrets Vaults</p>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm font-semibold text-white mb-1">Enterprise SSO & Secrets Vaults</p>
+                    <p className="text-sm text-white/90">
                       Secure access and enforce token rotation.
                     </p>
                   </div>
@@ -468,38 +474,41 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-red-300">
-              <div className="mb-6">
-                <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <DollarSign className="h-8 w-8 text-red-600" strokeWidth={2} />
+            <div className="group relative bg-gradient-to-br from-red-500 to-red-600 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-red-400 text-white overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+
+              <div className="relative z-10 mb-6">
+                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                  <DollarSign className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Protect Against Heavy Fines</h3>
+                <h3 className="text-2xl font-bold mb-4">Protect Against Heavy Fines</h3>
               </div>
 
-              <div className="space-y-4">
-                <div className="flex items-start gap-3 pb-3 border-b border-gray-100">
-                  <AlertTriangle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+              <div className="relative z-10 space-y-4">
+                <div className="flex items-start gap-3 pb-4 border-b border-white/20">
+                  <AlertTriangle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <div>
-                    <p className="text-sm font-semibold text-gray-900 mb-1">GDPR Fines</p>
-                    <p className="text-sm text-gray-600">
-                      Up to <span className="font-bold text-red-600">4% of global annual turnover</span> for unlawful AI data use or data breaches.
+                    <p className="text-sm font-semibold text-white mb-1">GDPR Fines</p>
+                    <p className="text-sm text-white/90">
+                      Up to <span className="font-bold text-white bg-white/20 px-2 py-0.5 rounded">4% of global annual turnover</span> for unlawful AI data use or data breaches.
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 pb-3 border-b border-gray-100">
-                  <AlertTriangle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                <div className="flex items-start gap-3 pb-4 border-b border-white/20">
+                  <AlertTriangle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <div>
-                    <p className="text-sm font-semibold text-gray-900 mb-1">EU AI Act Penalties</p>
-                    <p className="text-sm text-gray-600">
-                      Up to <span className="font-bold text-red-600">€35 million or 7% of global turnover</span> for failing to meet deployer duties.
+                    <p className="text-sm font-semibold text-white mb-1">EU AI Act Penalties</p>
+                    <p className="text-sm text-white/90">
+                      Up to <span className="font-bold text-white bg-white/20 px-2 py-0.5 rounded">€35 million or 7% of global turnover</span> for failing to meet deployer duties.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <AlertTriangle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <AlertTriangle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <div>
-                    <p className="text-sm font-semibold text-gray-900 mb-1">Audit-Ready Proof Required</p>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm font-semibold text-white mb-1">Audit-Ready Proof Required</p>
+                    <p className="text-sm text-white/90">
                       Regulators demand audit-ready proof, not promises.
                     </p>
                   </div>
@@ -507,20 +516,23 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-teal-400 text-white">
-              <div className="mb-6">
+            <div className="group relative bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-green-400 text-white overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+
+              <div className="relative z-10 mb-6">
                 <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
                   <Rocket className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Faster, Safer AI Adoption</h3>
               </div>
 
-              <p className="text-white/95 leading-relaxed text-base mb-4">
+              <p className="relative z-10 text-white/95 leading-relaxed text-base mb-4">
                 Enable your teams to use AI tools with confidence. Our framework establishes clear governance, guardrails, and oversight in just{' '}
                 <span className="font-bold text-white bg-white/20 px-2 py-1 rounded">90 days</span>, removing uncertainty and shadow AI risks.
               </p>
 
-              <div className="flex items-center gap-2 pt-4 border-t border-white/30">
+              <div className="relative z-10 flex items-center gap-2 pt-4 border-t border-white/30">
                 <CheckCircle2 className="h-5 w-5 text-white" strokeWidth={2.5} />
                 <p className="text-sm font-semibold text-white">
                   Transform compliance from a burden into a strategic advantage
