@@ -7,7 +7,7 @@ import { Menu, X, Compass, CircleCheck as CheckCircle2 } from 'lucide-react';
 const navigation = [
   { name: 'Solution', href: '/solution' },
   { name: 'Free Assessment', href: '/free-assessment' },
-  { name: 'See The Risk Now', href: '/see-the-risks' },
+  { name: 'GenAI Assure Framework', href: '/framework' },
   { name: 'Resources', href: '/resources' },
   { name: 'Contact Us', href: '/contact' },
   { name: 'About Us', href: '/about' },
