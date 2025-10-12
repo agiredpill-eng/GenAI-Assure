@@ -52,7 +52,47 @@ Deno.serve(async (req: Request) => {
       );
     }
 
-    const emailBody = `
+    const emailHtml = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    .header { background-color: #0f766e; color: white; padding: 20px; border-radius: 8px 8px 0 0; }
+    .content { background-color: #f0fdfa; padding: 20px; }
+    .field { margin-bottom: 15px; }
+    .label { font-weight: bold; color: #0f766e; }
+    .message-box { background-color: white; padding: 15px; border: 1px solid #e5e7eb; border-radius: 8px; margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2 style="margin: 0;">New Contact Form Submission</h2>
+    </div>
+    <div class="content">
+      <div class="field">
+        <span class="label">Name:</span> ${formData.name}
+      </div>
+      <div class="field">
+        <span class="label">Email:</span> <a href="mailto:${formData.email}">${formData.email}</a>
+      </div>
+      <div class="field">
+        <span class="label">Subject:</span> ${formData.subject || 'N/A'}
+      </div>
+      <div class="message-box">
+        <div class="label">Message:</div>
+        <p style="margin: 10px 0 0 0; white-space: pre-wrap;">${formData.message}</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+    `;
+
+    const emailText = `
 New Contact Form Submission
 
 Name: ${formData.name}
@@ -61,59 +101,51 @@ Subject: ${formData.subject || 'N/A'}
 
 Message:
 ${formData.message}
-
-View all submissions in your Supabase dashboard.
     `;
 
-    const emailPayload = {
-      personalizations: [{
-        to: [{ email: 'theelsaaiuk@gmail.com' }],
-        subject: formData.subject ? `Contact Form: ${formData.subject}` : 'New Contact Form Submission',
-      }],
-      from: { email: 'noreply@elsaai.co.uk', name: 'ELSA AI Contact Form' },
-      content: [{
-        type: 'text/plain',
-        value: emailBody,
-      }, {
-        type: 'text/html',
-        value: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: #0f766e;">New Contact Form Submission</h2>
-            <div style="background-color: #f0fdfa; padding: 20px; border-radius: 8px; margin: 20px 0;">
-              <p><strong>Name:</strong> ${formData.name}</p>
-              <p><strong>Email:</strong> <a href="mailto:${formData.email}">${formData.email}</a></p>
-              <p><strong>Subject:</strong> ${formData.subject || 'N/A'}</p>
-            </div>
-            <div style="background-color: #ffffff; padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
-              <h3>Message:</h3>
-              <p style="white-space: pre-wrap;">${formData.message}</p>
-            </div>
-            <p style="margin-top: 20px; color: #666; font-size: 12px;">View all submissions in your Supabase dashboard.</p>
-          </div>
-        `,
-      }],
-    };
+    try {
+      const emailPayload = {
+        Messages: [{
+          From: {
+            Email: "noreply@elsaai.co.uk",
+            Name: "ELSA AI Contact Form"
+          },
+          To: [{
+            Email: "theelsaaiuk@gmail.com",
+            Name: "ELSA AI Team"
+          }],
+          Subject: formData.subject ? `Contact Form: ${formData.subject}` : "New Contact Form Submission",
+          TextPart: emailText,
+          HTMLPart: emailHtml
+        }]
+      };
 
-    const sendgridApiKey = Deno.env.get('SENDGRID_API_KEY');
-    
-    if (sendgridApiKey) {
-      try {
-        const emailResponse = await fetch('https://api.sendgrid.com/v3/mail/send', {
+      const mailjetApiKey = Deno.env.get('MAILJET_API_KEY');
+      const mailjetApiSecret = Deno.env.get('MAILJET_API_SECRET');
+
+      if (mailjetApiKey && mailjetApiSecret) {
+        const authString = btoa(`${mailjetApiKey}:${mailjetApiSecret}`);
+        
+        const emailResponse = await fetch('https://api.mailjet.com/v3.1/send', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${sendgridApiKey}`,
+            'Authorization': `Basic ${authString}`,
           },
           body: JSON.stringify(emailPayload),
         });
 
         if (!emailResponse.ok) {
-          const errorData = await emailResponse.text();
-          console.error('SendGrid API error:', errorData);
+          const errorText = await emailResponse.text();
+          console.error('Mailjet API error:', emailResponse.status, errorText);
+        } else {
+          console.log('Email sent successfully via Mailjet');
         }
-      } catch (emailError) {
-        console.error('Email sending failed:', emailError);
+      } else {
+        console.log('Email service not configured - submission saved to database');
       }
+    } catch (emailError) {
+      console.error('Email sending failed:', emailError);
     }
 
     return new Response(
