@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Menu, X, Compass, CircleCheck as CheckCircle2 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 const navigation = [
   { name: 'Solution', href: '/solution' },
@@ -36,14 +37,14 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-3">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative">
-                <Compass className="h-7 w-7 text-[#0F172A]" strokeWidth={2.5} />
-                <CheckCircle2 className="h-3 w-3 text-[#0891B2] absolute -bottom-0.5 -right-0.5" strokeWidth={3} />
-              </div>
-              <div className="flex items-baseline gap-1.5">
-                <span className="text-xl font-bold text-[#0F172A] tracking-tight">ELSA</span>
-                <span className="text-xl font-bold text-[#0891B2] tracking-tight">AI</span>
-              </div>
+              <Image
+                src="/ELSAAI_Header_Logo.JPG"
+                alt="ELSA AI Logo"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
+                priority
+              />
             </Link>
             <div className="hidden lg:block h-6 w-px bg-gray-300 mx-2"></div>
             <p className="hidden lg:block text-xs text-[#64748B] font-medium">
