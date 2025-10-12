@@ -19,6 +19,7 @@ import {
 export default function UseCasesPage() {
   const useCases = [
     {
+      id: "microsoft-365",
       title: "Microsoft 365 Copilot / Google Workspace AI",
       icon: Briefcase,
       value: "Accelerate safe productivity gains (Docs/Sheets/Email/Teams/Chat) without data leaks.",
@@ -26,6 +27,7 @@ export default function UseCasesPage() {
       color: "blue"
     },
     {
+      id: "itsm",
       title: "Service Desk & ITSM copilots (ServiceNow, Jira, Freshservice)",
       icon: Settings,
       value: "Faster ticket resolution with auditable AI suggestions and safe actioning.",
@@ -33,6 +35,7 @@ export default function UseCasesPage() {
       color: "teal"
     },
     {
+      id: "crm",
       title: "CRM & Sales/Success AI (Salesforce Einstein, Dynamics)",
       icon: Users,
       value: "Better pipeline hygiene and outreach while protecting customer data.",
@@ -40,6 +43,7 @@ export default function UseCasesPage() {
       color: "green"
     },
     {
+      id: "hr",
       title: "HR & People Ops assistants (recruiting, onboarding, policy Q&A)",
       icon: Users,
       value: "Faster responses and documentation, with fairness and privacy controls.",
@@ -47,6 +51,7 @@ export default function UseCasesPage() {
       color: "orange"
     },
     {
+      id: "legal",
       title: "Legal & Contract support (drafting/summarisation/search)*",
       icon: FileText,
       value: "Accelerate reviews while maintaining confidentiality and provenance.",
@@ -55,6 +60,7 @@ export default function UseCasesPage() {
       note: "*Advisory tooling for counsel—not a substitute for legal advice."
     },
     {
+      id: "finance",
       title: "Finance & Reporting copilots (close, reconciliations, narrative)",
       icon: DollarSign,
       value: "Shorter cycles with traceable AI assistance and strict data boundaries.",
@@ -62,6 +68,7 @@ export default function UseCasesPage() {
       color: "blue"
     },
     {
+      id: "knowledge",
       title: "Knowledge assistants & enterprise search (RAG)",
       icon: Search,
       value: "Trusted answers from approved sources—tracked, labeled, and reviewable.",
@@ -69,6 +76,7 @@ export default function UseCasesPage() {
       color: "teal"
     },
     {
+      id: "content",
       title: "Content supply chain (marketing, product, web)",
       icon: Megaphone,
       value: "Faster content with brand-safe outputs and clear disclosure.",
@@ -76,6 +84,7 @@ export default function UseCasesPage() {
       color: "green"
     },
     {
+      id: "pipelines",
       title: "Data pipelines & LLM gateways (API hubs, model routing)",
       icon: Database,
       value: "Centralized control of model access, cost, and data paths.",
@@ -83,6 +92,7 @@ export default function UseCasesPage() {
       color: "orange"
     },
     {
+      id: "contact-center",
       title: "Contact center augmentation (assist, summaries, QA)",
       icon: Headphones,
       value: "Higher agent productivity and consistent compliance language.",
@@ -90,6 +100,7 @@ export default function UseCasesPage() {
       color: "red"
     },
     {
+      id: "procurement",
       title: "Procurement & vendor onboarding with AI",
       icon: ShoppingBag,
       value: "Speed up due diligence with traceable assessments.",
@@ -97,6 +108,7 @@ export default function UseCasesPage() {
       color: "blue"
     },
     {
+      id: "low-code",
       title: "Governance for low-code AI app builders (Power Platform, AppSheet)",
       icon: Settings,
       value: "Empower the business safely—without sprawl.",
@@ -104,6 +116,7 @@ export default function UseCasesPage() {
       color: "teal"
     },
     {
+      id: "workflow",
       title: "Workflow Automation (Make.com, n8n, Zapier)",
       icon: Workflow,
       value: "Scale reliable automations across teams while protecting tokens, webhooks, and data flows.",
@@ -111,6 +124,7 @@ export default function UseCasesPage() {
       color: "green"
     },
     {
+      id: "agents",
       title: "Custom Agents (Decision-and-Action Workflows)",
       icon: Bot,
       value: "Safely let agents plan, call tools/APIs, and complete tasks—under tight oversight.",
@@ -152,7 +166,8 @@ export default function UseCasesPage() {
               return (
                 <div
                   key={index}
-                  className={`bg-gradient-to-br ${colorClasses.bg} rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${colorClasses.border} p-8`}
+                  id={useCase.id}
+                  className={`bg-gradient-to-br ${colorClasses.bg} rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${colorClasses.border} p-8 scroll-mt-24`}
                 >
                   <div className="flex items-start gap-6">
                     <div className={`w-12 h-12 ${colorClasses.icon} rounded-lg flex items-center justify-center flex-shrink-0`}>

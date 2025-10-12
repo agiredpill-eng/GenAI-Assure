@@ -2,22 +2,44 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 
-const navigation = [
-  { name: 'Solution', href: '/solution' },
-  { name: 'Use Cases', href: '/use-cases' },
-  { name: 'Free Assessment', href: '/free-assessment' },
-  { name: 'GenAI Assure Framework', href: '/framework' },
-  { name: 'Resources', href: '/resources' },
-  { name: 'Contact Us', href: '/contact' },
-  { name: 'About Us', href: '/about' },
+const solutionsMenu = {
+  'Productivity & Ops': [
+    { name: 'Microsoft 365 / Workspace AI', href: '/use-cases#microsoft-365' },
+    { name: 'ITSM Copilots', href: '/use-cases#itsm' },
+    { name: 'Knowledge Assistants', href: '/use-cases#knowledge' },
+    { name: 'Content Supply Chain', href: '/use-cases#content' }
+  ],
+  'Customer & Growth': [
+    { name: 'CRM & Sales AI', href: '/use-cases#crm' },
+    { name: 'Contact Center', href: '/use-cases#contact-center' },
+    { name: 'HR & People Ops', href: '/use-cases#hr' }
+  ],
+  'Platform & Control': [
+    { name: 'Workflow Automation', href: '/use-cases#workflow' },
+    { name: 'Custom Agents', href: '/use-cases#agents' },
+    { name: 'Data Pipelines / LLM Gateways', href: '/use-cases#pipelines' },
+    { name: 'Low-Code Apps', href: '/use-cases#low-code' },
+    { name: 'Finance Copilots', href: '/use-cases#finance' },
+    { name: 'Legal Support', href: '/use-cases#legal' }
+  ]
+};
+
+const resourcesMenu = [
+  { name: 'Framework (PDF)', href: '/framework' },
+  { name: 'Articles & Guides', href: '/resources' },
+  { name: 'Case Studies', href: '/resources#case-studies' }
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
+  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
+  const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,75 +49,273 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setMobileSolutionsOpen(false);
+    setMobileResourcesOpen(false);
+  };
+
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-lg' : 'bg-white border-b border-gray-200'
-      }`}
-      style={{ boxShadow: scrolled ? '0 1px 3px rgba(0,0,0,0.1)' : 'none' }}
-    >
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Link href="/" className="flex items-center gap-2 group">
+    <>
+      <div className="hidden md:block bg-gray-900 text-white py-2">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-xs text-center tracking-wide">
+            Ethical · Legal · Societal · Accountable AI Operations
+          </p>
+        </div>
+      </div>
+
+      <header
+        className={`sticky top-0 z-50 bg-white transition-all duration-300 ${
+          scrolled ? 'shadow-md' : 'border-b border-gray-200'
+        }`}
+      >
+        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
+            <Link href="/" className="flex items-center" onClick={closeMobileMenu}>
               <Image
                 src="/ELSAAI_Header_Logo.JPG"
-                alt="ELSA AI Logo"
+                alt="ELSA AI"
                 width={120}
                 height={40}
                 className="h-10 w-auto"
                 priority
               />
             </Link>
-            <div className="hidden lg:block h-6 w-px bg-gray-300 mx-2"></div>
-            <p className="hidden lg:block text-xs text-[#64748B] font-medium">
-              Ethical · Legal · Societal · Accountable AI Operations
-            </p>
-          </div>
 
-          <div className="hidden lg:flex items-center gap-1">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="px-3 py-2 text-sm font-medium text-[#475569] hover:text-[#0891B2] hover:bg-gray-50 rounded-md transition-colors"
+            <div className="hidden lg:flex items-center gap-8">
+              <div
+                className="relative"
+                onMouseEnter={() => setSolutionsOpen(true)}
+                onMouseLeave={() => setSolutionsOpen(false)}
               >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          <button
-            type="button"
-            className="lg:hidden rounded-md p-2 text-gray-700 hover:bg-gray-100"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <span className="sr-only">Toggle menu</span>
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
-        </div>
-
-        {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4">
-            <div className="flex flex-col gap-1">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="px-3 py-2 text-base font-medium text-[#475569] hover:text-[#0891B2] hover:bg-gray-50 rounded-md transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
+                <button
+                  className="flex items-center gap-1 px-2 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 transition-colors tracking-wide min-h-[44px]"
+                  aria-expanded={solutionsOpen}
+                  aria-controls="solutions-menu"
                 >
-                  {item.name}
-                </Link>
-              ))}
+                  Solutions
+                  <ChevronDown className={`h-4 w-4 transition-transform ${solutionsOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                {solutionsOpen && (
+                  <div
+                    id="solutions-menu"
+                    className="absolute left-0 top-full mt-2 w-[800px] bg-white rounded-lg shadow-xl border border-gray-200 p-6 animate-in fade-in slide-in-from-top-2 duration-200"
+                  >
+                    <div className="grid grid-cols-3 gap-8">
+                      {Object.entries(solutionsMenu).map(([category, items]) => (
+                        <div key={category}>
+                          <h3 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-3">
+                            {category}
+                          </h3>
+                          <ul className="space-y-2">
+                            {items.map((item) => (
+                              <li key={item.name}>
+                                <Link
+                                  href={item.href}
+                                  className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-md transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600"
+                                >
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-6 pt-6 border-t border-gray-200">
+                      <Link
+                        href="/use-cases"
+                        className="inline-flex items-center text-sm font-semibold text-teal-600 hover:text-teal-700 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600 rounded px-2 py-1"
+                      >
+                        View All Solutions →
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <div
+                className="relative"
+                onMouseEnter={() => setResourcesOpen(true)}
+                onMouseLeave={() => setResourcesOpen(false)}
+              >
+                <button
+                  className="flex items-center gap-1 px-2 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 transition-colors tracking-wide min-h-[44px]"
+                  aria-expanded={resourcesOpen}
+                  aria-controls="resources-menu"
+                >
+                  Resources
+                  <ChevronDown className={`h-4 w-4 transition-transform ${resourcesOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                {resourcesOpen && (
+                  <div
+                    id="resources-menu"
+                    className="absolute left-0 top-full mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 p-4 animate-in fade-in slide-in-from-top-2 duration-200"
+                  >
+                    <ul className="space-y-1">
+                      {resourcesMenu.map((item) => (
+                        <li key={item.name}>
+                          <Link
+                            href={item.href}
+                            className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-md transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600"
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+              <Link
+                href="/about"
+                className="px-2 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 transition-colors tracking-wide min-h-[44px] flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600 rounded"
+              >
+                About
+              </Link>
+
+              <Link
+                href="/contact"
+                className="px-2 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 transition-colors tracking-wide min-h-[44px] flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600 rounded"
+              >
+                Contact
+              </Link>
+
+              <Link
+                href="/see-the-risks"
+                className="ml-auto px-6 py-2.5 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 min-h-[44px] flex items-center"
+              >
+                See the Risks Now
+              </Link>
             </div>
+
+            <button
+              type="button"
+              className="lg:hidden rounded-md p-2 text-gray-700 hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600 min-h-[44px] min-w-[44px]"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-expanded={mobileMenuOpen}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
-        )}
-      </nav>
-    </header>
+
+          {mobileMenuOpen && (
+            <div className="lg:hidden fixed inset-0 top-16 bg-white overflow-y-auto pb-6">
+              <div className="px-4 py-6 space-y-4">
+                <Link
+                  href="/see-the-risks"
+                  className="block w-full px-6 py-3 text-center text-base font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all shadow-sm min-h-[44px]"
+                  onClick={closeMobileMenu}
+                >
+                  See the Risks Now
+                </Link>
+
+                <div className="border-t border-gray-200 pt-4">
+                  <button
+                    onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
+                    className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-lg transition-colors min-h-[44px]"
+                    aria-expanded={mobileSolutionsOpen}
+                  >
+                    Solutions
+                    <ChevronDown className={`h-5 w-5 transition-transform ${mobileSolutionsOpen ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  {mobileSolutionsOpen && (
+                    <div className="mt-2 pl-4 space-y-4">
+                      {Object.entries(solutionsMenu).map(([category, items]) => (
+                        <div key={category}>
+                          <h3 className="text-xs font-bold text-gray-600 uppercase tracking-wider mb-2 px-4">
+                            {category}
+                          </h3>
+                          <ul className="space-y-1">
+                            {items.map((item) => (
+                              <li key={item.name}>
+                                <Link
+                                  href={item.href}
+                                  className="block px-4 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-md transition-colors min-h-[44px] flex items-center"
+                                  onClick={closeMobileMenu}
+                                >
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                      <Link
+                        href="/use-cases"
+                        className="block px-4 py-2 text-sm font-semibold text-teal-600 hover:text-teal-700 transition-colors min-h-[44px] flex items-center"
+                        onClick={closeMobileMenu}
+                      >
+                        View All Solutions →
+                      </Link>
+                    </div>
+                  )}
+                </div>
+
+                <div>
+                  <button
+                    onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)}
+                    className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-lg transition-colors min-h-[44px]"
+                    aria-expanded={mobileResourcesOpen}
+                  >
+                    Resources
+                    <ChevronDown className={`h-5 w-5 transition-transform ${mobileResourcesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  {mobileResourcesOpen && (
+                    <ul className="mt-2 pl-4 space-y-1">
+                      {resourcesMenu.map((item) => (
+                        <li key={item.name}>
+                          <Link
+                            href={item.href}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-md transition-colors min-h-[44px] flex items-center"
+                            onClick={closeMobileMenu}
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+
+                <Link
+                  href="/about"
+                  className="block px-4 py-3 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-lg transition-colors min-h-[44px]"
+                  onClick={closeMobileMenu}
+                >
+                  About
+                </Link>
+
+                <Link
+                  href="/contact"
+                  className="block px-4 py-3 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-lg transition-colors min-h-[44px]"
+                  onClick={closeMobileMenu}
+                >
+                  Contact
+                </Link>
+              </div>
+            </div>
+          )}
+        </nav>
+      </header>
+    </>
   );
 }
