@@ -58,25 +58,31 @@ export default function ContactPage() {
     setSubmitStatus('idle');
 
     try {
-      const mailtoLink = `mailto:contact@elsaai.co.uk?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-      )}`;
+      const apiUrl = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/send-contact-email`;
 
-      window.location.href = mailtoLink;
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-      setTimeout(() => {
-        setSubmitStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
-        });
-        setIsSubmitting(false);
-      }, 1000);
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
+    } finally {
       setIsSubmitting(false);
     }
   };
@@ -90,10 +96,10 @@ export default function ContactPage() {
               <CheckCircle2 className="h-10 w-10 text-teal-600" />
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Message Sent!
+              Thank You!
             </h1>
             <p className="text-lg text-gray-700 mb-6">
-              Thank you for contacting us. We'll get back to you within 1 business day.
+              Our representative will be in touch.
             </p>
             <Button
               onClick={() => setSubmitStatus('idle')}
