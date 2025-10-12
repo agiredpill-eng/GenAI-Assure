@@ -1,4 +1,4 @@
-import { Shield, Target, Users, Award, Mail, CircleCheck as CheckCircle2 } from 'lucide-react';
+import { Shield, Target, Users, Award, CircleCheck as CheckCircle2, Building2, Briefcase, Heart, Scale, ShoppingCart, Building } from 'lucide-react';
 
 export default function AboutPage() {
   return (
@@ -8,9 +8,15 @@ export default function AboutPage() {
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             About ELSA AI
           </h1>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            We help organizations navigate the complex landscape of AI governance with practical,
-            audit-ready solutions that transform compliance from a burden into a strategic advantage.
+          <div className="text-2xl font-semibold text-teal-600 mb-6">
+            Ethical • Legal • Societal • Accountable
+          </div>
+          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
+            We help organisations operationalise responsible AI fast. Using the GenAI Assure™ Framework,
+            we turn third-party AI tools into a governed, measurable, and auditable part of your business.
+          </p>
+          <p className="text-lg text-gray-900 font-semibold mt-6 max-w-3xl mx-auto">
+            Outcome: AI that is safe, compliant, and accountable without changing your vendors or rebuilding models.
           </p>
         </div>
 
@@ -23,10 +29,8 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-gray-900">Our Mission</h2>
             </div>
             <p className="text-lg text-gray-700 leading-relaxed">
-              ELSA AI exists to make responsible AI governance accessible and achievable for organizations of all sizes.
-              We believe that AI can be a powerful force for innovation and growth when deployed with proper safeguards,
-              transparency, and accountability. Our mission is to help organizations adopt AI confidently while meeting
-              regulatory requirements, protecting data, and maintaining trust with stakeholders.
+              To make every third-party AI deployment safe, compliant, and auditable by applying a focused
+              30-60-90 day rollout that delivers clear guardrails, responsible use, and evidence you can stand behind.
             </p>
           </div>
         </section>
@@ -35,36 +39,23 @@ export default function AboutPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">What We Do</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              We provide comprehensive AI governance solutions that address the complete lifecycle of AI deployment.
+              We enable organisations that deploy AI tools (chat, copilots, automations) to operate them with confidence.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div className="bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200">
               <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
                 <Shield className="h-6 w-6 text-teal-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">AI Governance Framework</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                We implement the GenAI Assure framework—a comprehensive approach to AI governance that covers
-                discovery, risk assessment, technical controls, policy development, and ongoing monitoring.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-700">Shadow AI discovery and inventory</span>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700 leading-relaxed">Stand up guardrails so AI is used safely from day one.</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-700">Risk classification and assessment</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-700">Technical control implementation</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-700">Policy and procedure development</span>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700 leading-relaxed">Assess and reduce risk across people, process, and data.</span>
                 </li>
               </ul>
             </div>
@@ -73,27 +64,14 @@ export default function AboutPage() {
               <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
                 <Award className="h-6 w-6 text-teal-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Compliance & Audit Support</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                We deliver audit-ready evidence packs that demonstrate compliance with GDPR, the EU AI Act,
-                and industry standards like ISO/IEC 42001, NIST AI RMF, and SOC 2.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-700">DPIA/FRIA documentation</span>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700 leading-relaxed">Embed monitoring so leaders see what matters, when it matters.</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-700">Vendor due diligence and DPAs</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-700">Comprehensive audit trails</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-700">Regulatory reporting support</span>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700 leading-relaxed">Deliver proof so auditors and regulators can verify outcomes.</span>
                 </li>
               </ul>
             </div>
@@ -101,48 +79,146 @@ export default function AboutPage() {
         </section>
 
         <section className="mb-20">
-          <div className="bg-gradient-to-br from-teal-50 to-white rounded-2xl shadow-xl p-8 sm:p-12 border-2 border-teal-200">
+          <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-12">
             <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center">
+                <Shield className="h-6 w-6 text-teal-600" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">AI Governance Framework</h2>
+            </div>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              A practical operating model for AI deployers, built for real-world adoption.
+            </p>
+
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                <div>
+                  <span className="font-semibold text-gray-900">Policy & accountability</span>
+                  <span className="text-gray-700"> that clarify how AI is used.</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                <div>
+                  <span className="font-semibold text-gray-900">Protection of access and data</span>
+                  <span className="text-gray-700"> so sensitive information stays safe.</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                <div>
+                  <span className="font-semibold text-gray-900">Monitoring & oversight</span>
+                  <span className="text-gray-700"> that make behaviour visible and correctable.</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                <div>
+                  <span className="font-semibold text-gray-900">Documentation & evidence</span>
+                  <span className="text-gray-700"> that demonstrate responsible operation.</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                <div>
+                  <span className="font-semibold text-gray-900">Incident handling & resilience</span>
+                  <span className="text-gray-700"> so you recover quickly and learn continuously.</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 pt-6 border-t border-gray-200">
+              <p className="text-base text-gray-900 font-semibold">
+                Delivered through a pragmatic 30-60-90 day plan with clear milestones.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-20">
+          <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-12">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center">
+                <Award className="h-6 w-6 text-teal-600" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">Compliance & Audit Support</h2>
+            </div>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Operate AI with confidence, and prove it.
+            </p>
+
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                <span className="text-gray-700 leading-relaxed">Aligns with the EU AI Act (deployer duties).</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                <span className="text-gray-700 leading-relaxed">Works with GDPR/UK GDPR expectations.</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                <span className="text-gray-700 leading-relaxed">Supports ISO/IEC 42001 (AI Management System).</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                <span className="text-gray-700 leading-relaxed">Maps to NIST AI RMF and NIST CSF / SOC 2.</span>
+              </div>
+            </div>
+
+            <div className="mt-8 pt-6 border-t border-gray-200">
+              <p className="text-base text-gray-700 leading-relaxed">
+                You get the artefacts and traceability to demonstrate responsible use.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-20">
+          <div className="bg-gradient-to-br from-teal-50 to-white rounded-2xl shadow-xl p-8 sm:p-12 border-2 border-teal-200">
+            <div className="flex items-center gap-4 mb-8">
               <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center">
                 <Shield className="h-6 w-6 text-teal-600" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">Why We're Different</h2>
             </div>
 
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Practical, Not Theoretical</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  We don't provide abstract frameworks that look good on paper but fail in practice. Our solutions
-                  are built for real-world implementation, addressing the messy reality of shadow AI, competing priorities,
-                  and resource constraints.
-                </p>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                <div>
+                  <span className="font-semibold text-gray-900">Deployer-first:</span>
+                  <span className="text-gray-700"> built for teams using third-party AI, not building models.</span>
+                </div>
               </div>
-
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Audit-Ready from Day One</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Compliance without documentation is just hope. We deliver comprehensive evidence packs that prove
-                  compliance to auditors and regulators. When you implement GenAI Assure, you're not just compliant—you
-                  can prove it.
-                </p>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                <div>
+                  <span className="font-semibold text-gray-900">Security-led:</span>
+                  <span className="text-gray-700"> practical guardrails over checkbox policies.</span>
+                </div>
               </div>
-
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">90-Day Implementation</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  AI governance doesn't require years of effort. Our proven methodology delivers a complete, functioning
-                  governance framework in just 90 days. We balance thoroughness with urgency because your regulatory
-                  deadlines won't wait.
-                </p>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                <div>
+                  <span className="font-semibold text-gray-900">Measurable:</span>
+                  <span className="text-gray-700"> real visibility into how AI is used across your estate.</span>
+                </div>
               </div>
-
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Technology-Agnostic</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  We work with your existing AI tools and infrastructure. Whether you're using ChatGPT, Microsoft Copilot,
-                  custom LLMs, or automation platforms like Make.com and n8n, our framework adapts to your technology stack.
-                </p>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                <div>
+                  <span className="font-semibold text-gray-900">Audit-ready:</span>
+                  <span className="text-gray-700"> evidence is part of the operating model, not an afterthought.</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-1" />
+                <div>
+                  <span className="font-semibold text-gray-900">Time-bound:</span>
+                  <span className="text-gray-700"> a clear 30-60-90 path your teams can execute.</span>
+                </div>
               </div>
             </div>
           </div>
@@ -156,80 +232,80 @@ export default function AboutPage() {
               </div>
               <h2 className="text-3xl font-bold text-gray-900">Who We Serve</h2>
             </div>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              We work with organizations across industries that need to secure their AI operations and demonstrate compliance.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-200">
+              <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                <Building2 className="h-5 w-5 text-teal-600" />
+              </div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Technology Companies</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Organizations deploying AI at scale across development, operations, and customer-facing applications.
+                Ship responsibly with copilots, support bots, and internal assistants, without slowing delivery.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+            <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-200">
+              <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                <Scale className="h-5 w-5 text-teal-600" />
+              </div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Financial Services</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Banks, insurance companies, and fintech firms using AI for risk assessment, fraud detection, and customer service.
+                Use AI for research and operations with controls that respect regulatory expectations.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+            <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-200">
+              <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                <Heart className="h-5 w-5 text-teal-600" />
+              </div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Healthcare Organizations</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Providers and payers using AI tools that process sensitive health data and require strict regulatory compliance.
+                Enable staff assistants and knowledge tools while keeping sensitive data safeguarded.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+            <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-200">
+              <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                <Briefcase className="h-5 w-5 text-teal-600" />
+              </div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Professional Services</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Law firms, consultancies, and agencies using AI to enhance productivity while protecting client confidentiality.
+                Boost research and drafting, with clear transparency and client-ready assurance.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+            <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-200">
+              <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                <ShoppingCart className="h-5 w-5 text-teal-600" />
+              </div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">E-commerce & Retail</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Companies using AI for personalization, customer service, and operations while managing privacy obligations.
+                Scale customer support and content safely, with governed data flows and brand-safe outputs.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+            <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-200">
+              <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                <Building className="h-5 w-5 text-teal-600" />
+              </div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Enterprise Organizations</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Large corporations with distributed AI adoption across multiple business units and geographies.
+                Roll out AI across functions with consistent guardrails, oversight, and evidence at scale.
               </p>
             </div>
           </div>
         </section>
 
         <section className="bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl shadow-2xl p-8 sm:p-12 text-white">
-          <div className="max-w-3xl mx-auto">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
-                <Mail className="h-6 w-6 text-white" />
-              </div>
-              <h2 className="text-3xl font-bold">Get in Touch</h2>
-            </div>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
 
             <p className="text-xl text-white/95 leading-relaxed mb-8">
               Ready to transform your AI governance from a compliance burden into a strategic advantage?
-              Contact us to discuss your specific requirements and learn how GenAI Assure can help.
             </p>
 
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-3">
-                <Mail className="h-6 w-6 text-white/80" />
-                <a href="mailto:contact@elsaai.co.uk" className="text-white text-lg hover:underline">
-                  contact@elsaai.co.uk
-                </a>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/free-assessment"
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal bg-white hover:bg-gray-100 rounded-lg transition-all shadow-lg hover:shadow-xl"
