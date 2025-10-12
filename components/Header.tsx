@@ -7,6 +7,7 @@ import Image from 'next/image';
 
 const navigation = [
   { name: 'Solution', href: '/solution' },
+  { name: 'Use Cases', href: '/use-cases' },
   { name: 'Free Assessment', href: '/free-assessment' },
   { name: 'GenAI Assure Framework', href: '/framework' },
   { name: 'Resources', href: '/resources' },
