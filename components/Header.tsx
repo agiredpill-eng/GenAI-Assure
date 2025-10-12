@@ -104,6 +104,7 @@ export default function Header() {
                   className="flex items-center gap-1 px-2 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 transition-colors tracking-wide min-h-[44px]"
                   aria-expanded={solutionsOpen}
                   aria-controls="solutions-menu"
+                  aria-haspopup="true"
                 >
                   Solutions
                   <ChevronDown className={`h-4 w-4 transition-transform ${solutionsOpen ? 'rotate-180' : ''}`} />
@@ -156,6 +157,7 @@ export default function Header() {
                   className="flex items-center gap-1 px-2 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 transition-colors tracking-wide min-h-[44px]"
                   aria-expanded={resourcesOpen}
                   aria-controls="resources-menu"
+                  aria-haspopup="true"
                 >
                   Resources
                   <ChevronDown className={`h-4 w-4 transition-transform ${resourcesOpen ? 'rotate-180' : ''}`} />

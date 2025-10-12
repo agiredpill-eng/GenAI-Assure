@@ -1,5 +1,17 @@
 import { TriangleAlert as AlertTriangle, Shield, FileCheck, Search, Lock, CircleCheck as CheckCircle2, ClipboardList, ShieldCheck, Eye, Scale, ShieldAlert, DollarSign, Rocket } from 'lucide-react';
 import FrameworkWheel from '@/components/FrameworkWheel';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'GenAI Assure - AI Governance & Compliance Framework | ELSA AI',
+  description: 'Secure your AI deployment estate with enterprise-grade governance controls. GenAI Assure helps organizations comply with GDPR, EU AI Act, and ISO/IEC 42001 through practical 30-60-90 day implementation.',
+  keywords: 'AI governance, AI compliance, GDPR AI, EU AI Act, ISO 42001, AI risk management, AI security, enterprise AI governance',
+  openGraph: {
+    title: 'GenAI Assure - AI Governance & Compliance Framework',
+    description: 'Secure your AI deployment estate with enterprise-grade governance controls for GDPR, EU AI Act, and ISO/IEC 42001 compliance.',
+    type: 'website',
+  },
+};
 
 export default function Home() {
   return (
@@ -65,7 +77,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal bg-white hover:bg-gray-50 rounded-lg transition-all border-2 border-teal shadow-sm hover:shadow-md"
                 >
-                  See The Risks Now
+                  See the Risks Now
                 </a>
               </div>
             </div>
@@ -187,8 +199,8 @@ export default function Home() {
             </h2>
             <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mt-6">
               GenAI Assure transforms AI governance from a compliance burden into a practical, scalable advantage. By applying our framework of{' '}
-              <strong className="font-semibold text-teal">principles → controls → evidence</strong>, we guide organisations through a structured{' '}
-              <strong className="font-semibold text-gray-900">90-day journey</strong> that enables safe, compliant, and auditable AI adoption.
+              <strong className="font-semibold text-teal">principles → controls → evidence</strong>, we implement the{' '}
+              <strong className="font-semibold text-gray-900">GenAI Assure™ 30-60-90 plan with defined milestones and evidence</strong> that enables safe, compliant, and auditable AI adoption.
             </p>
           </div>
 
@@ -329,7 +341,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal bg-white hover:bg-gray-50 rounded-lg transition-all border-2 border-teal shadow-sm hover:shadow-md"
             >
-              See The Risks Now
+              See the Risks Now
             </a>
           </div>
         </div>
@@ -439,25 +451,25 @@ export default function Home() {
                 <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
                   <DollarSign className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Protect Against Heavy Fines</h3>
+                <h3 className="text-2xl font-bold mb-4">Mitigate Regulatory Risk</h3>
               </div>
 
               <div className="relative z-10 space-y-4">
                 <div className="flex items-start gap-3 pb-4 border-b border-white/20">
                   <AlertTriangle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <div>
-                    <p className="text-sm font-semibold text-white mb-1">GDPR Fines</p>
+                    <p className="text-sm font-semibold text-white mb-1">GDPR Violations</p>
                     <p className="text-sm text-white/90">
-                      Up to <span className="font-bold text-white bg-white/20 px-2 py-0.5 rounded">4% of global annual turnover</span> for unlawful AI data use or data breaches.
+                      Unlawful AI data use or data breaches can result in significant regulatory penalties.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 pb-4 border-b border-white/20">
                   <AlertTriangle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <div>
-                    <p className="text-sm font-semibold text-white mb-1">EU AI Act Penalties</p>
+                    <p className="text-sm font-semibold text-white mb-1">EU AI Act Violations</p>
                     <p className="text-sm text-white/90">
-                      Up to <span className="font-bold text-white bg-white/20 px-2 py-0.5 rounded">€35 million or 7% of global turnover</span> for failing to meet deployer duties.
+                      Failing to meet deployer duties can result in substantial regulatory penalties.
                     </p>
                   </div>
                 </div>
@@ -485,8 +497,8 @@ export default function Home() {
               </div>
 
               <p className="relative z-10 text-white/95 leading-relaxed text-base mb-4">
-                Enable your teams to use AI tools with confidence. Our framework establishes clear governance, guardrails, and oversight in just{' '}
-                <span className="font-bold text-white bg-white/20 px-2 py-1 rounded">90 days</span>, removing uncertainty and shadow AI risks.
+                Enable your teams to use AI tools with confidence. Our framework establishes clear governance, guardrails, and oversight through a{' '}
+                <span className="font-bold text-white bg-white/20 px-2 py-1 rounded">structured 30-60-90 day plan</span>, removing uncertainty and shadow AI risks.
               </p>
 
               <div className="relative z-10 flex items-center gap-2 pt-4 border-t border-white/30">
@@ -513,7 +525,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal bg-white hover:bg-gray-50 rounded-lg transition-all border-2 border-teal shadow-sm hover:shadow-md"
             >
-              See The Risks Now
+              See the Risks Now
             </a>
           </div>
         </div>

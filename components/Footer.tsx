@@ -1,37 +1,117 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
-const footerLinks = [
-  { name: 'Cookies', href: '/cookies' },
-  { name: 'Privacy', href: '/privacy' },
-  { name: 'Solution', href: '/solution' },
-  { name: 'Free Assessment', href: '/free-assessment' },
-  { name: 'See The Risk Now', href: '/see-the-risks' },
-  { name: 'Resources', href: '/resources' },
-  { name: 'Contact Us', href: '/contact' },
-  { name: 'About Us', href: '/about' },
-];
+const footerNav = {
+  solutions: [
+    { name: 'All Solutions', href: '/use-cases' },
+    { name: 'Microsoft 365 / Workspace', href: '/use-cases#microsoft-365' },
+    { name: 'Workflow Automation', href: '/use-cases#workflow' },
+    { name: 'Custom Agents', href: '/use-cases#agents' },
+  ],
+  resources: [
+    { name: 'Framework (PDF)', href: '/framework' },
+    { name: 'Articles & Guides', href: '/resources' },
+  ],
+  company: [
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+  ],
+  legal: [
+    { name: 'Privacy', href: '/privacy' },
+    { name: 'Cookies', href: '/cookies' },
+  ],
+};
 
 export default function Footer() {
   return (
     <footer className="bg-[#0F172A] border-t border-[#1E293B] mt-auto">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-[#94A3B8] mb-6">
-          {footerLinks.map((link, index) => (
-            <span key={link.name} className="flex items-center">
-              <Link
-                href={link.href}
-                className="hover:text-[#0891B2] transition-colors"
-              >
-                {link.name}
-              </Link>
-              {index < footerLinks.length - 1 && (
-                <span className="ml-4 text-[#475569]">·</span>
-              )}
-            </span>
-          ))}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+          <div className="lg:col-span-2">
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/ELSAAI_Header_Logo.JPG"
+                alt="ELSA AI"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
+              />
+            </Link>
+            <p className="text-sm text-[#94A3B8] mb-6 max-w-xs">
+              Ethical · Legal · Societal · Accountable AI Operations
+            </p>
+            <Link
+              href="/see-the-risks"
+              className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all shadow-sm hover:shadow-md"
+            >
+              See the Risks Now
+            </Link>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold text-white mb-4">Solutions</h3>
+            <ul className="space-y-3">
+              {footerNav.solutions.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-[#94A3B8] hover:text-[#0891B2] transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold text-white mb-4">Resources</h3>
+            <ul className="space-y-3">
+              {footerNav.resources.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-[#94A3B8] hover:text-[#0891B2] transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-sm font-semibold text-white mb-4 mt-8">Company</h3>
+            <ul className="space-y-3">
+              {footerNav.company.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-[#94A3B8] hover:text-[#0891B2] transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold text-white mb-4">Legal</h3>
+            <ul className="space-y-3">
+              {footerNav.legal.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-[#94A3B8] hover:text-[#0891B2] transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#94A3B8] border-t border-[#1E293B] pt-6">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#94A3B8] border-t border-[#1E293B] pt-8">
           <p className="text-center sm:text-left">
             United Kingdom · Serving Organizations Globally
           </p>

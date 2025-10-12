@@ -38,7 +38,7 @@ export default function SolutionPage() {
               Our Three-Step Process
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              We deliver a complete AI governance solution in just 90 days through our proven methodology.
+              We implement the GenAI Assure™ 30-60-90 plan with defined milestones and evidence through our proven methodology.
             </p>
           </div>
 
@@ -156,7 +156,7 @@ export default function SolutionPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-white/20 hover:bg-white/30 rounded-lg transition-all border-2 border-white backdrop-blur-sm"
               >
-                See The Risks Now
+                See the Risks Now
               </a>
             </div>
           </div>
