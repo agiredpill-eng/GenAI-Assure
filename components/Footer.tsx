@@ -36,11 +36,11 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/ELSAAI_Header_Logo.JPG"
+                src="/image.png"
                 alt="ELSA AI"
-                width={120}
-                height={40}
-                className="h-10 w-auto"
+                width={180}
+                height={50}
+                className="h-12 w-auto"
               />
             </Link>
             <p className="text-sm text-[#94A3B8] mb-6 max-w-xs">

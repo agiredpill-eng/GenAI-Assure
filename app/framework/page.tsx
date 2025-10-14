@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
-import { Download, Printer, BookOpen, Shield, FileText, Calendar, Scale } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Download, Printer, BookOpen, Shield, FileText, Calendar, Scale, Users } from 'lucide-react';
+import FrameworkDownloadModal from '@/components/FrameworkDownloadModal';
 
 const tabs = [
   { id: 'purpose', label: 'Purpose and Scope' },
@@ -19,14 +20,38 @@ const tabs = [
 
 export default function FrameworkPage() {
   const [activeTab, setActiveTab] = useState('purpose');
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
+  const [downloadCount, setDownloadCount] = useState<number>(0);
+  const [isLoadingCount, setIsLoadingCount] = useState(true);
+
+  useEffect(() => {
+    fetchDownloadCount();
+  }, []);
+
+  const fetchDownloadCount = async () => {
+    try {
+      const response = await fetch('/api/log-download');
+      if (response.ok) {
+        const data = await response.json();
+        setDownloadCount(data.count || 0);
+      }
+    } catch (error) {
+      console.error('Error fetching download count:', error);
+    } finally {
+      setIsLoadingCount(false);
+    }
+  };
 
   const handlePrint = () => {
     window.print();
   };
 
   const handleDownload = () => {
-    const pdfUrl = 'https://raw.githubusercontent.com/elsasecure/GenAI_Assure_Framework/main/downloads/GenAI_Assure_Framework_v1.0.pdf';
-    window.open(pdfUrl, '_blank');
+    setShowDownloadModal(true);
+  };
+
+  const handleDownloadSuccess = () => {
+    fetchDownloadCount();
   };
 
   return (
@@ -73,7 +98,7 @@ export default function FrameworkPage() {
               </a>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
               <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200">
                 <div className="flex items-center gap-2 mb-2">
                   <FileText className="h-5 w-5 text-blue-600" />
@@ -104,6 +129,18 @@ export default function FrameworkPage() {
                   <h3 className="text-sm font-semibold text-gray-600">License</h3>
                 </div>
                 <p className="text-base font-bold text-gray-900">Open Framework (CC BY-ND 4.0)</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 shadow-md border-2 border-teal-300">
+                <div className="flex items-center gap-2 mb-2">
+                  <Users className="h-5 w-5 text-teal-600" />
+                  <h3 className="text-sm font-semibold text-gray-600">Downloads</h3>
+                </div>
+                {isLoadingCount ? (
+                  <p className="text-xl font-bold text-gray-400">Loading...</p>
+                ) : (
+                  <p className="text-3xl font-bold text-teal-700">{downloadCount.toLocaleString()}</p>
+                )}
               </div>
             </div>
           </div>
@@ -902,6 +939,12 @@ manifest_sha256: "<hash>"`}
           </div>
         </div>
       </div>
+
+      <FrameworkDownloadModal
+        isOpen={showDownloadModal}
+        onClose={() => setShowDownloadModal(false)}
+        onDownloadSuccess={handleDownloadSuccess}
+      />
     </div>
   );
 }
