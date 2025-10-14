@@ -65,7 +65,10 @@ export default function FrameworkDownloadModal({ isOpen, onClose, onDownloadSucc
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.error || 'Failed to log download');
+        const errorMsg = errorData.details
+          ? `${errorData.error}: ${errorData.details}`
+          : errorData.error || 'Failed to log download';
+        throw new Error(errorMsg);
       }
 
       const pdfUrl = 'https://raw.githubusercontent.com/elsasecure/GenAI_Assure_Framework/main/downloads/GenAI_Assure_Framework_v1.0.pdf';
