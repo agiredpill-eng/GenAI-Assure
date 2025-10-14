@@ -30,8 +30,6 @@ export async function POST(request: NextRequest) {
                      request.headers.get('x-real-ip') ||
                      null;
 
-    const downloadedAt = new Date().toISOString();
-
     const { error } = await supabase
       .from('framework_downloads')
       .insert({
@@ -42,43 +40,36 @@ export async function POST(request: NextRequest) {
         purpose,
         user_agent: userAgent,
         ip_address: ipAddress,
-        downloaded_at: downloadedAt,
       });
 
     if (error) {
       console.error('Database error:', error);
       return NextResponse.json(
-        { error: 'Failed to log download' },
+        { error: 'Failed to log download', details: error.message },
         { status: 500 }
       );
     }
 
-    try {
-      const emailResponse = await fetch(
-        `${supabaseUrl}/functions/v1/send-download-notification`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${supabaseAnonKey}`,
-          },
-          body: JSON.stringify({
-            name,
-            email,
-            location,
-            company: company || '',
-            purpose,
-            downloadedAt,
-          }),
-        }
-      );
+    const downloadedAt = new Date().toISOString();
 
-      if (!emailResponse.ok) {
-        console.error('Failed to send email notification');
+    fetch(
+      `${supabaseUrl}/functions/v1/send-download-notification`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${supabaseAnonKey}`,
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          location,
+          company: company || '',
+          purpose,
+          downloadedAt,
+        }),
       }
-    } catch (emailError) {
-      console.error('Error sending email notification:', emailError);
-    }
+    ).catch(err => console.error('Email notification error:', err));
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
