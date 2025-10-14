@@ -1,5 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useCookieConsent } from '@/lib/cookie-consent';
+import { Settings } from 'lucide-react';
 
 const footerNav = {
   solutions: [
@@ -23,6 +27,8 @@ const footerNav = {
 };
 
 export default function Footer() {
+  const { openPreferencesModal } = useCookieConsent();
+
   return (
     <footer className="bg-[#0F172A] border-t border-[#1E293B] mt-auto">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
@@ -107,6 +113,16 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <button
+                  onClick={openPreferencesModal}
+                  className="text-sm text-[#94A3B8] hover:text-[#0891B2] transition-colors flex items-center gap-1"
+                  aria-label="Manage cookie preferences"
+                >
+                  <Settings className="h-3 w-3" aria-hidden="true" />
+                  Manage Cookies
+                </button>
+              </li>
             </ul>
           </div>
         </div>

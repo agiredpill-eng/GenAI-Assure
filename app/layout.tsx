@@ -3,6 +3,9 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { CookieConsentProvider } from '@/lib/cookie-consent';
+import CookieConsentBanner from '@/components/CookieConsentBanner';
+import CookiePreferencesModal from '@/components/CookiePreferencesModal';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,13 +22,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-grow pt-16">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <CookieConsentProvider>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-grow pt-16">
+              {children}
+            </main>
+            <Footer />
+            <CookieConsentBanner />
+            <CookiePreferencesModal />
+          </div>
+        </CookieConsentProvider>
       </body>
     </html>
   );
