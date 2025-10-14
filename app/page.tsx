@@ -114,8 +114,32 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="py-8">
-            <FrameworkWheel />
+          <div className="py-8 grid lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+            <div>
+              <FrameworkWheel />
+            </div>
+            <div className="flex justify-center">
+              <a
+                href="https://youtu.be/_EdCkza4vTQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative group block w-full max-w-md"
+              >
+                <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl bg-gray-900 group-hover:shadow-3xl transition-all duration-300">
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/_EdCkza4vTQ?rel=0&modestbranding=1"
+                    title="GenAI Assure Framework Overview"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <p className="text-center text-sm text-gray-600 mt-3 group-hover:text-teal-600 transition-colors">
+                  Watch: GenAI Assure Framework Overview
+                </p>
+              </a>
+            </div>
           </div>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
