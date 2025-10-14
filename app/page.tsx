@@ -51,6 +51,12 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
+                <div className="flex items-center gap-2 pt-3 mt-3 border-t border-teal-300">
+                  <FileCheck className="h-5 w-5 text-teal-700" />
+                  <p className="font-semibold text-gray-900">
+                    Stop hoping your AI deployments stay compliant. Prove it with an audit-ready Evidence Pack.
+                  </p>
+                </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
