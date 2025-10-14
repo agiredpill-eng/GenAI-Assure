@@ -54,6 +54,55 @@ Deno.serve(async (req: Request) => {
       );
     }
 
+    const mailjetApiKey = Deno.env.get('MAILJET_API_KEY');
+    const mailjetSecretKey = Deno.env.get('MAILJET_SECRET_KEY');
+
+    if (mailjetApiKey && mailjetSecretKey) {
+      try {
+        const mailjetResponse = await fetch('https://api.mailjet.com/v3.1/send', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Basic ${btoa(`${mailjetApiKey}:${mailjetSecretKey}`)}`,
+          },
+          body: JSON.stringify({
+            Messages: [
+              {
+                From: {
+                  Email: 'noreply@elsaai.co.uk',
+                  Name: 'ELSA AI Framework Downloads',
+                },
+                To: [
+                  {
+                    Email: 'theelsaaiuk@gmail.com',
+                    Name: 'ELSA AI Team',
+                  },
+                ],
+                Subject: `Framework Download: ${name}`,
+                TextPart: `New framework download:\n\nName: ${name}\nEmail: ${email}\nLocation: ${location}\n${company ? `Company: ${company}\n` : ''}\nPurpose:\n${purpose}`,
+                HTMLPart: `
+                  <h2>New Framework Download</h2>
+                  <p><strong>Name:</strong> ${name}</p>
+                  <p><strong>Email:</strong> ${email}</p>
+                  <p><strong>Location:</strong> ${location}</p>
+                  ${company ? `<p><strong>Company:</strong> ${company}</p>` : ''}
+                  <h3>Purpose:</h3>
+                  <p>${purpose.replace(/\n/g, '<br>')}</p>
+                `,
+              },
+            ],
+          }),
+        });
+
+        if (!mailjetResponse.ok) {
+          const errorData = await mailjetResponse.text();
+          console.error('Mailjet error:', errorData);
+        }
+      } catch (emailError) {
+        console.error('Failed to send email:', emailError);
+      }
+    }
+
     return new Response(
       JSON.stringify({ success: true, message: 'Download logged successfully' }),
       {
