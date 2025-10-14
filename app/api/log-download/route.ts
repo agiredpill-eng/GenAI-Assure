@@ -17,7 +17,6 @@ export async function POST(request: NextRequest) {
     const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
     if (!supabaseUrl || !supabaseAnonKey) {
-      console.error('Supabase configuration missing');
       return NextResponse.json(
         { error: 'Server configuration error' },
         { status: 500 }
@@ -30,9 +29,9 @@ export async function POST(request: NextRequest) {
                      request.headers.get('x-real-ip') ||
                      null;
 
-    const { error } = await supabase
+    const { error: insertError } = await supabase
       .from('framework_downloads')
-      .insert({
+      .insert([{
         name,
         email,
         location,
@@ -40,12 +39,12 @@ export async function POST(request: NextRequest) {
         purpose,
         user_agent: userAgent,
         ip_address: ipAddress,
-      });
+      }]);
 
-    if (error) {
-      console.error('Database error:', error);
+    if (insertError) {
+      console.error('Database insert error:', insertError);
       return NextResponse.json(
-        { error: 'Failed to log download', details: error.message },
+        { error: 'Failed to log download', details: insertError.message },
         { status: 500 }
       );
     }
@@ -69,13 +68,13 @@ export async function POST(request: NextRequest) {
           downloadedAt,
         }),
       }
-    ).catch(err => console.error('Email notification error:', err));
+    ).catch(() => {});
 
     return NextResponse.json({ success: true }, { status: 200 });
-  } catch (error) {
-    console.error('Error logging download:', error);
+  } catch (err) {
+    console.error('API route error:', err);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Internal server error', message: err instanceof Error ? err.message : 'Unknown error' },
       { status: 500 }
     );
   }
@@ -107,8 +106,8 @@ export async function GET() {
     }
 
     return NextResponse.json({ count: data || 0 }, { status: 200 });
-  } catch (error) {
-    console.error('Error getting download count:', error);
+  } catch (err) {
+    console.error('Error getting download count:', err);
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
