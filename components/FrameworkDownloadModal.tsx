@@ -64,16 +64,12 @@ export default function FrameworkDownloadModal({ isOpen, onClose, onDownloadSucc
       });
 
       if (!response.ok) {
-        throw new Error('Failed to log download');
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || 'Failed to log download');
       }
 
-      const pdfUrl = '/framework';
-      const link = document.createElement('a');
-      link.href = pdfUrl;
-      link.download = 'GenAI-Assure-Framework.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      const pdfUrl = 'https://raw.githubusercontent.com/elsasecure/GenAI_Assure_Framework/main/downloads/GenAI_Assure_Framework_v1.0.pdf';
+      window.open(pdfUrl, '_blank');
 
       onDownloadSuccess();
       setFormData({
@@ -86,7 +82,8 @@ export default function FrameworkDownloadModal({ isOpen, onClose, onDownloadSucc
       onClose();
     } catch (err) {
       console.error('Error logging download:', err);
-      setError('Failed to process download. Please try again.');
+      const errorMessage = err instanceof Error ? err.message : 'Failed to process download. Please try again.';
+      setError(errorMessage);
     } finally {
       setIsSubmitting(false);
     }

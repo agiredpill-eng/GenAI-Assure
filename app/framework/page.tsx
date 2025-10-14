@@ -123,13 +123,20 @@ export default function FrameworkPage() {
                 <p className="text-xl font-bold text-gray-900">27 August 2025</p>
               </div>
 
-              <div className="bg-white rounded-xl p-6 shadow-md border border-gray-200">
+              <a
+                href="https://creativecommons.org/licenses/by-nd/4.0/deed.en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-xl p-6 shadow-md border border-gray-200 hover:shadow-xl hover:border-orange-300 transition-all duration-300 block group"
+              >
                 <div className="flex items-center gap-2 mb-2">
-                  <Scale className="h-5 w-5 text-orange-600" />
+                  <Scale className="h-5 w-5 text-orange-600 group-hover:scale-110 transition-transform" />
                   <h3 className="text-sm font-semibold text-gray-600">License</h3>
                 </div>
-                <p className="text-base font-bold text-gray-900">Open Framework (CC BY-ND 4.0)</p>
-              </div>
+                <p className="text-base font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
+                  Open Framework (CC BY-ND 4.0)
+                </p>
+              </a>
 
               <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 shadow-md border-2 border-teal-300">
                 <div className="flex items-center gap-2 mb-2">
