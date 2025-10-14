@@ -47,50 +47,6 @@ Deno.serve(async (req: Request) => {
       );
     }
 
-    const mailjetApiKey = Deno.env.get('MAILJET_API_KEY');
-    const mailjetSecretKey = Deno.env.get('MAILJET_SECRET_KEY');
-
-    if (mailjetApiKey && mailjetSecretKey) {
-      const mailjetResponse = await fetch('https://api.mailjet.com/v3.1/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Basic ${btoa(`${mailjetApiKey}:${mailjetSecretKey}`)}`,
-        },
-        body: JSON.stringify({
-          Messages: [
-            {
-              From: {
-                Email: 'noreply@elsaai.co.uk',
-                Name: 'ELSA AI Contact Form',
-              },
-              To: [
-                {
-                  Email: 'theelsaaiuk@gmail.com',
-                  Name: 'ELSA AI Team',
-                },
-              ],
-              Subject: `Contact Form: ${subject || 'No Subject'}`,
-              TextPart: `New contact form submission:\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject || 'No Subject'}\n\nMessage:\n${message}`,
-              HTMLPart: `
-                <h2>New Contact Form Submission</h2>
-                <p><strong>Name:</strong> ${name}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Subject:</strong> ${subject || 'No Subject'}</p>
-                <h3>Message:</h3>
-                <p>${message.replace(/\n/g, '<br>')}</p>
-              `,
-            },
-          ],
-        }),
-      });
-
-      if (!mailjetResponse.ok) {
-        const errorData = await mailjetResponse.text();
-        console.error('Mailjet error:', errorData);
-      }
-    }
-
     return new Response(
       JSON.stringify({ success: true, message: 'Contact form submitted successfully' }),
       {
