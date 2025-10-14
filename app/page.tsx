@@ -22,9 +22,9 @@ export default function Home() {
           backgroundSize: '40px 40px'
         }}></div>
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+            <div className="space-y-5">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-200 rounded-full text-sm font-semibold text-red-800">
                 <AlertTriangle className="h-4 w-4" />
                 Regulatory Compliance Alert
@@ -36,33 +36,24 @@ export default function Home() {
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                Your AI implementations—from Make/n8n/Zapier automations to copilots and custom agents—can bypass enterprise security, expose sensitive data, and create compliance gaps that violate{' '}
+                Your AI use—from Make/n8n/Zapier automations to copilots and custom agents—can bypass enterprise guardrails, expose sensitive data, and create gaps that lead to non-compliance with{' '}
                 <strong className="font-semibold text-gray-900">GDPR/UK GDPR</strong> and{' '}
                 <strong className="font-semibold text-gray-900">EU AI Act deployer obligations (Article 26)</strong>.
               </p>
 
-              <div className="bg-teal-50 border-2 border-teal-200 rounded-xl p-6 space-y-4">
+              <div className="bg-gradient-to-br from-teal-50 to-teal-100 border-2 border-teal-300 rounded-xl p-5 shadow-md">
                 <div className="flex items-start gap-3">
-                  <Shield className="h-6 w-6 text-teal-600 flex-shrink-0 mt-1" />
+                  <Shield className="h-6 w-6 text-teal-700 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-bold text-gray-900 text-lg mb-2">GenAI Assure</h3>
-                    <p className="text-gray-800 leading-relaxed">
-                      Secures your entire AI deployment estate with enterprise-grade governance controls specifically designed for AI tool deployers.
-                      We implement what auditors expect and regulations require: comprehensive SSO integration, AI-aware data loss prevention,
-                      structured event logging, complete audit trails, transparency documentation, DPIA/FRIA frameworks, and thorough
-                      vendor due-diligence processes.
+                    <p className="text-gray-800 leading-relaxed text-base">
+                      GenAI Assure helps secure your AI deployment estate with enterprise-grade governance for AI tool deployers. We implement the controls auditors expect and map to regulatory duties: single sign-on and MFA, AI-aware DLP (prompt/output redaction), structured usage logging to your SIEM, human-oversight procedures, complete audit trails, transparency labels and documentation, DPIA/FRIA frameworks, and thorough vendor due-diligence.
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 pt-2 border-t border-teal-200">
-                  <FileCheck className="h-5 w-5 text-teal-600" />
-                  <p className="font-semibold text-gray-900">
-                    Stop hoping your AI deployments stay compliant. Prove it with an audit-ready Evidence Pack.
-                  </p>
-                </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <a
                   href="/free-assessment"
                   target="_blank"
@@ -98,16 +89,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-gray-50 py-20 lg:py-32">
+      <section className="relative bg-gray-50 py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 space-y-4">
+          <div className="text-center mb-10 space-y-3">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
               Controls You Can Enforce. Evidence Auditors Accept.
             </h2>
             <h3 className="text-2xl sm:text-3xl font-semibold text-gray-600">
               That's the GenAI Assure Framework.
             </h3>
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mt-6">
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mt-3">
               GenAI Assure defines five core governance principles designed for AI deployers (organisations using third-party AI tools).
               These principles are purpose-built to solve AI governance challenges and mitigate regulatory exposure under frameworks like the{' '}
               <strong className="font-semibold text-gray-900">EU AI Act</strong>,{' '}
@@ -117,73 +108,73 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="py-12">
+          <div className="py-8">
             <FrameworkWheel />
           </div>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="group relative bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 cursor-pointer">
-              <div className="w-16 h-16 rounded-xl mb-4 flex items-center justify-center bg-green-100 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#10B981' }}>
-                <Shield className="h-8 w-8 text-white" />
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="group relative bg-gradient-to-br from-green-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 cursor-pointer">
+              <div className="w-14 h-14 rounded-xl mb-3 flex items-center justify-center bg-green-100 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#10B981' }}>
+                <Shield className="h-7 w-7 text-white" />
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Security & Data Protection</h4>
-              <p className="text-gray-700 text-base leading-relaxed">
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Security & Data Protection</h4>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Technical governance backbone for enterprise AI security
               </p>
             </div>
 
-            <div className="group relative bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300 cursor-pointer">
-              <div className="w-16 h-16 rounded-xl mb-4 flex items-center justify-center bg-blue-100 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#3B82F6' }}>
-                <FileCheck className="h-8 w-8 text-white" />
+            <div className="group relative bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300 cursor-pointer">
+              <div className="w-14 h-14 rounded-xl mb-3 flex items-center justify-center bg-blue-100 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#3B82F6' }}>
+                <FileCheck className="h-7 w-7 text-white" />
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Governance & Regulatory Assurance</h4>
-              <p className="text-gray-700 text-base leading-relaxed">
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Governance & Regulatory Assurance</h4>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Legal and regulatory obligations management
               </p>
             </div>
 
-            <div className="group relative bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-orange-100 hover:border-orange-300 cursor-pointer">
-              <div className="w-16 h-16 rounded-xl mb-4 flex items-center justify-center bg-orange-100 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#F97316' }}>
-                <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group relative bg-gradient-to-br from-orange-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-orange-100 hover:border-orange-300 cursor-pointer">
+              <div className="w-14 h-14 rounded-xl mb-3 flex items-center justify-center bg-orange-100 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#F97316' }}>
+                <svg className="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Ethical & Human Impact</h4>
-              <p className="text-gray-700 text-base leading-relaxed">
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Ethical & Human Impact</h4>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Legal and regulatory obligations for ethical AI
               </p>
             </div>
 
-            <div className="group relative bg-gradient-to-br from-red-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-red-100 hover:border-red-300 cursor-pointer">
-              <div className="w-16 h-16 rounded-xl mb-4 flex items-center justify-center bg-red-100 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#EF4444' }}>
-                <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group relative bg-gradient-to-br from-red-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-red-100 hover:border-red-300 cursor-pointer">
+              <div className="w-14 h-14 rounded-xl mb-3 flex items-center justify-center bg-red-100 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#EF4444' }}>
+                <svg className="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Accountable Operations</h4>
-              <p className="text-gray-700 text-base leading-relaxed">
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Accountable Operations</h4>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Operational readiness and accountability frameworks
               </p>
             </div>
 
-            <div className="group relative bg-gradient-to-br from-lime-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-lime-100 hover:border-lime-300 cursor-pointer">
-              <div className="w-16 h-16 rounded-xl mb-4 flex items-center justify-center bg-lime-100 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#84CC16' }}>
-                <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group relative bg-gradient-to-br from-lime-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-lime-100 hover:border-lime-300 cursor-pointer">
+              <div className="w-14 h-14 rounded-xl mb-3 flex items-center justify-center bg-lime-100 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#84CC16' }}>
+                <svg className="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Trust & Safety Culture</h4>
-              <p className="text-gray-700 text-base leading-relaxed">
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Trust & Safety Culture</h4>
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Operational readiness for building trust
               </p>
             </div>
 
-            <div className="group relative bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-teal-400 text-white md:col-span-2 lg:col-span-1 cursor-pointer">
-              <div className="w-16 h-16 rounded-xl bg-white/20 mb-4 flex items-center justify-center group-hover:scale-110 transition-transform backdrop-blur-sm">
-                <FileCheck className="h-8 w-8 text-white" />
+            <div className="group relative bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-teal-400 text-white md:col-span-2 lg:col-span-1 cursor-pointer">
+              <div className="w-14 h-14 rounded-xl bg-white/20 mb-3 flex items-center justify-center group-hover:scale-110 transition-transform backdrop-blur-sm">
+                <FileCheck className="h-7 w-7 text-white" />
               </div>
-              <h4 className="text-xl font-bold mb-3">Evidence Pack</h4>
-              <p className="text-white/95 text-base leading-relaxed">
+              <h4 className="text-xl font-bold mb-2">Evidence Pack</h4>
+              <p className="text-white/95 text-sm leading-relaxed">
                 Comprehensive audit trail and documentation ready for regulatory review
               </p>
             </div>
@@ -191,67 +182,67 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-white py-20 lg:py-32">
+      <section className="relative bg-white py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 space-y-4">
+          <div className="text-center mb-10 space-y-3">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
               How GenAI Assure Works: Our 3-Step Path to Confident AI Adoption
             </h2>
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mt-6">
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mt-3">
               GenAI Assure transforms AI governance from a compliance burden into a practical, scalable advantage. By applying our framework of{' '}
               <strong className="font-semibold text-teal">principles → controls → evidence</strong>, we implement the{' '}
               <strong className="font-semibold text-gray-900">GenAI Assure™ 30-60-90 plan with defined milestones and evidence</strong> that enables safe, compliant, and auditable AI adoption.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            <div className="group relative bg-gradient-to-br from-teal-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-teal-100 hover:border-teal-300">
-              <div className="absolute -top-6 -left-6 w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            <div className="group relative bg-gradient-to-br from-teal-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-teal-100 hover:border-teal-300">
+              <div className="absolute -top-5 -left-5 w-14 h-14 bg-teal-500 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
                 1
               </div>
 
-              <div className="mb-6 pt-6">
-                <div className="w-20 h-20 bg-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="mb-4 pt-5">
+                <div className="w-16 h-16 bg-teal-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <div className="relative">
                     <Search className="h-10 w-10 text-teal-600" strokeWidth={2} />
                     <ClipboardList className="h-6 w-6 text-teal-700 absolute -bottom-1 -right-1" strokeWidth={2.5} />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Assess & Govern</h3>
-                <p className="text-gray-700 leading-relaxed mb-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Assess & Govern</h3>
+                <p className="text-gray-700 leading-relaxed text-sm mb-4">
                   Establish a robust foundation for ethical and compliant AI by understanding your current landscape and mapping out a strategic path forward.
                 </p>
               </div>
 
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-gray-700">
+              <div className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-gray-700">
                     Define and implement comprehensive AI Use Policies tailored to your enterprise.
                   </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-gray-700">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-gray-700">
                     Discover and classify all AI tools and applications in use across your organisation.
                   </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-gray-700">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-gray-700">
                     Establish an AI governance framework with clear roles, responsibilities, and oversight.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="group relative bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300">
-              <div className="absolute -top-6 -left-6 w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+            <div className="group relative bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300">
+              <div className="absolute -top-5 -left-5 w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
                 2
               </div>
 
-              <div className="mb-6 pt-6">
-                <div className="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="mb-4 pt-5">
+                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <div className="relative">
                     <ShieldCheck className="h-10 w-10 text-blue-600" strokeWidth={2} />
                     <Lock className="h-6 w-6 text-blue-700 absolute -bottom-1 -right-1" strokeWidth={2.5} />
@@ -347,19 +338,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-gradient-to-br from-gray-50 to-gray-100 py-20 lg:py-32">
+      <section className="relative bg-gradient-to-br from-gray-50 to-gray-100 py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 space-y-4">
+          <div className="text-center mb-10 space-y-3">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
               Benefits of GenAI Assure for Your Business
             </h2>
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mt-6">
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mt-3">
               GenAI Assure delivers more than compliance. It provides a practical pathway to safe, auditable, and value-driven AI adoption — helping you accelerate innovation while maintaining trust and resilience.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="group relative bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-400 text-white overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="group relative bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-400 text-white overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
 
