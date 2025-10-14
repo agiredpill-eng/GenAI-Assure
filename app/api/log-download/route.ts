@@ -29,35 +29,12 @@ export async function POST(request: NextRequest) {
                      request.headers.get('x-real-ip') ||
                      null;
 
-    const { error: insertError } = await supabase
-      .from('framework_downloads')
-      .insert([{
-        name,
-        email,
-        location,
-        company: company || '',
-        purpose,
-        user_agent: userAgent,
-        ip_address: ipAddress,
-      }]);
-
-    if (insertError) {
-      console.error('Database insert error:', insertError);
-      return NextResponse.json(
-        { error: 'Failed to log download', details: insertError.message },
-        { status: 500 }
-      );
-    }
-
-    const downloadedAt = new Date().toISOString();
-
-    fetch(
+    const response = await fetch(
       `${supabaseUrl}/functions/v1/send-download-notification`,
       {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${supabaseAnonKey}`,
         },
         body: JSON.stringify({
           name,
@@ -65,10 +42,19 @@ export async function POST(request: NextRequest) {
           location,
           company: company || '',
           purpose,
-          downloadedAt,
+          userAgent,
         }),
       }
-    ).catch(() => {});
+    );
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      console.error('Edge function error:', errorData);
+      return NextResponse.json(
+        { error: 'Failed to log download', details: errorData.error || 'Unknown error' },
+        { status: response.status }
+      );
+    }
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (err) {
@@ -94,8 +80,9 @@ export async function GET() {
 
     const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-    const { data, error } = await supabase
-      .rpc('get_framework_download_count');
+    const { count, error } = await supabase
+      .from('framework_downloads')
+      .select('*', { count: 'exact', head: true });
 
     if (error) {
       console.error('Database error:', error);
@@ -105,7 +92,7 @@ export async function GET() {
       );
     }
 
-    return NextResponse.json({ count: data || 0 }, { status: 200 });
+    return NextResponse.json({ count: count || 0 }, { status: 200 });
   } catch (err) {
     console.error('Error getting download count:', err);
     return NextResponse.json(
