@@ -14,22 +14,15 @@ export async function POST(request: NextRequest) {
     }
 
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-    if (!supabaseUrl || !supabaseAnonKey) {
+    if (!supabaseUrl) {
       return NextResponse.json(
         { error: 'Server configuration error' },
         { status: 500 }
       );
     }
 
-    const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
-    const ipAddress = request.headers.get('x-forwarded-for') ||
-                     request.headers.get('x-real-ip') ||
-                     null;
-
-    const response = await fetch(
+    await fetch(
       `${supabaseUrl}/functions/v1/send-download-notification`,
       {
         method: 'POST',
@@ -45,24 +38,12 @@ export async function POST(request: NextRequest) {
           userAgent,
         }),
       }
-    );
-
-    if (!response.ok) {
-      const errorData = await response.json().catch(() => ({}));
-      console.error('Edge function error:', errorData);
-      return NextResponse.json(
-        { error: 'Failed to log download', details: errorData.error || 'Unknown error' },
-        { status: response.status }
-      );
-    }
+    ).catch(err => console.error('Failed to call edge function:', err));
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (err) {
     console.error('API route error:', err);
-    return NextResponse.json(
-      { error: 'Internal server error', message: err instanceof Error ? err.message : 'Unknown error' },
-      { status: 500 }
-    );
+    return NextResponse.json({ success: true }, { status: 200 });
   }
 }
 

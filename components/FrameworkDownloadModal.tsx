@@ -51,8 +51,10 @@ export default function FrameworkDownloadModal({ isOpen, onClose, onDownloadSucc
       return;
     }
 
+    const pdfUrl = 'https://raw.githubusercontent.com/elsasecure/GenAI_Assure_Framework/main/downloads/GenAI_Assure_Framework_v1.0.pdf';
+
     try {
-      const response = await fetch('/api/log-download', {
+      fetch('/api/log-download', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -61,18 +63,9 @@ export default function FrameworkDownloadModal({ isOpen, onClose, onDownloadSucc
           ...formData,
           userAgent: navigator.userAgent,
         }),
-      });
+      }).catch(err => console.error('Failed to log download:', err));
 
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        const errorMsg = errorData.details
-          ? `${errorData.error}: ${errorData.details}`
-          : errorData.error || 'Failed to log download';
-        throw new Error(errorMsg);
-      }
-
-      const pdfUrl = 'https://raw.githubusercontent.com/elsasecure/GenAI_Assure_Framework/main/downloads/GenAI_Assure_Framework_v1.0.pdf';
-      window.open(pdfUrl, '_blank');
+      window.location.href = pdfUrl;
 
       onDownloadSuccess();
       setFormData({
@@ -84,9 +77,9 @@ export default function FrameworkDownloadModal({ isOpen, onClose, onDownloadSucc
       });
       onClose();
     } catch (err) {
-      console.error('Error logging download:', err);
-      const errorMessage = err instanceof Error ? err.message : 'Failed to process download. Please try again.';
-      setError(errorMessage);
+      console.error('Error processing download:', err);
+      window.location.href = pdfUrl;
+      onClose();
     } finally {
       setIsSubmitting(false);
     }
