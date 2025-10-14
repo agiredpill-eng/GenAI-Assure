@@ -34,7 +34,7 @@ Deno.serve(async (req: Request) => {
       .insert({
         name: formData.name,
         email: formData.email,
-        subject: formData.subject || null,
+        subject: formData.subject || '',
         message: formData.message,
       });
 
