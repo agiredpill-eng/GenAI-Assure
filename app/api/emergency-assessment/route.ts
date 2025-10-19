@@ -102,30 +102,30 @@ export async function POST(request: NextRequest) {
       try {
         console.log('Attempting to send emergency assessment email via Mailjet...');
         const emailBody = `
-          <h2>New Emergency Risk Assessment Submission</h2>
-          <h3>Contact Information</h3>
-          <p><strong>Name:</strong> ${formData.fullName}</p>
-          <p><strong>Email:</strong> ${formData.workEmail}</p>
-          <p><strong>Company:</strong> ${formData.company}</p>
-          <p><strong>Role:</strong> ${formData.roleTitle}</p>
-          <p><strong>Company Size:</strong> ${formData.companySize}</p>
-          ${formData.phone ? `<p><strong>Phone:</strong> ${formData.phone}</p>` : ''}
+<h2>New Emergency Risk Assessment Submission</h2>
+<h3>Contact Information</h3>
+<p><strong>Name:</strong> ${formData.fullName}</p>
+<p><strong>Email:</strong> ${formData.workEmail}</p>
+<p><strong>Company:</strong> ${formData.company}</p>
+<p><strong>Role:</strong> ${formData.roleTitle}</p>
+<p><strong>Company Size:</strong> ${formData.companySize}</p>
+${formData.phone ? `<p><strong>Phone:</strong> ${formData.phone}</p>` : ''}
 
-          <h3>Use Case Information</h3>
-          <p><strong>Primary Use Cases:</strong> ${formData.primaryUseCases?.join(', ') || 'None'}</p>
-          ${formData.useCaseOther ? `<p><strong>Other Use Case:</strong> ${formData.useCaseOther}</p>` : ''}
-          <p><strong>Use Case Owner:</strong> ${formData.topUseCaseOwner}</p>
-          <p><strong>Business Criticality:</strong> ${formData.businessCriticality}</p>
-          <p><strong>Adoption Status:</strong> ${formData.adoptionStatus}</p>
-          <p><strong>Description:</strong> ${formData.useCaseDescription}</p>
+<h3>Use Case Information</h3>
+<p><strong>Primary Use Cases:</strong> ${formData.primaryUseCases?.join(', ') || 'None'}</p>
+${formData.useCaseOther ? `<p><strong>Other Use Case:</strong> ${formData.useCaseOther}</p>` : ''}
+<p><strong>Use Case Owner:</strong> ${formData.topUseCaseOwner}</p>
+<p><strong>Business Criticality:</strong> ${formData.businessCriticality}</p>
+<p><strong>Adoption Status:</strong> ${formData.adoptionStatus}</p>
+<p><strong>Description:</strong> ${formData.useCaseDescription}</p>
 
-          <h3>Biggest Concerns</h3>
-          <p>${formData.biggestConcerns}</p>
+<h3>Biggest Concerns</h3>
+<p>${formData.biggestConcerns}</p>
 
-          <h3>Urgency</h3>
-          <p><strong>Urgency Level:</strong> ${formData.urgency}</p>
-          ${formData.decisionSpeed ? `<p><strong>Decision Speed Required:</strong> ${formData.decisionSpeed}</p>` : ''}
-        `;
+<h3>Urgency</h3>
+<p><strong>Urgency Level:</strong> ${formData.urgency}</p>
+${formData.decisionSpeed ? `<p><strong>Decision Speed Required:</strong> ${formData.decisionSpeed}</p>` : ''}
+`;
 
         const emailResponse = await fetch('https://api.mailjet.com/v3.1/send', {
           method: 'POST',

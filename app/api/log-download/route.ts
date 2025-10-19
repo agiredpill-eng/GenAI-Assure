@@ -69,15 +69,15 @@ export async function POST(request: NextRequest) {
       try {
         console.log('Attempting to send framework download email via Mailjet...');
         const emailBody = `
-          <h2>New Framework Download</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Location:</strong> ${location}</p>
-          <p><strong>Company:</strong> ${company || 'Not provided'}</p>
-          <p><strong>Purpose:</strong> ${purpose}</p>
-          ${userAgent ? `<p><strong>User Agent:</strong> ${userAgent}</p>` : ''}
-          <p><strong>Downloaded at:</strong> ${new Date().toLocaleString()}</p>
-        `;
+<h2>New Framework Download</h2>
+<p><strong>Name:</strong> ${name}</p>
+<p><strong>Email:</strong> ${email}</p>
+<p><strong>Location:</strong> ${location}</p>
+<p><strong>Company:</strong> ${company || 'Not provided'}</p>
+<p><strong>Purpose:</strong> ${purpose}</p>
+${userAgent ? `<p><strong>User Agent:</strong> ${userAgent}</p>` : ''}
+<p><strong>Downloaded at:</strong> ${new Date().toLocaleString()}</p>
+`;
 
         const emailResponse = await fetch('https://api.mailjet.com/v3.1/send', {
           method: 'POST',

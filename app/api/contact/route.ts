@@ -34,7 +34,6 @@ export async function POST(request: NextRequest) {
       console.error('❌ Supabase configuration missing - URL or Anon Key not set');
       // Log security issue but don't fail the request to maintain user experience
     } else {
-
       try {
         const supabase = createClient(supabaseUrl, supabaseAnonKey);
         const insertData = {
@@ -92,13 +91,13 @@ export async function POST(request: NextRequest) {
               Subject: `Contact Form: ${subject || 'No Subject'}`,
               TextPart: `New contact form submission:\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject || 'No Subject'}\n\nMessage:\n${message}`,
               HTMLPart: `
-                <h2>New Contact Form Submission</h2>
-                <p><strong>Name:</strong> ${name}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Subject:</strong> ${subject || 'No Subject'}</p>
-                <h3>Message:</h3>
-                <p>${message.replace(/\n/g, '<br>')}</p>
-              `,
+<h2>New Contact Form Submission</h2>
+<p><strong>Name:</strong> ${name}</p>
+<p><strong>Email:</strong> ${email}</p>
+<p><strong>Subject:</strong> ${subject || 'No Subject'}</p>
+<h3>Message:</h3>
+<p>${message.replace(/\n/g, '<br>')}</p>
+`,
             }],
           }),
         });
