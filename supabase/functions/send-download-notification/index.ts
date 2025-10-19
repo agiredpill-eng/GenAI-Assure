@@ -55,7 +55,7 @@ Deno.serve(async (req: Request) => {
     }
 
     const mailjetApiKey = Deno.env.get('MAILJET_API_KEY');
-    const mailjetSecretKey = Deno.env.get('MAILJET_SECRET_KEY');
+    const mailjetSecretKey = Deno.env.get('MAILJET_API_SECRET') || Deno.env.get('MAILJET_SECRET_KEY');
 
     if (mailjetApiKey && mailjetSecretKey) {
       try {

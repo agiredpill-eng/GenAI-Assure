@@ -148,9 +148,7 @@ export default function FreeAssessmentPage() {
     setSubmitStatus('idle');
 
     try {
-      const apiUrl = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/send-emergency-assessment`;
-
-      const response = await fetch(apiUrl, {
+      const response = await fetch('/api/emergency-assessment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

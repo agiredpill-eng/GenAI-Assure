@@ -48,7 +48,20 @@ Deno.serve(async (req: Request) => {
     }
 
     const mailjetApiKey = Deno.env.get('MAILJET_API_KEY');
-    const mailjetSecretKey = Deno.env.get('MAILJET_SECRET_KEY');
+    const mailjetSecretKey = Deno.env.get('MAILJET_API_SECRET') || Deno.env.get('MAILJET_SECRET_KEY');
+
+    console.log('Checking Mailjet configuration...');
+
+    if (!mailjetApiKey || !mailjetSecretKey) {
+      console.error('Mailjet configuration missing - API Key or Secret Key not found');
+      return new Response(
+        JSON.stringify({ error: 'Email service configuration error' }),
+        {
+          status: 500,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
+      );
+    }
 
     if (mailjetApiKey && mailjetSecretKey) {
       try {
@@ -89,9 +102,25 @@ Deno.serve(async (req: Request) => {
         if (!mailjetResponse.ok) {
           const errorData = await mailjetResponse.text();
           console.error('Mailjet error:', errorData);
+          return new Response(
+            JSON.stringify({ error: 'Failed to send email', details: errorData }),
+            {
+              status: 500,
+              headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+            }
+          );
         }
+        
+        console.log('Email sent successfully');
       } catch (emailError) {
         console.error('Failed to send email:', emailError);
+        return new Response(
+          JSON.stringify({ error: 'Failed to send email', details: emailError.message }),
+          {
+            status: 500,
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          }
+        );
       }
     }
 

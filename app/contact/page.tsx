@@ -58,9 +58,7 @@ export default function ContactPage() {
     setSubmitStatus('idle');
 
     try {
-      const apiUrl = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/send-contact-email`;
-
-      const response = await fetch(apiUrl, {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -69,9 +67,12 @@ export default function ContactPage() {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || 'Failed to send message');
       }
 
+      const result = await response.json();
+      
       setSubmitStatus('success');
       setFormData({
         name: '',
