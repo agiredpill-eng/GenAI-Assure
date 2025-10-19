@@ -24,10 +24,10 @@ export async function POST(request: NextRequest) {
     const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
     
     console.log('Environment check:');
-    console.log('- Supabase URL:', supabaseUrl ? 'Present' : 'Missing');
-    console.log('- Supabase Key:', supabaseAnonKey ? 'Present' : 'Missing');
-    console.log('- Mailjet API Key:', process.env.MAILJET_API_KEY ? 'Present' : 'Missing');
-    console.log('- Mailjet Secret:', process.env.MAILJET_API_SECRET ? 'Present' : 'Missing');
+    console.log('- Supabase URL:', supabaseUrl ? `Present (${supabaseUrl.substring(0, 20)}...)` : 'Missing');
+    console.log('- Supabase Key:', supabaseAnonKey ? `Present (${supabaseAnonKey.substring(0, 20)}...)` : 'Missing');
+    console.log('- Mailjet API Key:', process.env.MAILJET_API_KEY ? `Present (${process.env.MAILJET_API_KEY.substring(0, 8)}...)` : 'Missing');
+    console.log('- Mailjet Secret:', process.env.MAILJET_API_SECRET ? `Present (${process.env.MAILJET_API_SECRET.substring(0, 8)}...)` : 'Missing');
     
     let dbSaved = false;
     if (!supabaseUrl || !supabaseAnonKey) {
