@@ -20,8 +20,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Save to database first
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://ycpvnwgkqqwbiiztuetn.supabase.co';
-    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InljcHZud2drcXF3YmlpenR1ZXRuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAyMTIwNjUsImV4cCI6MjA3NTc4ODA2NX0.md8bmBRIc3c6fRY1tBF7h9cmRCQtyrkaPvjldDHm8nk';
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
     
     console.log('Environment check:');
     console.log('- Supabase URL:', supabaseUrl ? 'Present' : 'Missing');
@@ -30,7 +30,11 @@ export async function POST(request: NextRequest) {
     console.log('- Mailjet Secret:', process.env.MAILJET_API_SECRET ? 'Present' : 'Missing');
     
     let dbSaved = false;
-    if (supabaseUrl && supabaseAnonKey) {
+    if (!supabaseUrl || !supabaseAnonKey) {
+      console.error('❌ Supabase configuration missing - URL or Anon Key not set');
+      // Log security issue but don't fail the request to maintain user experience
+    } else {
+
       try {
         const supabase = createClient(supabaseUrl, supabaseAnonKey);
         const insertData = {
@@ -54,21 +58,19 @@ export async function POST(request: NextRequest) {
       } catch (dbError) {
         console.error('❌ Database save failed:', dbError);
       }
-    } else {
-      console.error('❌ Supabase configuration missing');
-      console.error('URL:', supabaseUrl);
-      console.error('Key:', supabaseAnonKey ? 'Present' : 'Missing');
     }
 
     // Send email via Mailjet
-    const mailjetApiKey = process.env.MAILJET_API_KEY || '08b787a02b3b591bf8cccd77e8f14b33';
-    const mailjetApiSecret = process.env.MAILJET_API_SECRET || '85d82f1a9e4eedeaac723dd11e748651';
+    const mailjetApiKey = process.env.MAILJET_API_KEY;
+    const mailjetApiSecret = process.env.MAILJET_API_SECRET;
     
     console.log('Mailjet API Key available:', !!mailjetApiKey);
     console.log('Mailjet API Secret available:', !!mailjetApiSecret);
 
     let emailSent = false;
-    if (mailjetApiKey && mailjetApiSecret) {
+    if (!mailjetApiKey || !mailjetApiSecret) {
+      console.error('❌ Mailjet API keys not configured properly - missing API key or secret');
+    } else {
       try {
         console.log('Attempting to send email via Mailjet...');
         const emailResponse = await fetch('https://api.mailjet.com/v3.1/send', {
@@ -112,8 +114,6 @@ export async function POST(request: NextRequest) {
       } catch (emailError) {
         console.error('❌ Failed to send email:', emailError);
       }
-    } else {
-      console.error('❌ Mailjet API keys not configured properly');
     }
 
     // Log summary of what happened
