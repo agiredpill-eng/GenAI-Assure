@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 
@@ -40,6 +40,10 @@ export default function Header() {
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
   const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
+  
+  // Add refs for timeout management
+  const solutionsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const resourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,6 +69,47 @@ export default function Header() {
     setMobileSolutionsOpen(false);
     setMobileResourcesOpen(false);
   };
+
+  // Helper functions for delayed menu closing
+  const handleSolutionsMouseEnter = () => {
+    if (solutionsTimeoutRef.current) {
+      clearTimeout(solutionsTimeoutRef.current);
+      solutionsTimeoutRef.current = null;
+    }
+    setSolutionsOpen(true);
+  };
+
+  const handleSolutionsMouseLeave = () => {
+    solutionsTimeoutRef.current = setTimeout(() => {
+      setSolutionsOpen(false);
+    }, 150); // 150ms delay
+  };
+
+  const handleResourcesMouseEnter = () => {
+    if (resourcesTimeoutRef.current) {
+      clearTimeout(resourcesTimeoutRef.current);
+      resourcesTimeoutRef.current = null;
+    }
+    setResourcesOpen(true);
+  };
+
+  const handleResourcesMouseLeave = () => {
+    resourcesTimeoutRef.current = setTimeout(() => {
+      setResourcesOpen(false);
+    }, 150); // 150ms delay
+  };
+
+  // Cleanup timeouts on unmount
+  useEffect(() => {
+    return () => {
+      if (solutionsTimeoutRef.current) {
+        clearTimeout(solutionsTimeoutRef.current);
+      }
+      if (resourcesTimeoutRef.current) {
+        clearTimeout(resourcesTimeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -97,8 +142,8 @@ export default function Header() {
             <div className="hidden lg:flex items-center gap-8">
               <div
                 className="relative"
-                onMouseEnter={() => setSolutionsOpen(true)}
-                onMouseLeave={() => setSolutionsOpen(false)}
+                onMouseEnter={handleSolutionsMouseEnter}
+                onMouseLeave={handleSolutionsMouseLeave}
               >
                 <button
                   className="flex items-center gap-1 px-2 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 transition-colors tracking-wide min-h-[44px]"
@@ -114,6 +159,8 @@ export default function Header() {
                   <div
                     id="solutions-menu"
                     className="absolute left-0 top-full mt-2 w-[800px] bg-white rounded-lg shadow-xl border border-gray-200 p-6 animate-in fade-in slide-in-from-top-2 duration-200"
+                    onMouseEnter={handleSolutionsMouseEnter}
+                    onMouseLeave={handleSolutionsMouseLeave}
                   >
                     <div className="grid grid-cols-3 gap-8">
                       {Object.entries(solutionsMenu).map(([category, items]) => (
@@ -150,8 +197,8 @@ export default function Header() {
 
               <div
                 className="relative"
-                onMouseEnter={() => setResourcesOpen(true)}
-                onMouseLeave={() => setResourcesOpen(false)}
+                onMouseEnter={handleResourcesMouseEnter}
+                onMouseLeave={handleResourcesMouseLeave}
               >
                 <button
                   className="flex items-center gap-1 px-2 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 transition-colors tracking-wide min-h-[44px]"
@@ -167,6 +214,8 @@ export default function Header() {
                   <div
                     id="resources-menu"
                     className="absolute left-0 top-full mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 p-4 animate-in fade-in slide-in-from-top-2 duration-200"
+                    onMouseEnter={handleResourcesMouseEnter}
+                    onMouseLeave={handleResourcesMouseLeave}
                   >
                     <ul className="space-y-1">
                       {resourcesMenu.map((item) => (

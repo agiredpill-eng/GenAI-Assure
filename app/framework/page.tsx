@@ -158,6 +158,20 @@ export default function FrameworkPage() {
               <p className="text-gray-700 leading-relaxed">
                 Scroll to read the full framework from start to finish. You can also open the PDF in a new tab from your browser controls if preferred.
               </p>
+              
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mt-4 rounded-r-lg">
+                <p className="text-blue-800 text-sm">
+                  You're viewing a tabbed preview of the framework—not the full document.
+                  <br />
+                  Download the complete PDF to read the entire framework{' '}
+                  <button
+                    onClick={handleDownload}
+                    className="text-blue-600 underline hover:text-blue-800 font-semibold"
+                  >
+                    here
+                  </button>.
+                </p>
+              </div>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
