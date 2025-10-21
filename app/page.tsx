@@ -128,7 +128,7 @@ export default function Home() {
                 <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl bg-gray-900 group-hover:shadow-3xl transition-all duration-300">
                   <iframe
                     className="absolute inset-0 w-full h-full"
-                    src="https://www.youtube.com/embed/_EdCkza4vTQ?rel=0&modestbranding=1"
+                    src="https://www.youtube.com/embed/7XDeGy7P07Y?rel=0&modestbranding=1"
                     title="GenAI Assure Framework Overview"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
