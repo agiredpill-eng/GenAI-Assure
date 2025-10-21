@@ -120,7 +120,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center">
               <a
-                href="https://youtu.be/_EdCkza4vTQ"
+                href="https://youtu.be/7XDeGy7P07Y"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group block w-full max-w-md"
