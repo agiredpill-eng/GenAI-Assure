@@ -148,7 +148,7 @@ export default function SolutionPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal bg-white hover:bg-gray-100 rounded-lg transition-all shadow-lg hover:shadow-xl"
               >
-                Get Free Emergency Assessment
+                Get My Free Risk Assessment
               </a>
               <a
                 href="/see-the-risks"
@@ -156,7 +156,7 @@ export default function SolutionPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-white/20 hover:bg-white/30 rounded-lg transition-all border-2 border-white backdrop-blur-sm"
               >
-                See the Risks Now
+                See My AI Deployer Exposures
               </a>
             </div>
           </div>

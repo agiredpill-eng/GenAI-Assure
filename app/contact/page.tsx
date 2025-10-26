@@ -261,7 +261,7 @@ export default function ContactPage() {
                 href="/free-assessment"
                 className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-md hover:shadow-lg"
               >
-                Get Free Emergency Assessment
+                Get My Free Risk Assessment
               </a>
             </div>
           </div>

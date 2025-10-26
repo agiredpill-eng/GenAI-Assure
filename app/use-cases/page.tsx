@@ -283,7 +283,7 @@ export default function UseCasesPage() {
               href="/free-assessment"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              Get Free Emergency Assessment
+              Get My Free Risk Assessment
             </a>
             <a
               href="/contact"

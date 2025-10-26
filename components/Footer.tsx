@@ -50,7 +50,7 @@ export default function Footer() {
               href="/see-the-risks"
               className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all shadow-sm hover:shadow-md"
             >
-              See the Risks Now
+              Get My Free Risk Assessment
             </Link>
           </div>
 

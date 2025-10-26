@@ -27,18 +27,19 @@ export default function Home() {
             <div className="space-y-5">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-200 rounded-full text-sm font-semibold text-red-800">
                 <AlertTriangle className="h-4 w-4" />
-                Regulatory Compliance Alert
+                🚨 Your AI Tools Now Sit Under €20M+ GDPR and EU AI Act Penalty Regimes
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Don't Let Unmanaged AI Become Your Next{' '}
-                <span className="text-red-600">Regulatory Crisis</span>
+                Every ChatGPT prompt. Every n8n workflow. Every Copilot suggestion.
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                Your AI use—from Make/n8n/Zapier automations to copilots and custom agents—can bypass enterprise guardrails, expose sensitive data, and create gaps that lead to non-compliance with{' '}
-                <strong className="font-semibold text-gray-900">GDPR/UK GDPR</strong> and{' '}
-                <strong className="font-semibold text-gray-900">EU AI Act deployer obligations (Article 26)</strong>.
+                If it's not governed, it's discoverable in audit—and you carry the liability as the deployer.
+              </p>
+
+              <p className="text-lg text-gray-600 leading-relaxed">
+                We make your AI estate audit-ready in 90 days. Controls, evidence packs, regulator-aligned reporting.
               </p>
 
               <div className="bg-gradient-to-br from-teal-50 to-teal-100 border-2 border-teal-300 rounded-xl p-5 shadow-md">
@@ -66,7 +67,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
-                  Get Free Emergency Assessment
+                  Get My Free Risk Assessment
                 </a>
                 <a
                   href="/see-the-risks"
@@ -74,7 +75,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal bg-white hover:bg-gray-50 rounded-lg transition-all border-2 border-teal shadow-sm hover:shadow-md"
                 >
-                  See the Risks Now
+                  See My AI Deployer Exposures
                 </a>
               </div>
             </div>
@@ -354,7 +355,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              Get Free Emergency Assessment
+              Get My Free Risk Assessment
             </a>
             <a
               href="/see-the-risks"
@@ -362,7 +363,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal bg-white hover:bg-gray-50 rounded-lg transition-all border-2 border-teal shadow-sm hover:shadow-md"
             >
-              See the Risks Now
+              See My AI Deployer Exposures
             </a>
           </div>
         </div>
@@ -538,7 +539,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              Get Free Emergency Assessment
+              Get My Free Risk Assessment
             </a>
             <a
               href="/see-the-risks"
@@ -546,7 +547,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal bg-white hover:bg-gray-50 rounded-lg transition-all border-2 border-teal shadow-sm hover:shadow-md"
             >
-              See the Risks Now
+              See My AI Deployer Exposures
             </a>
           </div>
         </div>
