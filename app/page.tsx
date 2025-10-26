@@ -1,4 +1,4 @@
-import { TriangleAlert as AlertTriangle, Shield, FileCheck, Search, Lock, CircleCheck as CheckCircle2, ClipboardList, ShieldCheck, Eye, Scale, ShieldAlert, DollarSign, Rocket } from 'lucide-react';
+import { TriangleAlert as AlertTriangle, FileCheck, Search, Lock, CircleCheck as CheckCircle2, ClipboardList, ShieldCheck, Eye, Scale, ShieldAlert, DollarSign, Rocket } from 'lucide-react';
 import FrameworkWheel from '@/components/FrameworkWheel';
 import { Metadata } from 'next';
 
@@ -23,7 +23,7 @@ export default function Home() {
         }}></div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+          <div className="max-w-4xl mx-auto">
             <div className="space-y-5">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-200 rounded-full text-sm font-semibold text-red-800">
                 <AlertTriangle className="h-4 w-4" />
@@ -42,24 +42,6 @@ export default function Home() {
                 We make your AI estate audit-ready in 90 days. Controls, evidence packs, regulator-aligned reporting.
               </p>
 
-              <div className="bg-gradient-to-br from-teal-50 to-teal-100 border-2 border-teal-300 rounded-xl p-5 shadow-md">
-                <div className="flex items-start gap-3">
-                  <Shield className="h-6 w-6 text-teal-700 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-bold text-gray-900 text-lg mb-2">GenAI Assure</h3>
-                    <p className="text-gray-800 leading-relaxed text-base">
-                      GenAI Assure helps secure your AI deployment estate with enterprise-grade governance for AI tool deployers. We implement the controls auditors expect and map to regulatory duties: single sign-on and MFA, AI-aware DLP (prompt/output redaction), structured usage logging to your SIEM, human-oversight procedures, complete audit trails, transparency labels and documentation, DPIA/FRIA frameworks, and thorough vendor due-diligence.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 pt-3 mt-3 border-t border-teal-300">
-                  <FileCheck className="h-5 w-5 text-teal-700" />
-                  <p className="font-semibold text-gray-900">
-                    Stop hoping your AI deployments stay compliant. Prove it with an audit-ready Evidence Pack.
-                  </p>
-                </div>
-              </div>
-
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <a
                   href="/free-assessment"
@@ -77,19 +59,6 @@ export default function Home() {
                 >
                   See My AI Deployer Exposures
                 </a>
-              </div>
-            </div>
-
-            <div className="relative lg:h-[600px] h-[400px]">
-              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-gray-900">
-                <iframe
-                  className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/7XDeGy7P07Y?rel=0&modestbranding=1"
-                  title="GenAI Assure Overview"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                ></iframe>
               </div>
             </div>
           </div>

@@ -247,12 +247,14 @@ export default function Header() {
                 Contact
               </Link>
 
-              <Link
-                href="/see-the-risks"
+              <a
+                href="https://elsaai.co.uk/free-assessment"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="ml-auto px-6 py-2.5 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 min-h-[44px] flex items-center"
               >
                 Get My Free Risk Assessment
-              </Link>
+              </a>
             </div>
 
             <button
@@ -269,13 +271,15 @@ export default function Header() {
           {mobileMenuOpen && (
             <div className="lg:hidden fixed inset-0 top-16 bg-white overflow-y-auto pb-6">
               <div className="px-4 py-6 space-y-4">
-                <Link
-                  href="/see-the-risks"
+                <a
+                  href="https://elsaai.co.uk/free-assessment"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full px-6 py-3 text-center text-base font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all shadow-sm min-h-[44px]"
                   onClick={closeMobileMenu}
                 >
                   Get My Free Risk Assessment
-                </Link>
+                </a>
 
                 <div className="border-t border-gray-200 pt-4">
                   <button
