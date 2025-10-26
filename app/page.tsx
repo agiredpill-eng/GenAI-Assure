@@ -1,4 +1,4 @@
-import { TriangleAlert as AlertTriangle, FileCheck, Search, Lock, CircleCheck as CheckCircle2, ClipboardList, ShieldCheck, Eye, Scale, ShieldAlert, DollarSign, Rocket } from 'lucide-react';
+import { TriangleAlert as AlertTriangle, Shield, FileCheck, Search, Lock, CircleCheck as CheckCircle2, ClipboardList, ShieldCheck, Eye, Scale, ShieldAlert, DollarSign, Rocket } from 'lucide-react';
 import FrameworkWheel from '@/components/FrameworkWheel';
 import { Metadata } from 'next';
 
