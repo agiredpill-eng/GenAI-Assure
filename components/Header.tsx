@@ -130,7 +130,7 @@ export default function Header() {
           <div className="flex h-16 items-center justify-between">
             <Link href="/" className="flex items-center hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all" onClick={closeMobileMenu}>
               <Image
-                src="/ELSAAI_Header_Logo.JPG"
+                src="/image.png"
                 alt="ELSA AI"
                 width={120}
                 height={40}
