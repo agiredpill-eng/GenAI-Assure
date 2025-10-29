@@ -32,13 +32,19 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0F172A] border-t border-[#1E293B] mt-auto">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-black border-t borderElsa-card mt-auto relative">
+      <div className="absolute inset-0 opacity-10" style={{
+        backgroundImage: 'radial-gradient(circle at top, rgba(185,255,44,0.15) 0%, transparent 70%)',
+      }}></div>
+      <div className="absolute inset-0 opacity-50" style={{
+        boxShadow: '0 -10px 40px rgba(185,255,44,0.05)',
+      }}></div>
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         {/* Row 1: Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Column 1: Brand / Value Prop / CTA */}
           <div>
-            <Link href="/" className="inline-block mb-4">
+            <Link href="/" className="inline-block mb-4 hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all">
               <Image
                 src="/image.png"
                 alt="ELSA AI"
@@ -47,14 +53,14 @@ export default function Footer() {
                 className="h-12 w-auto"
               />
             </Link>
-            <p className="text-sm text-[#94A3B8] mb-6 max-w-xs">
+            <p className="text-sm text-textElsa-secondary mb-6 max-w-xs">
               Ethical · Legal · Societal · Accountable AI Operations
             </p>
             <a
               href="https://elsaai.co.uk/free-assessment"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all shadow-sm hover:shadow-md"
+              className="inline-flex items-center justify-center px-5 py-3 text-sm font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
             >
               Get Your Readiness Assessment
             </a>
@@ -62,13 +68,13 @@ export default function Footer() {
 
           {/* Column 2: Solutions */}
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4">Solutions</h3>
+            <h3 className="text-sm font-semibold text-textElsa-primary mb-4">Solutions</h3>
             <ul className="space-y-3">
               {footerNav.solutions.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[#94A3B8] hover:text-[#0891B2] transition-colors"
+                    className="text-sm text-textElsa-secondary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all"
                   >
                     {link.name}
                   </Link>
@@ -79,13 +85,13 @@ export default function Footer() {
 
           {/* Column 3: Resources / Company */}
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4">Resources</h3>
+            <h3 className="text-sm font-semibold text-textElsa-primary mb-4">Resources</h3>
             <ul className="space-y-3">
               {footerNav.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[#94A3B8] hover:text-[#0891B2] transition-colors"
+                    className="text-sm text-textElsa-secondary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all"
                   >
                     {link.name}
                   </Link>
@@ -93,13 +99,13 @@ export default function Footer() {
               ))}
             </ul>
 
-            <h3 className="text-sm font-semibold text-white mb-4 mt-8">Company</h3>
+            <h3 className="text-sm font-semibold text-textElsa-primary mb-4 mt-8">Company</h3>
             <ul className="space-y-3">
               {footerNav.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[#94A3B8] hover:text-[#0891B2] transition-colors"
+                    className="text-sm text-textElsa-secondary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all"
                   >
                     {link.name}
                   </Link>
@@ -110,13 +116,13 @@ export default function Footer() {
 
           {/* Column 4: Legal & Company Info */}
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4">Legal & Company Info</h3>
+            <h3 className="text-sm font-semibold text-textElsa-primary mb-4">Legal & Company Info</h3>
             <ul className="space-y-3">
               {footerNav.legal.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[#94A3B8] hover:text-[#0891B2] transition-colors"
+                    className="text-sm text-textElsa-secondary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all"
                   >
                     {link.name}
                   </Link>
@@ -125,7 +131,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={openPreferencesModal}
-                  className="text-sm text-[#94A3B8] hover:text-[#0891B2] transition-colors flex items-center gap-1"
+                  className="text-sm text-textElsa-secondary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all flex items-center gap-1"
                   aria-label="Manage cookie preferences"
                 >
                   <Settings className="h-3 w-3" aria-hidden="true" />
@@ -136,8 +142,8 @@ export default function Footer() {
 
             <div className="mt-6 space-y-3">
               <div>
-                <p className="text-sm font-semibold text-white mb-2">Registered office</p>
-                <p className="text-sm text-[#94A3B8]">
+                <p className="text-sm font-semibold text-textElsa-primary mb-2">Registered office</p>
+                <p className="text-sm text-textElsa-secondary">
                   ELSA AI Ltd<br />
                   124 City Road<br />
                   London, England, EC1V 2NX
@@ -145,18 +151,18 @@ export default function Footer() {
               </div>
               
               <div>
-                <p className="text-sm font-semibold text-white mb-2">Contact</p>
+                <p className="text-sm font-semibold text-textElsa-primary mb-2">Contact</p>
                 <div className="space-y-2">
                   <a
                     href="tel:+447715995735"
-                    className="text-sm text-[#94A3B8] hover:text-[#0891B2] transition-colors flex items-center gap-1"
+                    className="text-sm text-textElsa-secondary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all flex items-center gap-1"
                   >
                     <Phone className="h-3 w-3" />
                     +44 771 5995 735
                   </a>
                   <a
                     href="mailto:contact@elsaai.co.uk"
-                    className="text-sm text-[#94A3B8] hover:text-[#0891B2] transition-colors flex items-center gap-1"
+                    className="text-sm text-textElsa-secondary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all flex items-center gap-1"
                   >
                     <Mail className="h-3 w-3" />
                     contact@elsaai.co.uk
@@ -168,8 +174,8 @@ export default function Footer() {
         </div>
 
         {/* Row 2: Bottom Bar */}
-        <hr className="border-[#1E293B] mb-6" />
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#94A3B8]">
+        <hr className="borderElsa-card mb-6" />
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-textElsa-secondary">
           <p className="text-center sm:text-left">
             United Kingdom · Serving Organisations Globally
           </p>

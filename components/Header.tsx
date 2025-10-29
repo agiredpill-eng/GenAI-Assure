@@ -113,22 +113,22 @@ export default function Header() {
 
   return (
     <>
-      <div className="hidden md:block bg-gray-900 text-white py-2">
+      <div className="hidden md:block bg-body border-b borderElsa-card py-2">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-xs text-center tracking-wide">
+          <p className="text-xs text-center tracking-wide text-textElsa-secondary">
             Ethical · Legal · Societal · Accountable AI Operations
           </p>
         </div>
       </div>
 
       <header
-        className={`sticky top-0 z-50 bg-white transition-all duration-300 ${
-          scrolled ? 'shadow-md' : 'border-b border-gray-200'
+        className={`sticky top-0 z-[100] bg-cardElsa-dark transition-all duration-300 border-b ${
+          scrolled ? 'shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(185,255,44,0.3)]' : 'borderElsa-card'
         }`}
       >
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center" onClick={closeMobileMenu}>
+            <Link href="/" className="flex items-center hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all" onClick={closeMobileMenu}>
               <Image
                 src="/ELSAAI_Header_Logo.JPG"
                 alt="ELSA AI"
@@ -146,7 +146,7 @@ export default function Header() {
                 onMouseLeave={handleSolutionsMouseLeave}
               >
                 <button
-                  className="flex items-center gap-1 px-2 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 transition-colors tracking-wide min-h-[44px]"
+                  className="flex items-center gap-1 px-2 py-2 text-sm font-medium text-textElsa-primary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all tracking-wide min-h-[44px]"
                   aria-expanded={solutionsOpen}
                   aria-controls="solutions-menu"
                   aria-haspopup="true"
@@ -158,14 +158,14 @@ export default function Header() {
                 {solutionsOpen && (
                   <div
                     id="solutions-menu"
-                    className="absolute left-0 top-full mt-2 w-[800px] bg-white rounded-lg shadow-xl border border-gray-200 p-6 animate-in fade-in slide-in-from-top-2 duration-200"
+                    className="absolute left-0 top-full mt-2 w-[800px] bg-cardElsa-dark rounded-lg shadow-[0_16px_40px_rgba(0,0,0,0.6)] border borderElsa-card p-6 animate-in fade-in slide-in-from-top-2 duration-200"
                     onMouseEnter={handleSolutionsMouseEnter}
                     onMouseLeave={handleSolutionsMouseLeave}
                   >
                     <div className="grid grid-cols-3 gap-8">
                       {Object.entries(solutionsMenu).map(([category, items]) => (
                         <div key={category}>
-                          <h3 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-3">
+                          <h3 className="text-xs font-bold text-textElsa-primary uppercase tracking-wider mb-3">
                             {category}
                           </h3>
                           <ul className="space-y-2">
@@ -173,7 +173,7 @@ export default function Header() {
                               <li key={item.name}>
                                 <Link
                                   href={item.href}
-                                  className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-md transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600"
+                                  className="block px-3 py-2 text-sm text-textElsa-secondary hover:text-[#B9FF2C] hover:bg-cardElsa-dark rounded-md transition-all hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#B9FF2C] border border-transparent hover:border-[#B9FF2C]/30"
                                 >
                                   {item.name}
                                 </Link>
@@ -183,10 +183,10 @@ export default function Header() {
                         </div>
                       ))}
                     </div>
-                    <div className="mt-6 pt-6 border-t border-gray-200">
+                    <div className="mt-6 pt-6 border-t borderElsa-card">
                       <Link
                         href="/use-cases"
-                        className="inline-flex items-center text-sm font-semibold text-teal-600 hover:text-teal-700 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600 rounded px-2 py-1"
+                        className="inline-flex items-center text-sm font-semibold text-[#B9FF2C] hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#B9FF2C] rounded px-2 py-1"
                       >
                         View All Solutions →
                       </Link>
@@ -201,7 +201,7 @@ export default function Header() {
                 onMouseLeave={handleResourcesMouseLeave}
               >
                 <button
-                  className="flex items-center gap-1 px-2 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 transition-colors tracking-wide min-h-[44px]"
+                  className="flex items-center gap-1 px-2 py-2 text-sm font-medium text-textElsa-primary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all tracking-wide min-h-[44px]"
                   aria-expanded={resourcesOpen}
                   aria-controls="resources-menu"
                   aria-haspopup="true"
@@ -213,7 +213,7 @@ export default function Header() {
                 {resourcesOpen && (
                   <div
                     id="resources-menu"
-                    className="absolute left-0 top-full mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 p-4 animate-in fade-in slide-in-from-top-2 duration-200"
+                    className="absolute left-0 top-full mt-2 w-56 bg-cardElsa-dark rounded-lg shadow-[0_16px_40px_rgba(0,0,0,0.6)] border borderElsa-card p-4 animate-in fade-in slide-in-from-top-2 duration-200"
                     onMouseEnter={handleResourcesMouseEnter}
                     onMouseLeave={handleResourcesMouseLeave}
                   >
@@ -222,7 +222,7 @@ export default function Header() {
                         <li key={item.name}>
                           <Link
                             href={item.href}
-                            className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-md transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600"
+                            className="block px-3 py-2 text-sm text-textElsa-secondary hover:text-[#B9FF2C] hover:bg-cardElsa-dark rounded-md transition-all hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#B9FF2C] border border-transparent hover:border-[#B9FF2C]/30"
                           >
                             {item.name}
                           </Link>
@@ -235,14 +235,14 @@ export default function Header() {
 
               <Link
                 href="/about"
-                className="px-2 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 transition-colors tracking-wide min-h-[44px] flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600 rounded"
+                className="px-2 py-2 text-sm font-medium text-textElsa-primary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all tracking-wide min-h-[44px] flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#B9FF2C] rounded"
               >
                 About
               </Link>
 
               <Link
                 href="/contact"
-                className="px-2 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 transition-colors tracking-wide min-h-[44px] flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600 rounded"
+                className="px-2 py-2 text-sm font-medium text-textElsa-primary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all tracking-wide min-h-[44px] flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#B9FF2C] rounded"
               >
                 Contact
               </Link>
@@ -251,7 +251,7 @@ export default function Header() {
                 href="https://elsaai.co.uk/free-assessment"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-auto px-6 py-2.5 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 min-h-[44px] flex items-center"
+                className="ml-auto px-5 py-2.5 text-sm font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#B9FF2C] min-h-[44px] flex items-center hover:bg-[#B9FF2C]/10"
               >
                 Get Your Readiness Assessment
               </a>
@@ -259,7 +259,7 @@ export default function Header() {
 
             <button
               type="button"
-              className="lg:hidden rounded-md p-2 text-gray-700 hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600 min-h-[44px] min-w-[44px]"
+              className="lg:hidden rounded-md p-2 text-textElsa-primary hover:text-[#B9FF2C] hover:bg-cardElsa-dark hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#B9FF2C] min-h-[44px] min-w-[44px] transition-all"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-expanded={mobileMenuOpen}
               aria-label="Toggle menu"
@@ -269,22 +269,22 @@ export default function Header() {
           </div>
 
           {mobileMenuOpen && (
-            <div className="lg:hidden fixed inset-0 top-16 bg-white overflow-y-auto pb-6">
+            <div className="lg:hidden fixed inset-0 top-16 bg-body overflow-y-auto pb-6">
               <div className="px-4 py-6 space-y-4">
                 <a
                   href="https://elsaai.co.uk/free-assessment"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full px-6 py-3 text-center text-base font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all shadow-sm min-h-[44px]"
+                  className="block w-full px-6 py-3 text-center text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] min-h-[44px] hover:bg-[#B9FF2C]/10"
                   onClick={closeMobileMenu}
                 >
                   Get Your Readiness Assessment
                 </a>
 
-                <div className="border-t border-gray-200 pt-4">
+                <div className="border-t borderElsa-card pt-4">
                   <button
                     onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
-                    className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-lg transition-colors min-h-[44px]"
+                    className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-textElsa-primary hover:text-[#B9FF2C] hover:bg-cardElsa-dark hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] rounded-lg transition-all min-h-[44px]"
                     aria-expanded={mobileSolutionsOpen}
                   >
                     Solutions
@@ -295,7 +295,7 @@ export default function Header() {
                     <div className="mt-2 pl-4 space-y-4">
                       {Object.entries(solutionsMenu).map(([category, items]) => (
                         <div key={category}>
-                          <h3 className="text-xs font-bold text-gray-600 uppercase tracking-wider mb-2 px-4">
+                          <h3 className="text-xs font-bold text-textElsa-secondary uppercase tracking-wider mb-2 px-4">
                             {category}
                           </h3>
                           <ul className="space-y-1">
@@ -303,7 +303,7 @@ export default function Header() {
                               <li key={item.name}>
                                 <Link
                                   href={item.href}
-                                  className="block px-4 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-md transition-colors min-h-[44px] flex items-center"
+                                  className="block px-4 py-2 text-sm text-textElsa-secondary hover:text-[#B9FF2C] hover:bg-cardElsa-dark hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] rounded-md transition-all min-h-[44px] flex items-center"
                                   onClick={closeMobileMenu}
                                 >
                                   {item.name}
@@ -315,7 +315,7 @@ export default function Header() {
                       ))}
                       <Link
                         href="/use-cases"
-                        className="block px-4 py-2 text-sm font-semibold text-teal-600 hover:text-teal-700 transition-colors min-h-[44px] flex items-center"
+                        className="block px-4 py-2 text-sm font-semibold text-[#B9FF2C] hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all min-h-[44px] flex items-center"
                         onClick={closeMobileMenu}
                       >
                         View All Solutions →
@@ -327,7 +327,7 @@ export default function Header() {
                 <div>
                   <button
                     onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)}
-                    className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-lg transition-colors min-h-[44px]"
+                    className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-textElsa-primary hover:text-[#B9FF2C] hover:bg-cardElsa-dark hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] rounded-lg transition-all min-h-[44px]"
                     aria-expanded={mobileResourcesOpen}
                   >
                     Resources
@@ -340,7 +340,7 @@ export default function Header() {
                         <li key={item.name}>
                           <Link
                             href={item.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-md transition-colors min-h-[44px] flex items-center"
+                            className="block px-4 py-2 text-sm text-textElsa-secondary hover:text-[#B9FF2C] hover:bg-cardElsa-dark hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] rounded-md transition-all min-h-[44px] flex items-center"
                             onClick={closeMobileMenu}
                           >
                             {item.name}
@@ -353,7 +353,7 @@ export default function Header() {
 
                 <Link
                   href="/about"
-                  className="block px-4 py-3 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-lg transition-colors min-h-[44px]"
+                  className="block px-4 py-3 text-base font-medium text-textElsa-primary hover:text-[#B9FF2C] hover:bg-cardElsa-dark hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] rounded-lg transition-all min-h-[44px]"
                   onClick={closeMobileMenu}
                 >
                   About
@@ -361,7 +361,7 @@ export default function Header() {
 
                 <Link
                   href="/contact"
-                  className="block px-4 py-3 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-lg transition-colors min-h-[44px]"
+                  className="block px-4 py-3 text-base font-medium text-textElsa-primary hover:text-[#B9FF2C] hover:bg-cardElsa-dark hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] rounded-lg transition-all min-h-[44px]"
                   onClick={closeMobileMenu}
                 >
                   Contact

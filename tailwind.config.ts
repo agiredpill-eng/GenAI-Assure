@@ -15,13 +15,39 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        xs: '6px',
+        sm: '8px',
+        md: '12px',
+        lg: '16px',
+        xl: '20px',
+        'pill-band': '16px',
+        circular: '9999px',
       },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        // ELSA AI Design System Colors
+        body: {
+          DEFAULT: '#0B1C16',
+        },
+        cardElsa: {
+          dark: '#0F241C',
+          light: '#EFFFF0',
+        },
+        accent: {
+          primary: '#5EFAC3', // Mint
+        },
+        emerald: {
+          DEFAULT: '#1C8A63',
+        },
+        textElsa: {
+          primary: '#FFFFFF',
+          secondary: '#B8C5BE', // Improved contrast from #A7B4AC
+        },
+        borderElsa: {
+          card: 'rgba(38,77,59,0.6)',
+          focus: '#5EFAC3',
+        },
         cyan: {
           DEFAULT: '#0891B2',
           50: '#ECFEFF',

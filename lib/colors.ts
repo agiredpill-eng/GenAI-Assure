@@ -1,35 +1,47 @@
+// ELSA AI Design System Colors
 export const colors = {
-  primary: {
-    main: '#0891B2',
-    dark: '#0E7490',
-    light: '#06B6D4',
+  // Design System Colors
+  body: {
+    bg: '#0B1C16',
+  },
+  sectionGradient: {
+    start: '#1C8A63',
+    end: '#000000',
+  },
+  card: {
+    dark: '#0F241C',
+    light: '#EFFFF0',
   },
   accent: {
-    purple: '#7C3AED',
-    purpleDark: '#6D28D9',
-    indigo: '#4F46E5',
+    primary: '#5EFAC3', // Mint
+  },
+  emerald: '#1C8A63',
+  text: {
+    primary: '#FFFFFF',
+    secondary: '#B8C5BE', // Improved contrast for better readability
+  },
+  border: {
+    card: 'rgba(38,77,59,0.6)',
+    focus: '#5EFAC3',
+  },
+  overlay: {
+    glowMint: 'rgba(94,250,195,0.4)',
+    glowEmerald: 'rgba(28,138,99,0.25)',
+  },
+  // Legacy colors for compatibility
+  primary: {
+    main: '#5EFAC3',
+    dark: '#1C8A63',
+    light: '#5EFAC3',
   },
   neutral: {
-    background: '#FFFFFF',
-    surface: '#F8FAFC',
-    surfaceDark: '#F1F5F9',
-    border: '#E2E8F0',
-    textPrimary: '#0F172A',
-    textSecondary: '#475569',
-    textMuted: '#64748B',
-  },
-  status: {
-    success: '#059669',
-    warning: '#D97706',
-    critical: '#DC2626',
-    info: '#2563EB',
-  },
-  framework: {
-    security: '#059669',
-    governance: '#2563EB',
-    ethical: '#7C3AED',
-    accountable: '#DC2626',
-    trust: '#84CC16',
+    background: '#0B1C16',
+    surface: '#0F241C',
+    surfaceDark: '#0B1C16',
+    border: 'rgba(38,77,59,0.6)',
+    textPrimary: '#FFFFFF',
+    textSecondary: '#A7B4AC',
+    textMuted: '#A7B4AC',
   },
 };
 
