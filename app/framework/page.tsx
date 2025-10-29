@@ -946,10 +946,12 @@ manifest_sha256: "<hash>"`}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="/free-assessment"
+              href="https://elsaai.co.uk/free-assessment"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal-600 bg-white hover:bg-gray-50 rounded-lg transition-all shadow-lg hover:shadow-xl"
             >
-              Get Free Assessment
+              Get Your Readiness Assessment
             </a>
             <a
               href="/contact"

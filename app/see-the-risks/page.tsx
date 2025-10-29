@@ -857,12 +857,14 @@ export default function SeeTheRisksPage() {
             Our team can help you assess your current AI risk exposure and develop a comprehensive mitigation strategy tailored to your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              onClick={() => (window.location.href = '/free-assessment')}
-              className="bg-teal-600 hover:bg-teal-700 text-lg px-8 py-6"
+            <a
+              href="https://elsaai.co.uk/free-assessment"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white text-lg px-8 py-6 rounded-md transition-colors"
             >
-              Get Free Risk Assessment
-            </Button>
+              Get Your Readiness Assessment
+            </a>
             <Button
               onClick={() => (window.location.href = '/contact')}
               variant="outline"

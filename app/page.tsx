@@ -40,7 +40,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
-                  Get Your Readiness Assessment—Free
+                  Get Your Readiness Assessment
                 </a>
                 <a
                   href="/see-the-risks"
@@ -335,7 +335,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              Get Your Readiness Assessment—Free
+              Get Your Readiness Assessment
             </a>
             <a
               href="/see-the-risks"
@@ -493,7 +493,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              Get Your Readiness Assessment—Free
+              Get Your Readiness Assessment
             </a>
             <a
               href="/see-the-risks"

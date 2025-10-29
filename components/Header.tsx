@@ -253,7 +253,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="ml-auto px-6 py-2.5 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 min-h-[44px] flex items-center"
               >
-                Get Your Readiness Assessment—Free
+                Get Your Readiness Assessment
               </a>
             </div>
 
@@ -278,7 +278,7 @@ export default function Header() {
                   className="block w-full px-6 py-3 text-center text-base font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all shadow-sm min-h-[44px]"
                   onClick={closeMobileMenu}
                 >
-                  Get Your Readiness Assessment—Free
+                  Get Your Readiness Assessment
                 </a>
 
                 <div className="border-t border-gray-200 pt-4">

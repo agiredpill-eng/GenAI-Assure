@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useCookieConsent } from '@/lib/cookie-consent';
-import { Settings } from 'lucide-react';
+import { Settings, Phone, Mail } from 'lucide-react';
 
 const footerNav = {
   solutions: [
@@ -15,6 +15,7 @@ const footerNav = {
   resources: [
     { name: 'Framework (PDF)', href: '/framework' },
     { name: 'Articles & Guides', href: '/resources' },
+    { name: 'FAQ', href: '/faq' },
   ],
   company: [
     { name: 'About', href: '/about' },
@@ -28,12 +29,15 @@ const footerNav = {
 
 export default function Footer() {
   const { openPreferencesModal } = useCookieConsent();
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-[#0F172A] border-t border-[#1E293B] mt-auto">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-          <div className="lg:col-span-2">
+        {/* Row 1: Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {/* Column 1: Brand / Value Prop / CTA */}
+          <div>
             <Link href="/" className="inline-block mb-4">
               <Image
                 src="/image.png"
@@ -46,14 +50,17 @@ export default function Footer() {
             <p className="text-sm text-[#94A3B8] mb-6 max-w-xs">
               Ethical · Legal · Societal · Accountable AI Operations
             </p>
-            <Link
-              href="/see-the-risks"
+            <a
+              href="https://elsaai.co.uk/free-assessment"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all shadow-sm hover:shadow-md"
             >
-              Get My Free Risk Assessment
-            </Link>
+              Get Your Readiness Assessment
+            </a>
           </div>
 
+          {/* Column 2: Solutions */}
           <div>
             <h3 className="text-sm font-semibold text-white mb-4">Solutions</h3>
             <ul className="space-y-3">
@@ -70,6 +77,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Column 3: Resources / Company */}
           <div>
             <h3 className="text-sm font-semibold text-white mb-4">Resources</h3>
             <ul className="space-y-3">
@@ -100,8 +108,9 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Column 4: Legal & Company Info */}
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4">Legal</h3>
+            <h3 className="text-sm font-semibold text-white mb-4">Legal & Company Info</h3>
             <ul className="space-y-3">
               {footerNav.legal.map((link) => (
                 <li key={link.name}>
@@ -124,22 +133,47 @@ export default function Footer() {
                 </button>
               </li>
             </ul>
+
+            <div className="mt-6 space-y-3">
+              <div>
+                <p className="text-sm font-semibold text-white mb-2">Registered office</p>
+                <p className="text-sm text-[#94A3B8]">
+                  ELSA AI Ltd<br />
+                  124 City Road<br />
+                  London, England, EC1V 2NX
+                </p>
+              </div>
+              
+              <div>
+                <p className="text-sm font-semibold text-white mb-2">Contact</p>
+                <div className="space-y-2">
+                  <a
+                    href="tel:+447715995735"
+                    className="text-sm text-[#94A3B8] hover:text-[#0891B2] transition-colors flex items-center gap-1"
+                  >
+                    <Phone className="h-3 w-3" />
+                    +44 771 5995 735
+                  </a>
+                  <a
+                    href="mailto:contact@elsaai.co.uk"
+                    className="text-sm text-[#94A3B8] hover:text-[#0891B2] transition-colors flex items-center gap-1"
+                  >
+                    <Mail className="h-3 w-3" />
+                    contact@elsaai.co.uk
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#94A3B8] border-t border-[#1E293B] pt-8">
+        {/* Row 2: Bottom Bar */}
+        <hr className="border-[#1E293B] mb-6" />
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#94A3B8]">
           <p className="text-center sm:text-left">
-            United Kingdom · Serving Organizations Globally
+            United Kingdom · Serving Organisations Globally
           </p>
-          <div className="flex items-center gap-4">
-            <p>© 2025 ELSA AI</p>
-            <a
-              href="mailto:contact@elsaai.co.uk"
-              className="hover:text-[#0891B2] transition-colors"
-            >
-              contact@elsaai.co.uk
-            </a>
-          </div>
+          <p>© {currentYear} ELSA AI Ltd</p>
         </div>
       </div>
     </footer>

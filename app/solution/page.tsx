@@ -143,12 +143,12 @@ export default function SolutionPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/free-assessment"
+                href="https://elsaai.co.uk/free-assessment"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal bg-white hover:bg-gray-100 rounded-lg transition-all shadow-lg hover:shadow-xl"
               >
-                Get My Free Risk Assessment
+                Get Your Readiness Assessment
               </a>
               <a
                 href="/see-the-risks"
