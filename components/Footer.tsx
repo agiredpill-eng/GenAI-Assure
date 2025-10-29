@@ -44,14 +44,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Column 1: Brand / Value Prop / CTA */}
           <div>
-            <Link href="/" className="inline-block mb-4 hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all">
-              <Image
-                src="/image.png"
-                alt="ELSA AI"
-                width={180}
-                height={50}
-                className="h-12 w-auto"
-              />
+            <Link href="/" className="inline-block mb-4 text-2xl font-bold text-textElsa-primary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all">
+              ELSA AI
             </Link>
             <p className="text-sm text-textElsa-secondary mb-6 max-w-xs">
               Ethical · Legal · Societal · Accountable AI Operations
