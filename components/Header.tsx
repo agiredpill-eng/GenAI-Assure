@@ -128,7 +128,15 @@ export default function Header() {
       >
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center text-xl font-bold text-textElsa-primary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all" onClick={closeMobileMenu}>
+            <Link href="/" className="flex items-center gap-2 text-xl font-bold text-textElsa-primary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all" onClick={closeMobileMenu}>
+              <Image
+                src="/image.png"
+                alt="ELSA AI Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+                priority
+              />
               ELSA AI
             </Link>
 
