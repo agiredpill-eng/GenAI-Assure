@@ -25,31 +25,22 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-5">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-200 rounded-full text-sm font-semibold text-red-800">
-                <AlertTriangle className="h-4 w-4" />
-                🚨 Your AI Tools Now Sit Under €20M+ GDPR and EU AI Act Penalty Regimes
-              </div>
-
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Every ChatGPT prompt. Every n8n workflow. Every Copilot suggestion.
+                AI Deployer Liability is €35M. We Built Your Compliance Shield.
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                If it's not governed, it's discoverable in audit—and you carry the liability as the deployer.
-              </p>
-
-              <p className="text-lg text-gray-600 leading-relaxed">
-                We make your AI estate audit-ready in 90 days. Controls, evidence packs, regulator-aligned reporting.
+                Every ChatGPT prompt is audit evidence for regulators. Get the EU AI ACT Article 26 controls your board demands. Audit-ready in 90 days.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <a
-                  href="/free-assessment"
+                  href="https://elsaai.co.uk/free-assessment"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
-                  Get My Free Risk Assessment
+                  Get Your Readiness Assessment—Free
                 </a>
                 <a
                   href="/see-the-risks"
@@ -71,16 +62,8 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
               Controls You Can Enforce. Evidence Auditors Accept.
             </h2>
-            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-600">
-              That's the GenAI Assure Framework.
-            </h3>
             <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mt-3">
-              GenAI Assure defines five core governance principles designed for AI deployers (organisations using third-party AI tools).
-              These principles are purpose-built to solve AI governance challenges and mitigate regulatory exposure under frameworks like the{' '}
-              <strong className="font-semibold text-gray-900">EU AI Act</strong>,{' '}
-              <strong className="font-semibold text-gray-900">GDPR</strong>,{' '}
-              <strong className="font-semibold text-gray-900">ISO/IEC 42001</strong>, and{' '}
-              <strong className="font-semibold text-gray-900">NIST AI RMF</strong>.
+              A deployer-first framework that links principles → controls → evidence for third-party AI—on your existing stack (e.g., SSO/DLP + SIEM prompt/output logs). It delivers Evidence Packs with tiered retrieval SLAs, mapped to EU AI Act Article 26, GDPR, ISO/IEC 42001, and NIST AI RMF.
             </p>
           </div>
 
@@ -119,7 +102,7 @@ export default function Home() {
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-2">Security & Data Protection</h4>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Technical governance backbone for enterprise AI security
+                Stop leaks; control access and outbound data (SSO/MFA, DLP, SIEM).
               </p>
             </div>
 
@@ -129,7 +112,7 @@ export default function Home() {
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-2">Governance & Regulatory Assurance</h4>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Legal and regulatory obligations management
+                Meet duties and keep proof (DPIA/FRIA, vendor due-diligence, lifecycle gates).
               </p>
             </div>
 
@@ -141,7 +124,7 @@ export default function Home() {
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-2">Ethical & Human Impact</h4>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Legal and regulatory obligations for ethical AI
+                Lower harm; explain outcomes (bias tests, explainability profiles, HITL, redress).
               </p>
             </div>
 
@@ -153,7 +136,7 @@ export default function Home() {
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-2">Accountable Operations</h4>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Operational readiness and accountability frameworks
+                Trace every decision and owner (decision records, RACI, oversight committee).
               </p>
             </div>
 
@@ -165,7 +148,7 @@ export default function Home() {
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-2">Trust & Safety Culture</h4>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Operational readiness for building trust
+                Train people; report issues safely (role-based training, awareness campaigns, help channel).
               </p>
             </div>
 
@@ -175,7 +158,7 @@ export default function Home() {
               </div>
               <h4 className="text-xl font-bold mb-2">Evidence Pack</h4>
               <p className="text-white/95 text-sm leading-relaxed">
-                Comprehensive audit trail and documentation ready for regulatory review
+                Audit-ready proof on demand (WORM & hashed manifests; ≤4/8/24h retrieval SLA).
               </p>
             </div>
           </div>
@@ -189,9 +172,7 @@ export default function Home() {
               How GenAI Assure Works: Our 3-Step Path to Confident AI Adoption
             </h2>
             <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mt-3">
-              GenAI Assure transforms AI governance from a compliance burden into a practical, scalable advantage. By applying our framework of{' '}
-              <strong className="font-semibold text-teal">principles → controls → evidence</strong>, we implement the{' '}
-              <strong className="font-semibold text-gray-900">GenAI Assure™ 30-60-90 plan with defined milestones and evidence</strong> that enables safe, compliant, and auditable AI adoption.
+              GenAI Assure turns governance into a practical advantage by linking principles → controls → evidence on a 30-60-90 plan with defined milestones and artifacts.
             </p>
           </div>
 
@@ -208,29 +189,38 @@ export default function Home() {
                     <ClipboardList className="h-6 w-6 text-teal-700 absolute -bottom-1 -right-1" strokeWidth={2.5} />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Assess & Govern</h3>
-                <p className="text-gray-700 leading-relaxed text-sm mb-4">
-                  Establish a robust foundation for ethical and compliant AI by understanding your current landscape and mapping out a strategic path forward.
-                </p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Assess & Govern (Days 1–30)</h3>
               </div>
 
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <p className="text-xs text-gray-700">
-                    Define and implement comprehensive AI Use Policies tailored to your enterprise.
+                    Approve AI Use Policy + exceptions; launch intake & tiering
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <p className="text-xs text-gray-700">
-                    Discover and classify all AI tools and applications in use across your organisation.
+                    Discover & inventory ≥95% of AI tools (incl. Shadow-AI)
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <p className="text-xs text-gray-700">
-                    Establish an AI governance framework with clear roles, responsibilities, and oversight.
+                    Transparency labels live in pilot flows (email/chatbot/docs)
+                  </p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-gray-700">
+                    Stand up AI event schema → SIEM (WORM) and baseline DLP
+                  </p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-teal-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-gray-700">
+                    Start RoPA and publish DPIA/FRIA trigger list
                   </p>
                 </div>
               </div>
@@ -248,29 +238,38 @@ export default function Home() {
                     <Lock className="h-6 w-6 text-blue-700 absolute -bottom-1 -right-1" strokeWidth={2.5} />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Implement Smart Guardrails</h3>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  Deploy advanced technical controls and automated protections to ensure your AI systems operate securely and within defined ethical boundaries.
-                </p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Implement Smart Guardrails (Days 31–60)</h3>
               </div>
 
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-gray-700">
-                    Secure AI access and usage with granular controls and identity management.
+              <div className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-gray-700">
+                    Enforce SSO/MFA, least-privilege/SCIM, vault + ≤90-day token rotation
                   </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-gray-700">
-                    Prevent sensitive data leaks and unauthorised information disclosure in AI interactions.
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-gray-700">
+                    Monitor prompts/outputs/actions in SIEM; tune DLP across channels
                   </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-gray-700">
-                    Monitor for anomalous AI behaviour, security threats, and policy violations in real-time.
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-gray-700">
+                    Complete Top-10 DPIAs & vendor due-diligence; ship explainability profiles
+                  </p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-gray-700">
+                    Role-based training launched; Shadow-AI triage playbook running
+                  </p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-blue-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-gray-700">
+                    Incident & Resilience (GA-RR/RB): IR runbooks/SOAR + fallbacks, tabletop tests
                   </p>
                 </div>
               </div>
@@ -288,29 +287,41 @@ export default function Home() {
                     <Eye className="h-6 w-6 text-green-700 absolute -bottom-1 -right-1" strokeWidth={2.5} />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Achieve Audit-Ready Assurance</h3>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  Make compliance straightforward and transparent, ensuring you're always prepared for audits and can demonstrate responsible AI practices with ease.
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Achieve Audit-Ready Assurance (Days 61–90)</h3>
+                <p className="text-gray-700 leading-relaxed mb-4 text-sm">
+                  Outcome: Safe, compliant, and audit-ready AI—delivered in 90 days.
                 </p>
               </div>
 
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-gray-700">
-                    Align AI controls with regulatory requirements (e.g., EU AI Act, NIST AI RMF).
+              <div className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-gray-700">
+                    Automate Evidence Packs: YAML manifest + WORM, SHA-256 timestamps
                   </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-gray-700">
-                    Deploy AI transparency labels and usage disclosures for user trust and clarity.
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-gray-700">
+                    Retrieval SLA: Tier-1 ≤4h • Tier-2 ≤8h • Tier-3 ≤24h
                   </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-gray-700">
-                    Automate the generation of comprehensive "Evidence Packs" for regulatory audits.
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-gray-700">
+                    Dashboards & KPIs; internal audit dry-run passed
+                  </p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-gray-700">
+                    Discovery automation live; Transfer Register maintained; vendor re-assess cadence set
+                  </p>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-gray-700">
+                    Standards mapped: EU AI Act Art. 26, GDPR, ISO/IEC 42001, NIST AI RMF
                   </p>
                 </div>
               </div>
@@ -319,12 +330,12 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <a
-              href="/free-assessment"
+              href="https://elsaai.co.uk/free-assessment"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              Get My Free Risk Assessment
+              Get Your Readiness Assessment—Free
             </a>
             <a
               href="/see-the-risks"
@@ -345,7 +356,7 @@ export default function Home() {
               Benefits of GenAI Assure for Your Business
             </h2>
             <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mt-3">
-              GenAI Assure delivers more than compliance. It provides a practical pathway to safe, auditable, and value-driven AI adoption — helping you accelerate innovation while maintaining trust and resilience.
+              GenAI Assure delivers more than compliance. It provides a practical pathway to safe, auditable, value-driven AI adoption—so you can accelerate innovation while maintaining trust and resilience.
             </p>
           </div>
 
@@ -359,35 +370,27 @@ export default function Home() {
                   <Scale className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Navigate Regulatory Complexity</h3>
+                <p className="text-white/90 text-sm">Know what's required and how to prove it.</p>
               </div>
 
               <div className="relative z-10 space-y-4">
                 <div className="flex items-start gap-3 pb-4 border-b border-white/20">
                   <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <div>
-                    <p className="text-sm font-semibold text-white mb-1">EU AI Act (Article 26)</p>
-                    <p className="text-sm text-white/90">
-                      Deployer duties for logging, oversight, and transparency.
-                    </p>
-                  </div>
+                  <p className="text-sm text-white/90">
+                    EU AI Act (Art. 26): logging, oversight, transparency.
+                  </p>
                 </div>
                 <div className="flex items-start gap-3 pb-4 border-b border-white/20">
                   <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <div>
-                    <p className="text-sm font-semibold text-white mb-1">GDPR/UK GDPR</p>
-                    <p className="text-sm text-white/90">
-                      Lawful basis, DPIAs, and data rights protections.
-                    </p>
-                  </div>
+                  <p className="text-sm text-white/90">
+                    GDPR/UK GDPR: lawful basis, DPIA/FRIA, rights.
+                  </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <div>
-                    <p className="text-sm font-semibold text-white mb-1">Global Standards</p>
-                    <p className="text-sm text-white/90">
-                      Mapped to ISO/IEC 42001, NIST AI RMF, NIST CSF 2.0, and SOC 2.
-                    </p>
-                  </div>
+                  <p className="text-sm text-white/90">
+                    Mapped to ISO/IEC 42001 & NIST AI RMF (plus SOC 2 where needed).
+                  </p>
                 </div>
               </div>
             </div>
@@ -401,35 +404,27 @@ export default function Home() {
                   <ShieldAlert className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Mitigate Security & Data Risks</h3>
+                <p className="text-white/90 text-sm">Stop leaks; contain misuse.</p>
               </div>
 
               <div className="relative z-10 space-y-4">
                 <div className="flex items-start gap-3 pb-4 border-b border-white/20">
                   <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <div>
-                    <p className="text-sm font-semibold text-white mb-1">AI-aware DLP & Redaction</p>
-                    <p className="text-sm text-white/90">
-                      Prevent leaks of PII, credentials, or regulated data.
-                    </p>
-                  </div>
+                  <p className="text-sm text-white/90">
+                    AI-aware DLP + SIEM detections; proxy/CASB allow-lists.
+                  </p>
                 </div>
                 <div className="flex items-start gap-3 pb-4 border-b border-white/20">
                   <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <div>
-                    <p className="text-sm font-semibold text-white mb-1">Shadow AI Playbook</p>
-                    <p className="text-sm text-white/90">
-                      Discover and control unsanctioned AI tools.
-                    </p>
-                  </div>
+                  <p className="text-sm text-white/90">
+                    Shadow-AI playbook to block/triage unsanctioned tools.
+                  </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <div>
-                    <p className="text-sm font-semibold text-white mb-1">Enterprise SSO & Secrets Vaults</p>
-                    <p className="text-sm text-white/90">
-                      Secure access and enforce token rotation.
-                    </p>
-                  </div>
+                  <p className="text-sm text-white/90">
+                    SSO/MFA & secrets vaults with rotation hygiene.
+                  </p>
                 </div>
               </div>
             </div>
@@ -442,36 +437,28 @@ export default function Home() {
                 <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
                   <DollarSign className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Mitigate Regulatory Risk</h3>
+                <h3 className="text-2xl font-bold mb-4">Reduce Regulatory Exposure</h3>
+                <p className="text-white/90 text-sm">Avoid penalties with audit-ready proof.</p>
               </div>
 
               <div className="relative z-10 space-y-4">
                 <div className="flex items-start gap-3 pb-4 border-b border-white/20">
-                  <AlertTriangle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <div>
-                    <p className="text-sm font-semibold text-white mb-1">GDPR Violations</p>
-                    <p className="text-sm text-white/90">
-                      Unlawful AI data use or data breaches can result in significant regulatory penalties.
-                    </p>
-                  </div>
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-sm text-white/90">
+                    Labels & notices; DPIA/FRIA before go-live.
+                  </p>
                 </div>
                 <div className="flex items-start gap-3 pb-4 border-b border-white/20">
-                  <AlertTriangle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <div>
-                    <p className="text-sm font-semibold text-white mb-1">EU AI Act Violations</p>
-                    <p className="text-sm text-white/90">
-                      Failing to meet deployer duties can result in substantial regulatory penalties.
-                    </p>
-                  </div>
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-sm text-white/90">
+                    Vendor due-diligence (SCC/IDTA, attestations, sub-processors).
+                  </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <AlertTriangle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <div>
-                    <p className="text-sm font-semibold text-white mb-1">Audit-Ready Proof Required</p>
-                    <p className="text-sm text-white/90">
-                      Regulators demand audit-ready proof, not promises.
-                    </p>
-                  </div>
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-sm text-white/90">
+                    Evidence Packs (YAML+WORM, ≤4/8/24h retrieval SLA).
+                  </p>
                 </div>
               </div>
             </div>
@@ -485,17 +472,15 @@ export default function Home() {
                   <Rocket className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Faster, Safer AI Adoption</h3>
+                <p className="text-white/90 text-sm mb-4">Roll out on your existing stack with visibility.</p>
               </div>
 
-              <p className="relative z-10 text-white/95 leading-relaxed text-base mb-4">
-                Enable your teams to use AI tools with confidence. Our framework establishes clear governance, guardrails, and oversight through a{' '}
-                <span className="font-bold text-white bg-white/20 px-2 py-1 rounded">structured 30-60-90 day plan</span>, removing uncertainty and shadow AI risks.
-              </p>
-
-              <div className="relative z-10 flex items-center gap-2 pt-4 border-t border-white/30">
-                <CheckCircle2 className="h-5 w-5 text-white" strokeWidth={2.5} />
-                <p className="text-sm font-semibold text-white">
-                  Transform compliance from a burden into a strategic advantage
+              <div className="relative z-10 space-y-3 mb-4">
+                <p className="text-white/90 text-sm">
+                  30-60-90 plan with day-30/60/90 receipts; dashboards/KPIs.
+                </p>
+                <p className="text-white/90 text-sm">
+                  KPIs include DLP effectiveness, token hygiene, and MTTD/MTTR.
                 </p>
               </div>
             </div>
@@ -503,12 +488,12 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <a
-              href="/free-assessment"
+              href="https://elsaai.co.uk/free-assessment"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              Get My Free Risk Assessment
+              Get Your Readiness Assessment—Free
             </a>
             <a
               href="/see-the-risks"
