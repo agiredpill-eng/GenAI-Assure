@@ -25,7 +25,7 @@ const segments: Segment[] = [
   {
     id: 2,
     name: 'Governance & Regulatory Assurance',
-    color: '#2563EB',
+    color: '#001F54',
     arcLabel: 'Legal & Regulatory Obligations',
     centerLabel: 'Governance &\nRegulatory',
     startAngle: -18,
@@ -34,7 +34,7 @@ const segments: Segment[] = [
   {
     id: 3,
     name: 'Ethical & Human Impact',
-    color: '#7C3AED',
+    color: '#FF8C00',
     arcLabel: 'Ethical Considerations',
     centerLabel: 'Ethical &\nHuman',
     startAngle: 54,
@@ -52,7 +52,7 @@ const segments: Segment[] = [
   {
     id: 5,
     name: 'Trust & Safety Culture',
-    color: '#84CC16',
+    color: '#B9FF2C',
     arcLabel: 'Trust & Safety',
     centerLabel: 'Trust &\nSafety',
     startAngle: 198,
@@ -202,16 +202,16 @@ export default function FrameworkWheel() {
           cx={centerX}
           cy={centerY}
           r={innerRadius}
-          fill="white"
-          stroke="#0891B2"
-          strokeWidth="4"
+          fill="#B9FF2C"
+          stroke="#000000"
+          strokeWidth="3"
           className="drop-shadow-lg"
         />
 
         <text
           x={centerX}
           y={centerY - 10}
-          fill="#0F172A"
+          fill="#000000"
           fontSize="22"
           fontWeight="bold"
           textAnchor="middle"
@@ -222,7 +222,7 @@ export default function FrameworkWheel() {
         <text
           x={centerX}
           y={centerY + 15}
-          fill="#0891B2"
+          fill="#000000"
           fontSize="22"
           fontWeight="bold"
           textAnchor="middle"

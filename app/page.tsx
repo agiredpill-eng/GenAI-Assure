@@ -37,7 +37,7 @@ export default function Home() {
                   href="https://elsaai.co.uk/free-assessment"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-accent-primary hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] transform hover:scale-[1.02] hover:bg-accent-primary/10"
+                  className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-accent-primary hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] transform hover:scale-[1.02] hover:bg-[#B9FF2C] hover:text-black hover:border-black"
                 >
                   Get Your Readiness Assessment
                 </a>
@@ -45,7 +45,7 @@ export default function Home() {
                   href="/see-the-risks"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-accent-primary hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] transform hover:scale-[1.02] hover:bg-accent-primary/10"
+                  className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-accent-primary hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] transform hover:scale-[1.02] hover:bg-[#B9FF2C] hover:text-black hover:border-black"
                 >
                   See My AI Deployer Exposures
                 </a>
@@ -95,46 +95,46 @@ export default function Home() {
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="group relative bg-[#B9FF2C] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(185,255,44,0.3)] transition-all duration-300 border border-[#9FE92A] hover:border-black cursor-pointer transform hover:-translate-y-0.5">
-              <div className="w-14 h-14 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform border border-black/20 group-hover:border-black/50 group-hover:shadow-[0_0_15px_rgba(0,0,0,0.2)]" style={{ backgroundColor: 'transparent' }}>
-                <Shield className="h-7 w-7 text-black" />
+            <div className="group relative bg-[#059669] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(5,150,105,0.45)] transition-all duration-300 border border-[#047857] hover:border-white cursor-pointer transform hover:-translate-y-0.5">
+              <div className="w-14 h-14 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform border border-white/30 group-hover:border-white/60 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]" style={{ backgroundColor: 'transparent' }}>
+                <Shield className="h-7 w-7 text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-black mb-2 group-hover:text-black transition-colors">Security & Data Protection</h4>
-              <p className="text-black/90 text-sm leading-relaxed group-hover:text-black transition-colors">
+              <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-white transition-colors">Security & Data Protection</h4>
+              <p className="text-white/90 text-sm leading-relaxed group-hover:text-white transition-colors">
                 Stop leaks; control access and outbound data (SSO/MFA, DLP, SIEM).
               </p>
             </div>
 
-            <div className="group relative bg-[#B9FF2C] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(185,255,44,0.3)] transition-all duration-300 border border-[#9FE92A] hover:border-black cursor-pointer transform hover:-translate-y-0.5">
-              <div className="w-14 h-14 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform border border-black/20 group-hover:border-black/50 group-hover:shadow-[0_0_15px_rgba(0,0,0,0.2)]" style={{ backgroundColor: 'transparent' }}>
-                <FileCheck className="h-7 w-7 text-black" />
+            <div className="group relative bg-[#001F54] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(0,31,84,0.45)] transition-all duration-300 border border-[#002B7A] hover:border-white cursor-pointer transform hover:-translate-y-0.5">
+              <div className="w-14 h-14 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform border border-white/30 group-hover:border-white/60 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]" style={{ backgroundColor: 'transparent' }}>
+                <FileCheck className="h-7 w-7 text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-black mb-2 group-hover:text-black transition-colors">Governance & Regulatory Assurance</h4>
-              <p className="text-black/90 text-sm leading-relaxed group-hover:text-black transition-colors">
+              <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-white transition-colors">Governance & Regulatory Assurance</h4>
+              <p className="text-white/90 text-sm leading-relaxed group-hover:text-white transition-colors">
                 Meet duties and keep proof (DPIA/FRIA, vendor due-diligence, lifecycle gates).
               </p>
             </div>
 
-            <div className="group relative bg-[#B9FF2C] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(185,255,44,0.3)] transition-all duration-300 border border-[#9FE92A] hover:border-black cursor-pointer transform hover:-translate-y-0.5">
-              <div className="w-14 h-14 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform border border-black/20 group-hover:border-black/50 group-hover:shadow-[0_0_15px_rgba(0,0,0,0.2)]" style={{ backgroundColor: 'transparent' }}>
-                <svg className="h-7 w-7 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group relative bg-[#FF8C00] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(255,140,0,0.45)] transition-all duration-300 border border-[#DB7A00] hover:border-white cursor-pointer transform hover:-translate-y-0.5">
+              <div className="w-14 h-14 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform border border-white/30 group-hover:border-white/60 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]" style={{ backgroundColor: 'transparent' }}>
+                <svg className="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-semibold text-black mb-2 group-hover:text-black transition-colors">Ethical & Human Impact</h4>
-              <p className="text-black/90 text-sm leading-relaxed group-hover:text-black transition-colors">
+              <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-white transition-colors">Ethical & Human Impact</h4>
+              <p className="text-white/90 text-sm leading-relaxed group-hover:text-white transition-colors">
                 Lower harm; explain outcomes (bias tests, explainability profiles, HITL, redress).
               </p>
             </div>
 
-            <div className="group relative bg-[#B9FF2C] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(185,255,44,0.3)] transition-all duration-300 border border-[#9FE92A] hover:border-black cursor-pointer transform hover:-translate-y-0.5">
-              <div className="w-14 h-14 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform border border-black/20 group-hover:border-black/50 group-hover:shadow-[0_0_15px_rgba(0,0,0,0.2)]" style={{ backgroundColor: 'transparent' }}>
-                <svg className="h-7 w-7 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group relative bg-[#800000] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(128,0,0,0.45)] transition-all duration-300 border border-[#6A0000] hover:border-white cursor-pointer transform hover:-translate-y-0.5">
+              <div className="w-14 h-14 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform border border-white/30 group-hover:border-white/60 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]" style={{ backgroundColor: 'transparent' }}>
+                <svg className="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-semibold text-black mb-2 group-hover:text-black transition-colors">Accountable Operations</h4>
-              <p className="text-black/90 text-sm leading-relaxed group-hover:text-black transition-colors">
+              <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-white transition-colors">Accountable Operations</h4>
+              <p className="text-white/90 text-sm leading-relaxed group-hover:text-white transition-colors">
                 Trace every decision and owner (decision records, RACI, oversight committee).
               </p>
             </div>
@@ -151,8 +151,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="group relative bg-[#B9FF2C] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(185,255,44,0.3)] transition-all duration-300 border border-[#9FE92A] hover:border-black md:col-span-2 lg:col-span-1 cursor-pointer transform hover:-translate-y-0.5">
-              <div className="w-14 h-14 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform border border-black/20 group-hover:border-black/50 group-hover:shadow-[0_0_15px_rgba(0,0,0,0.2)]" style={{ backgroundColor: 'transparent' }}>
+            <div className="group relative bg-[#F0E68C] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(240,230,140,0.45)] transition-all duration-300 border border-[#CBBE6A] hover:border-black md:col-span-2 lg:col-span-1 cursor-pointer transform hover:-translate-y-0.5">
+              <div className="w-14 h-14 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform border border-black/20 group-hover:border-black/60 group-hover:shadow-[0_0_15px_rgba(0,0,0,0.25)]" style={{ backgroundColor: 'transparent' }}>
                 <FileCheck className="h-7 w-7 text-black" />
               </div>
               <h4 className="text-xl font-semibold text-black mb-2 group-hover:text-black transition-colors">Evidence Pack</h4>
@@ -176,49 +176,49 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-            <div className="group relative bg-[#B9FF2C] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(185,255,44,0.3)] transition-all duration-300 border border-[#9FE92A] hover:border-accent-primary transform hover:-translate-y-0.5">
+            <div className="group relative bg-[#001F54] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(0,31,84,0.45)] transition-all duration-300 border border-[#002B7A] hover:border-white transform hover:-translate-y-0.5">
               <div className="absolute -top-5 -left-5 w-14 h-14 bg-accent-primary rounded-full flex items-center justify-center text-white text-xl font-bold shadow-[0_8px_16px_rgba(0,0,0,0.2),0_0_20px_rgba(94,250,195,0.4)] group-hover:scale-110 group-hover:shadow-[0_8px_16px_rgba(0,0,0,0.2),0_0_30px_rgba(94,250,195,0.6)] transition-transform">
                 1
               </div>
 
               <div className="mb-4 pt-5">
-                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-black/20 group-hover:border-black/50 group-hover:shadow-[0_0_15px_rgba(0,0,0,0.2)]">
+                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-white/30 group-hover:border-white/60 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.25)]">
                   <div className="relative">
-                    <Search className="h-10 w-10 text-black" strokeWidth={2} />
-                    <ClipboardList className="h-6 w-6 text-black absolute -bottom-1 -right-1" strokeWidth={2.5} />
+                    <Search className="h-10 w-10 text-white" strokeWidth={2} />
+                    <ClipboardList className="h-6 w-6 text-white absolute -bottom-1 -right-1" strokeWidth={2.5} />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-black mb-2 group-hover:text-black transition-colors">Assess & Govern (Days 1–30)</h3>
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-white transition-colors">Assess & Govern (Days 1–30)</h3>
               </div>
 
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-xs text-black/90">
+                  <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-white/90">
                     Approve AI Use Policy + exceptions; launch intake & tiering
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-xs text-black/90">
+                  <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-white/90">
                     Discover & inventory ≥95% of AI tools (incl. Shadow-AI)
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-xs text-black/90">
+                  <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-white/90">
                     Transparency labels live in pilot flows (email/chatbot/docs)
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-xs text-black/90">
+                  <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-white/90">
                     Stand up AI event schema → SIEM (WORM) and baseline DLP
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-xs text-black/90">
+                  <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-white/90">
                     Start RoPA and publish DPIA/FRIA trigger list
                   </p>
                 </div>
@@ -274,13 +274,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group relative bg-[#B9FF2C] rounded-lg p-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(185,255,44,0.3)] transition-all duration-300 border border-[#9FE92A] hover:border-accent-primary transform hover:-translate-y-0.5">
+            <div className="group relative bg-[#F0E68C] rounded-lg p-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(240,230,140,0.45)] transition-all duration-300 border border-[#CBBE6A] hover:border-black transform hover:-translate-y-0.5">
               <div className="absolute -top-6 -left-6 w-16 h-16 bg-accent-primary rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-[0_8px_16px_rgba(0,0,0,0.2),0_0_20px_rgba(94,250,195,0.4)] group-hover:scale-110 group-hover:shadow-[0_8px_16px_rgba(0,0,0,0.2),0_0_30px_rgba(94,250,195,0.6)] transition-transform">
                 3
               </div>
 
               <div className="mb-6 pt-6">
-                <div className="w-20 h-20 bg-transparent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-black/20 group-hover:border-black/50 group-hover:shadow-[0_0_15px_rgba(0,0,0,0.2)]">
+                <div className="w-20 h-20 bg-transparent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-black/30 group-hover:border-black/60 group-hover:shadow-[0_0_15px_rgba(0,0,0,0.25)]">
                   <div className="relative">
                     <FileCheck className="h-10 w-10 text-black" strokeWidth={2} />
                     <Eye className="h-6 w-6 text-black absolute -bottom-1 -right-1" strokeWidth={2.5} />
@@ -332,7 +332,7 @@ export default function Home() {
               href="https://elsaai.co.uk/free-assessment"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-accent-primary hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] transform hover:scale-[1.02] hover:bg-accent-primary/10"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-accent-primary hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] transform hover:scale-[1.02] hover:bg-[#B9FF2C] hover:text-black hover:border-black"
             >
               Get Your Readiness Assessment
             </a>
@@ -340,7 +340,7 @@ export default function Home() {
               href="/see-the-risks"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-accent-primary hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] transform hover:scale-[1.02] hover:bg-accent-primary/10"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-accent-primary hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] transform hover:scale-[1.02] hover:bg-[#B9FF2C] hover:text-black hover:border-black"
             >
               See My AI Deployer Exposures
             </a>
@@ -360,33 +360,33 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div className="group relative bg-[#B9FF2C] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(185,255,44,0.3)] transition-all duration-300 border border-[#9FE92A] hover:border-black transform hover:-translate-y-0.5">
+            <div className="group relative bg-[#001F54] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(0,31,84,0.45)] transition-all duration-300 border border-[#002B7A] hover:border-white transform hover:-translate-y-0.5">
               <div className="relative z-10 mb-6">
-                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-black/20 group-hover:border-black/50 group-hover:shadow-[0_0_15px_rgba(0,0,0,0.2)]">
-                  <Scale className="h-8 w-8 text-black" strokeWidth={2} />
+                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-white/30 group-hover:border-white/60 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                  <Scale className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
-                <h3 className="text-2xl font-semibold text-black mb-4 group-hover:text-black transition-colors">Navigate Regulatory Complexity</h3>
-                <p className="text-black/90 text-sm group-hover:text-black transition-colors">Know what's required and how to prove it.</p>
+                <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-white transition-colors">Navigate Regulatory Complexity</h3>
+                <p className="text-white/90 text-sm group-hover:text-white transition-colors">Know what's required and how to prove it.</p>
               </div>
 
               <div className="relative z-10 space-y-4">
-                <div className="flex items-start gap-3 pb-4 border-b border-black/20">
-                  <CheckCircle2 className="h-5 w-5 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-black/90">
+                <div className="flex items-start gap-3 pb-4 border-b border-white/20">
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <p className="text-sm text-white/90">
                     EU AI Act (Art. 26): logging, oversight, transparency.
-                  </p>
+                    </p>
                 </div>
-                <div className="flex items-start gap-3 pb-4 border-b border-black/20">
-                  <CheckCircle2 className="h-5 w-5 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-black/90">
+                <div className="flex items-start gap-3 pb-4 border-b border-white/20">
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <p className="text-sm text-white/90">
                     GDPR/UK GDPR: lawful basis, DPIA/FRIA, rights.
-                  </p>
+                    </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-black/90">
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <p className="text-sm text-white/90">
                     Mapped to ISO/IEC 42001 & NIST AI RMF (plus SOC 2 where needed).
-                  </p>
+                    </p>
                 </div>
               </div>
             </div>
@@ -422,51 +422,51 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group relative bg-[#B9FF2C] rounded-lg p-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(185,255,44,0.3)] transition-all duration-300 border border-[#9FE92A] hover:border-black transform hover:-translate-y-0.5">
+            <div className="group relative bg-[#800000] rounded-lg p-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(128,0,0,0.45)] transition-all duration-300 border border-[#6A0000] hover:border-white transform hover:-translate-y-0.5">
               <div className="relative z-10 mb-6">
-                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-black/20 group-hover:border-black/50 group-hover:shadow-[0_0_15px_rgba(0,0,0,0.2)]">
-                  <DollarSign className="h-8 w-8 text-black" strokeWidth={2} />
+                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-white/30 group-hover:border-white/60 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                  <DollarSign className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
-                <h3 className="text-2xl font-semibold text-black mb-4 group-hover:text-black transition-colors">Reduce Regulatory Exposure</h3>
-                <p className="text-black/90 text-sm group-hover:text-black transition-colors">Avoid penalties with audit-ready proof.</p>
+                <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-white transition-colors">Reduce Regulatory Exposure</h3>
+                <p className="text-white/90 text-sm group-hover:text-white transition-colors">Avoid penalties with audit-ready proof.</p>
               </div>
 
               <div className="relative z-10 space-y-4">
-                <div className="flex items-start gap-3 pb-4 border-b border-black/20">
-                  <CheckCircle2 className="h-5 w-5 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-black/90">
+                <div className="flex items-start gap-3 pb-4 border-b border-white/20">
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <p className="text-sm text-white/90">
                     Labels & notices; DPIA/FRIA before go-live.
-                  </p>
+                    </p>
                 </div>
-                <div className="flex items-start gap-3 pb-4 border-b border-black/20">
-                  <CheckCircle2 className="h-5 w-5 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-black/90">
+                <div className="flex items-start gap-3 pb-4 border-b border-white/20">
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <p className="text-sm text-white/90">
                     Vendor due-diligence (SCC/IDTA, attestations, sub-processors).
-                  </p>
+                    </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-black/90">
+                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <p className="text-sm text-white/90">
                     Evidence Packs (YAML+WORM, ≤4/8/24h retrieval SLA).
-                  </p>
+                    </p>
                 </div>
               </div>
             </div>
 
-            <div className="group relative bg-[#B9FF2C] rounded-lg p-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(185,255,44,0.3)] transition-all duration-300 border border-[#9FE92A] hover:border-black transform hover:-translate-y-0.5">
+            <div className="group relative bg-[#059669] rounded-lg p-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(5,150,105,0.45)] transition-all duration-300 border border-[#047857] hover:border-white transform hover:-translate-y-0.5">
               <div className="relative z-10 mb-6">
-                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-black/20 group-hover:border-black/50 group-hover:shadow-[0_0_15px_rgba(0,0,0,0.2)]">
-                  <Rocket className="h-8 w-8 text-black" strokeWidth={2} />
+                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-white/30 group-hover:border-white/60 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                  <Rocket className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
-                <h3 className="text-2xl font-semibold text-black mb-4 group-hover:text-black transition-colors">Faster, Safer AI Adoption</h3>
-                <p className="text-black/90 text-sm mb-4 group-hover:text-black transition-colors">Roll out on your existing stack with visibility.</p>
+                <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-white transition-colors">Faster, Safer AI Adoption</h3>
+                <p className="text-white/90 text-sm mb-4 group-hover:text-white transition-colors">Roll out on your existing stack with visibility.</p>
               </div>
 
               <div className="relative z-10 space-y-3 mb-4">
-                <p className="text-black/90 text-sm">
+                <p className="text-white/90 text-sm">
                   30-60-90 plan with day-30/60/90 receipts; dashboards/KPIs.
                 </p>
-                <p className="text-black/90 text-sm">
+                <p className="text-white/90 text-sm">
                   KPIs include DLP effectiveness, token hygiene, and MTTD/MTTR.
                 </p>
               </div>
