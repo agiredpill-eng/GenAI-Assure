@@ -115,28 +115,27 @@ export default function Header() {
     <>
       <div className="hidden md:block bg-body border-b borderElsa-card py-2">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-xs text-center tracking-wide text-textElsa-secondary">
+          <p className="text-sm text-center tracking-wide text-textElsa-primary font-medium transition-colors duration-200 hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)]">
             Ethical · Legal · Societal · Accountable AI Operations
           </p>
         </div>
       </div>
 
-      <header
-        className={`sticky top-0 z-[100] bg-cardElsa-dark transition-all duration-300 border-b ${
-          scrolled ? 'shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(185,255,44,0.3)]' : 'borderElsa-card'
-        }`}
-      >
+      <header className="sticky top-0 z-[100] bg-body py-4 transition-all duration-300">
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center gap-2 text-xl font-bold text-textElsa-primary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all" onClick={closeMobileMenu}>
-              <Image
-                src="/ELSA_AI_Desing_Logo.png"
-                alt="ELSA AI Logo"
-                width={32}
-                height={32}
-                className="w-8 h-8"
-                priority
-              />
+          <div className="flex h-16 items-center justify-between bg-cardElsa-dark rounded-full border-2 border-[#B9FF2C] px-6 shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(185,255,44,0.3)]">
+            <Link href="/" className="flex items-center gap-2 text-lg font-bold text-textElsa-primary hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all" onClick={closeMobileMenu}>
+              <div className="relative">
+                <Image
+                  src="/ELSA_AI_Desing_Logo.png"
+                  alt="ELSA AI Logo"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-full object-cover border-2 border-[#B9FF2C]"
+                  priority
+                />
+                <span className="absolute -inset-0.5 rounded-full ring-1 ring-[#B9FF2C]/30"></span>
+              </div>
               ELSA AI
             </Link>
 

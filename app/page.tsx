@@ -1,6 +1,7 @@
 import { TriangleAlert as AlertTriangle, Shield, FileCheck, Search, Lock, CircleCheck as CheckCircle2, ClipboardList, ShieldCheck, Eye, Scale, ShieldAlert, DollarSign, Rocket } from 'lucide-react';
 import FrameworkWheel from '@/components/FrameworkWheel';
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'GenAI Assure - AI Governance & Compliance Framework | ELSA AI',
@@ -22,14 +23,14 @@ export default function Home() {
         }}></div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-          <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-textElsa-primary leading-tight">
-                <span className="text-[#B9FF2C]">AI Deployer Liability is €35M.</span> We Built Your Compliance Shield.
+                <span className="text-[#B9FF2C]">Every AI Prompt Your Team Makes Is Audit Evidence.</span> Can You Prove You Had Controls?
               </h1>
 
               <p className="text-lg sm:text-xl text-textElsa-secondary leading-relaxed">
-                Every ChatGPT prompt is audit evidence for regulators. Get the EU AI ACT Article 26 controls your board demands. Audit-ready in 90 days.
+                The EU AI Act Article 26 holds deployers liable—not vendors. Fines reach €35M or 7% of global revenue, and vendor frameworks won't protect you when regulators arrive. GenAI Assure delivers deployer-first controls and audit-ready documentation in 90 days, built by the director who secured 20+ high-stakes enterprises.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
@@ -37,7 +38,7 @@ export default function Home() {
                   href="https://elsaai.co.uk/free-assessment"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-accent-primary hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] transform hover:scale-[1.02] hover:bg-[#B9FF2C] hover:text-black hover:border-black"
+                  className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
                 >
                   Get Your Readiness Assessment
                 </a>
@@ -45,15 +46,30 @@ export default function Home() {
                   href="/see-the-risks"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-accent-primary hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] transform hover:scale-[1.02] hover:bg-[#B9FF2C] hover:text-black hover:border-black"
+                  className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
                 >
                   See My AI Deployer Exposures
                 </a>
               </div>
             </div>
+
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-lg">
+                <Image 
+                  src="/GenAI_Assure_Hero.png" 
+                  alt="GenAI Assure - AI Governance & Compliance Framework" 
+                  width={800}
+                  height={800}
+                  className="w-full h-auto rounded-lg shadow-2xl"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+            
 
       <section className="relative bg-body py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -62,7 +78,7 @@ export default function Home() {
               Controls You Can Enforce. Evidence Auditors Accept.
             </h2>
             <p className="text-lg text-textElsa-secondary max-w-4xl mx-auto leading-relaxed mt-3">
-              A deployer-first framework that links principles → controls → evidence for third-party AI—on your existing stack (e.g., SSO/DLP + SIEM prompt/output logs). It delivers Evidence Packs with tiered retrieval SLAs, mapped to EU AI Act Article 26, GDPR, ISO/IEC 42001, and NIST AI RMF.
+              A deployer-first framework that links <span className="text-[#B9FF2C]">principles → controls → evidence</span> for third-party AI—on your existing stack (e.g., SSO/DLP + SIEM prompt/output logs). It delivers Evidence Packs with tiered retrieval SLAs, mapped to <span className="text-[#B9FF2C]">EU AI Act Article 26, GDPR, ISO/IEC 42001, and NIST AI RMF</span>.
             </p>
           </div>
 
@@ -171,18 +187,18 @@ export default function Home() {
               How GenAI Assure Works: Our 3-Step Path to Confident AI Adoption
             </h2>
             <p className="text-lg text-textElsa-secondary max-w-4xl mx-auto leading-relaxed mt-3">
-              GenAI Assure turns governance into a practical advantage by linking principles → controls → evidence on a 30-60-90 plan with defined milestones and artifacts.
+              GenAI Assure turns governance into a practical advantage by linking <span className="text-[#B9FF2C]">principles → controls → evidence</span> on a 30-60-90 plan with defined milestones and artifacts.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-            <div className="group relative bg-[#001F54] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(0,31,84,0.45)] transition-all duration-300 border border-[#002B7A] hover:border-white transform hover:-translate-y-0.5">
+            <div className="group relative bg-body rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(94,250,195,0.45)] transition-all duration-300 border border-[#B9FF2C]/30 hover:border-[#B9FF2C] transform hover:-translate-y-0.5">
               <div className="absolute -top-5 -left-5 w-14 h-14 bg-accent-primary rounded-full flex items-center justify-center text-white text-xl font-bold shadow-[0_8px_16px_rgba(0,0,0,0.2),0_0_20px_rgba(94,250,195,0.4)] group-hover:scale-110 group-hover:shadow-[0_8px_16px_rgba(0,0,0,0.2),0_0_30px_rgba(94,250,195,0.6)] transition-transform">
                 1
               </div>
 
               <div className="mb-4 pt-5">
-                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-white/30 group-hover:border-white/60 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.25)]">
+                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-[#B9FF2C]/30 group-hover:border-[#B9FF2C] group-hover:shadow-[0_0_15px_rgba(185,255,44,0.25)]">
                   <div className="relative">
                     <Search className="h-10 w-10 text-white" strokeWidth={2} />
                     <ClipboardList className="h-6 w-6 text-white absolute -bottom-1 -right-1" strokeWidth={2.5} />
@@ -191,7 +207,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-white transition-colors">Assess & Govern (Days 1–30)</h3>
               </div>
 
-              <div className="space-y-2">
+              <div className="border border-[#B9FF2C]/30 rounded-lg p-4 space-y-2 group-hover:border-[#B9FF2C] transition-colors">
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <p className="text-xs text-white/90">
@@ -225,101 +241,101 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group relative bg-[#B9FF2C] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(185,255,44,0.3)] transition-all duration-300 border border-[#9FE92A] hover:border-accent-primary transform hover:-translate-y-0.5">
+            <div className="group relative bg-body rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(94,250,195,0.45)] transition-all duration-300 border border-[#B9FF2C]/30 hover:border-[#B9FF2C] transform hover:-translate-y-0.5">
               <div className="absolute -top-5 -left-5 w-14 h-14 bg-accent-primary rounded-full flex items-center justify-center text-white text-xl font-bold shadow-[0_8px_16px_rgba(0,0,0,0.2),0_0_20px_rgba(94,250,195,0.4)] group-hover:scale-110 group-hover:shadow-[0_8px_16px_rgba(0,0,0,0.2),0_0_30px_rgba(94,250,195,0.6)] transition-transform">
                 2
               </div>
 
               <div className="mb-4 pt-5">
-                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-black/20 group-hover:border-black/50 group-hover:shadow-[0_0_15px_rgba(0,0,0,0.2)]">
+                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-[#B9FF2C]/30 group-hover:border-[#B9FF2C] group-hover:shadow-[0_0_15px_rgba(185,255,44,0.25)]">
                   <div className="relative">
-                    <ShieldCheck className="h-10 w-10 text-black" strokeWidth={2} />
-                    <Lock className="h-6 w-6 text-black absolute -bottom-1 -right-1" strokeWidth={2.5} />
+                    <ShieldCheck className="h-10 w-10 text-white" strokeWidth={2} />
+                    <Lock className="h-6 w-6 text-white absolute -bottom-1 -right-1" strokeWidth={2.5} />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-black mb-2 group-hover:text-black transition-colors">Implement Smart Guardrails (Days 31–60)</h3>
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-white transition-colors">Implement Smart Guardrails (Days 31–60)</h3>
               </div>
 
-              <div className="space-y-2">
+              <div className="border border-[#B9FF2C]/30 rounded-lg p-4 space-y-2 group-hover:border-[#B9FF2C] transition-colors">
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-xs text-black/90">
+                  <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-white/90">
                     Enforce SSO/MFA, least-privilege/SCIM, vault + ≤90-day token rotation
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-xs text-black/90">
+                  <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-white/90">
                     Monitor prompts/outputs/actions in SIEM; tune DLP across channels
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-xs text-black/90">
+                  <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-white/90">
                     Complete Top-10 DPIAs & vendor due-diligence; ship explainability profiles
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-xs text-black/90">
+                  <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-white/90">
                     Role-based training launched; Shadow-AI triage playbook running
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-xs text-black/90">
+                  <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-white/90">
                     Incident & Resilience (GA-RR/RB): IR runbooks/SOAR + fallbacks, tabletop tests
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="group relative bg-[#F0E68C] rounded-lg p-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(240,230,140,0.45)] transition-all duration-300 border border-[#CBBE6A] hover:border-black transform hover:-translate-y-0.5">
+            <div className="group relative bg-body rounded-lg p-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(94,250,195,0.45)] transition-all duration-300 border border-[#B9FF2C]/30 hover:border-[#B9FF2C] transform hover:-translate-y-0.5">
               <div className="absolute -top-6 -left-6 w-16 h-16 bg-accent-primary rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-[0_8px_16px_rgba(0,0,0,0.2),0_0_20px_rgba(94,250,195,0.4)] group-hover:scale-110 group-hover:shadow-[0_8px_16px_rgba(0,0,0,0.2),0_0_30px_rgba(94,250,195,0.6)] transition-transform">
                 3
               </div>
 
               <div className="mb-6 pt-6">
-                <div className="w-20 h-20 bg-transparent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-black/30 group-hover:border-black/60 group-hover:shadow-[0_0_15px_rgba(0,0,0,0.25)]">
+                <div className="w-20 h-20 bg-transparent rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border border-[#B9FF2C]/30 group-hover:border-[#B9FF2C] group-hover:shadow-[0_0_15px_rgba(185,255,44,0.25)]">
                   <div className="relative">
-                    <FileCheck className="h-10 w-10 text-black" strokeWidth={2} />
-                    <Eye className="h-6 w-6 text-black absolute -bottom-1 -right-1" strokeWidth={2.5} />
+                    <FileCheck className="h-10 w-10 text-white" strokeWidth={2} />
+                    <Eye className="h-6 w-6 text-white absolute -bottom-1 -right-1" strokeWidth={2.5} />
                   </div>
                 </div>
-                <h3 className="text-2xl font-semibold text-black mb-3 group-hover:text-black transition-colors">Achieve Audit-Ready Assurance (Days 61–90)</h3>
-                <p className="text-black/90 leading-relaxed mb-4 text-sm group-hover:text-black transition-colors">
+                <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-white transition-colors">Achieve Audit-Ready Assurance (Days 61–90)</h3>
+                <p className="text-white/90 leading-relaxed mb-4 text-sm group-hover:text-white transition-colors">
                   Outcome: Safe, compliant, and audit-ready AI—delivered in 90 days.
                 </p>
               </div>
 
-              <div className="space-y-2">
+              <div className="border border-[#B9FF2C]/30 rounded-lg p-4 space-y-2 group-hover:border-[#B9FF2C] transition-colors">
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-xs text-black/90">
+                  <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-white/90">
                     Automate Evidence Packs: YAML manifest + WORM, SHA-256 timestamps
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-xs text-black/90">
+                  <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-white/90">
                     Retrieval SLA: Tier-1 ≤4h • Tier-2 ≤8h • Tier-3 ≤24h
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-xs text-black/90">
+                  <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-white/90">
                     Dashboards & KPIs; internal audit dry-run passed
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-xs text-black/90">
+                  <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-white/90">
                     Discovery automation live; Transfer Register maintained; vendor re-assess cadence set
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-xs text-black/90">
+                  <CheckCircle2 className="h-4 w-4 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <p className="text-xs text-white/90">
                     Standards mapped: EU AI Act Art. 26, GDPR, ISO/IEC 42001, NIST AI RMF
                   </p>
                 </div>
@@ -332,7 +348,7 @@ export default function Home() {
               href="https://elsaai.co.uk/free-assessment"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-accent-primary hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] transform hover:scale-[1.02] hover:bg-[#B9FF2C] hover:text-black hover:border-black"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
             >
               Get Your Readiness Assessment
             </a>
@@ -340,7 +356,7 @@ export default function Home() {
               href="/see-the-risks"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-accent-primary hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] transform hover:scale-[1.02] hover:bg-[#B9FF2C] hover:text-black hover:border-black"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
             >
               See My AI Deployer Exposures
             </a>
@@ -355,120 +371,128 @@ export default function Home() {
               Benefits of GenAI Assure for Your Business
             </h2>
             <p className="text-lg text-textElsa-secondary max-w-4xl mx-auto leading-relaxed mt-3">
-              GenAI Assure delivers more than compliance. It provides a practical pathway to safe, auditable, value-driven AI adoption—so you can accelerate innovation while maintaining trust and resilience.
+              GenAI Assure delivers more than compliance. <span className="text-[#B9FF2C]">It provides a practical pathway to safe, auditable, value-driven AI adoption</span>—so you can accelerate innovation while maintaining trust and resilience.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div className="group relative bg-[#001F54] rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(0,31,84,0.45)] transition-all duration-300 border border-[#002B7A] hover:border-white transform hover:-translate-y-0.5">
+            <div className="group relative bg-body rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(94,250,195,0.45)] transition-all duration-300 border border-[#B9FF2C]/30 hover:border-[#B9FF2C] transform hover:-translate-y-0.5">
               <div className="relative z-10 mb-6">
-                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-white/30 group-hover:border-white/60 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-[#B9FF2C]/30 group-hover:border-[#B9FF2C] group-hover:shadow-[0_0_15px_rgba(185,255,44,0.25)]">
                   <Scale className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-white transition-colors">Navigate Regulatory Complexity</h3>
                 <p className="text-white/90 text-sm group-hover:text-white transition-colors">Know what's required and how to prove it.</p>
               </div>
 
-              <div className="relative z-10 space-y-4">
-                <div className="flex items-start gap-3 pb-4 border-b border-white/20">
-                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+              <div className="border border-[#B9FF2C]/30 rounded-lg p-4 group-hover:border-[#B9FF2C] transition-colors">
+                <div className="relative z-10 space-y-4">
+                  <div className="flex items-start gap-3 pb-4 border-b border-[#B9FF2C]/20">
+                    <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                     <p className="text-sm text-white/90">
-                    EU AI Act (Art. 26): logging, oversight, transparency.
+                      EU AI Act (Art. 26): logging, oversight, transparency.
                     </p>
-                </div>
-                <div className="flex items-start gap-3 pb-4 border-b border-white/20">
-                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  </div>
+                  <div className="flex items-start gap-3 pb-4 border-b border-[#B9FF2C]/20">
+                    <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                     <p className="text-sm text-white/90">
-                    GDPR/UK GDPR: lawful basis, DPIA/FRIA, rights.
+                      GDPR/UK GDPR: lawful basis, DPIA/FRIA, rights.
                     </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                     <p className="text-sm text-white/90">
-                    Mapped to ISO/IEC 42001 & NIST AI RMF (plus SOC 2 where needed).
+                      Mapped to ISO/IEC 42001 & NIST AI RMF (plus SOC 2 where needed).
                     </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="group relative bg-[#B9FF2C] rounded-lg p-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_20px_rgba(185,255,44,0.3)] transition-all duration-300 border border-[#9FE92A] hover:border-black transform hover:-translate-y-0.5">
+            <div className="group relative bg-body rounded-lg p-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(94,250,195,0.45)] transition-all duration-300 border border-[#B9FF2C]/30 hover:border-[#B9FF2C] transform hover:-translate-y-0.5">
               <div className="relative z-10 mb-6">
-                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-black/20 group-hover:border-black/50 group-hover:shadow-[0_0_15px_rgba(0,0,0,0.2)]">
-                  <ShieldAlert className="h-8 w-8 text-black" strokeWidth={2} />
+                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-[#B9FF2C]/30 group-hover:border-[#B9FF2C] group-hover:shadow-[0_0_15px_rgba(185,255,44,0.25)]">
+                  <ShieldAlert className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
-                <h3 className="text-2xl font-semibold text-black mb-4 group-hover:text-black transition-colors">Mitigate Security & Data Risks</h3>
-                <p className="text-black/90 text-sm group-hover:text-black transition-colors">Stop leaks; contain misuse.</p>
+                <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-white transition-colors">Mitigate Security & Data Risks</h3>
+                <p className="text-white/90 text-sm group-hover:text-white transition-colors">Stop leaks; contain misuse.</p>
               </div>
 
-              <div className="relative z-10 space-y-4">
-                <div className="flex items-start gap-3 pb-4 border-b border-black/20">
-                  <CheckCircle2 className="h-5 w-5 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-black/90">
-                    AI-aware DLP + SIEM detections; proxy/CASB allow-lists.
-                  </p>
-                </div>
-                <div className="flex items-start gap-3 pb-4 border-b border-black/20">
-                  <CheckCircle2 className="h-5 w-5 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-black/90">
-                    Shadow-AI playbook to block/triage unsanctioned tools.
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-black flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                  <p className="text-sm text-black/90">
-                    SSO/MFA & secrets vaults with rotation hygiene.
-                  </p>
+              <div className="border border-[#B9FF2C]/30 rounded-lg p-4 group-hover:border-[#B9FF2C] transition-colors">
+                <div className="relative z-10 space-y-4">
+                  <div className="flex items-start gap-3 pb-4 border-b border-[#B9FF2C]/20">
+                    <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <p className="text-sm text-white/90">
+                      AI-aware DLP + SIEM detections; proxy/CASB allow-lists.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3 pb-4 border-b border-[#B9FF2C]/20">
+                    <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <p className="text-sm text-white/90">
+                      Shadow-AI playbook to block/triage unsanctioned tools.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <p className="text-sm text-white/90">
+                      SSO/MFA & secrets vaults with rotation hygiene.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="group relative bg-[#800000] rounded-lg p-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(128,0,0,0.45)] transition-all duration-300 border border-[#6A0000] hover:border-white transform hover:-translate-y-0.5">
+            <div className="group relative bg-body rounded-lg p-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(94,250,195,0.45)] transition-all duration-300 border border-[#B9FF2C]/30 hover:border-[#B9FF2C] transform hover:-translate-y-0.5">
               <div className="relative z-10 mb-6">
-                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-white/30 group-hover:border-white/60 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-[#B9FF2C]/30 group-hover:border-[#B9FF2C] group-hover:shadow-[0_0_15px_rgba(185,255,44,0.25)]">
                   <DollarSign className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-white transition-colors">Reduce Regulatory Exposure</h3>
                 <p className="text-white/90 text-sm group-hover:text-white transition-colors">Avoid penalties with audit-ready proof.</p>
               </div>
 
-              <div className="relative z-10 space-y-4">
-                <div className="flex items-start gap-3 pb-4 border-b border-white/20">
-                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+              <div className="border border-[#B9FF2C]/30 rounded-lg p-4 group-hover:border-[#B9FF2C] transition-colors">
+                <div className="relative z-10 space-y-4">
+                  <div className="flex items-start gap-3 pb-4 border-b border-[#B9FF2C]/20">
+                    <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                     <p className="text-sm text-white/90">
-                    Labels & notices; DPIA/FRIA before go-live.
+                      Labels & notices; DPIA/FRIA before go-live.
                     </p>
-                </div>
-                <div className="flex items-start gap-3 pb-4 border-b border-white/20">
-                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  </div>
+                  <div className="flex items-start gap-3 pb-4 border-b border-[#B9FF2C]/20">
+                    <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                     <p className="text-sm text-white/90">
-                    Vendor due-diligence (SCC/IDTA, attestations, sub-processors).
+                      Vendor due-diligence (SCC/IDTA, attestations, sub-processors).
                     </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                     <p className="text-sm text-white/90">
-                    Evidence Packs (YAML+WORM, ≤4/8/24h retrieval SLA).
+                      Evidence Packs (YAML+WORM, ≤4/8/24h retrieval SLA).
                     </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="group relative bg-[#059669] rounded-lg p-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(5,150,105,0.45)] transition-all duration-300 border border-[#047857] hover:border-white transform hover:-translate-y-0.5">
+            <div className="group relative bg-body rounded-lg p-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(94,250,195,0.45)] transition-all duration-300 border border-[#B9FF2C]/30 hover:border-[#B9FF2C] transform hover:-translate-y-0.5">
               <div className="relative z-10 mb-6">
-                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-white/30 group-hover:border-white/60 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                <div className="w-16 h-16 bg-transparent rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-[#B9FF2C]/30 group-hover:border-[#B9FF2C] group-hover:shadow-[0_0_15px_rgba(185,255,44,0.25)]">
                   <Rocket className="h-8 w-8 text-white" strokeWidth={2} />
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-white transition-colors">Faster, Safer AI Adoption</h3>
                 <p className="text-white/90 text-sm mb-4 group-hover:text-white transition-colors">Roll out on your existing stack with visibility.</p>
               </div>
 
-              <div className="relative z-10 space-y-3 mb-4">
-                <p className="text-white/90 text-sm">
-                  30-60-90 plan with day-30/60/90 receipts; dashboards/KPIs.
-                </p>
-                <p className="text-white/90 text-sm">
-                  KPIs include DLP effectiveness, token hygiene, and MTTD/MTTR.
-                </p>
+              <div className="border border-[#B9FF2C]/30 rounded-lg p-4 group-hover:border-[#B9FF2C] transition-colors">
+                <div className="relative z-10 space-y-3">
+                  <p className="text-white/90 text-sm">
+                    30-60-90 plan with day-30/60/90 receipts; dashboards/KPIs.
+                  </p>
+                  <p className="text-white/90 text-sm">
+                    KPIs include DLP effectiveness, token hygiene, and MTTD/MTTR.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -478,7 +502,7 @@ export default function Home() {
               href="https://elsaai.co.uk/free-assessment"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-accent-primary hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] transform hover:scale-[1.02] hover:bg-accent-primary/10"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
             >
               Get Your Readiness Assessment
             </a>
@@ -486,10 +510,97 @@ export default function Home() {
               href="/see-the-risks"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-accent-primary hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_40px_rgba(94,250,195,0.4)] transform hover:scale-[1.02] hover:bg-accent-primary/10"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
             >
               See My AI Deployer Exposures
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet Faisal Ali — final section before footer */}
+      <section className="relative bg-body py-20 lg:py-28 border-t borderElsa-card overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 opacity-10" style={{
+          backgroundImage: 'radial-gradient(circle at 20% 20%, rgba(94,250,195,0.15), transparent 50%), radial-gradient(circle at 80% 60%, rgba(185,255,44,0.15), transparent 40%)'
+        }}></div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 items-center">
+            <div className="flex flex-col items-center lg:items-start">
+              <div className="relative">
+                <img src="/FA-West-3-Piece.png" alt="Faisal Ali" className="w-64 h-64 rounded-full object-cover border-4 border-[#B9FF2C] shadow-[0_12px_40px_rgba(0,0,0,0.45)]" />
+                <span className="absolute -inset-2 rounded-full ring-1 ring-[#B9FF2C]/30"></span>
+              </div>
+              <div className="text-center lg:text-left mt-5 group cursor-pointer">
+                <p className="text-textElsa-primary font-semibold transition-colors duration-200 group-hover:text-[#B9FF2C]">— Faisal Ali CISM, CRISC</p>
+                <p className="text-textElsa-secondary text-sm transition-colors duration-200 group-hover:text-[#B9FF2C]">Founder, ELSA AI · Director, GenAI Assure Framework</p>
+                <p className="text-textElsa-secondary text-xs mt-2 transition-colors duration-200 group-hover:text-[#B9FF2C]">30 Years Securing High-Stakes Enterprises</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-textElsa-primary tracking-tight mb-6">
+                AI Governance Built by Someone Who Secured the World's Most Scrutinized Enterprises
+              </h2>
+              
+              <div className="space-y-6">
+                <div className="border-l-4 border-[#B9FF2C] pl-6 py-3 bg-cardElsa-dark/50 rounded-r-lg">
+                  <p className="text-textElsa-secondary leading-relaxed">
+                    Faisal Ali didn't build GenAI Assure in a lab. He built it after 30 years in the trenches—leading cybersecurity programs, navigating audits, and implementing controls at organizations where a single failure could mean regulatory action, board-level crisis, or operational catastrophe.
+                  </p>
+                </div>
+
+                <div className="border border-[#B9FF2C]/30 rounded-lg p-6 bg-cardElsa-dark/30 hover:border-[#B9FF2C]/50 transition-all">
+                  <h3 className="text-lg font-bold text-[#B9FF2C] mb-3">
+                    Where the Framework Was Forged:
+                  </h3>
+                  <p className="text-textElsa-secondary mb-4 text-sm">
+                    30 years securing operations where failure meant front-page crisis:
+                  </p>
+                  <ul className="space-y-2 text-textElsa-secondary text-sm">
+                    <li className="flex items-start">
+                      <span className="text-[#B9FF2C] mr-3 mt-1">▸</span>
+                      <span>Financial institutions managing billions in daily transactions (Barclays, Lloyds, British Business Bank)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-[#B9FF2C] mr-3 mt-1">▸</span>
+                      <span>Defense contractors protecting classified systems (BAE Systems, Lockheed Martin)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-[#B9FF2C] mr-3 mt-1">▸</span>
+                      <span>Retail and supply chain platforms at global scale (Walmart, Premier Farnell, Burberry, Applegate)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-[#B9FF2C] mr-3 mt-1">▸</span>
+                      <span>National infrastructure and public services under taxpayer accountability (Capita, OVO Energy, Smart DCC, BWDC, The Insolvency Service)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-[#B9FF2C] mr-3 mt-1">▸</span>
+                      <span>Manufacturing and global logistics (Bombardier, Volkswagen, Maersk, American President Line, National Saudi Shipping Line)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-[#B9FF2C] mr-3 mt-1">▸</span>
+                      <span>Healthcare systems safeguarding patient data (Newcross Healthcare)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="border-l-4 border-[#B9FF2C] pl-6 py-3 bg-cardElsa-dark/50 rounded-r-lg">
+                  <h3 className="text-lg font-bold text-textElsa-primary mb-2">
+                    What That Experience Revealed:
+                  </h3>
+                  <p className="text-textElsa-secondary leading-relaxed">
+                    Boards don't want theory. Auditors don't want promises. Deployers need controls that work this quarter—and evidence that survives scrutiny. GenAI Assure is built on that reality: 30 years of operational pressure, regulatory scrutiny, and high-stakes delivery.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <a href="https://www.linkedin.com/in/faisalal1" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-textElsa-primary bg-transparent border border-accent-primary rounded-sm transition-all hover:bg-[#B9FF2C] hover:text-black hover:border-black hover:shadow-[0_0_40px_rgba(94,250,195,0.4)]">LinkedIn Profile</a>
+                <a href="/framework" className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-textElsa-primary bg-transparent border border-accent-primary rounded-sm transition-all hover:bg-[#B9FF2C] hover:text-black hover:border-black hover:shadow-[0_0_40px_rgba(94,250,195,0.4)]">Download Framework</a>
+                <a href="/contact" className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-textElsa-primary bg-transparent border border-accent-primary rounded-sm transition-all hover:bg-[#B9FF2C] hover:text-black hover:border-black hover:shadow-[0_0_40px_rgba(94,250,195,0.4)]">Book Consultation</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
