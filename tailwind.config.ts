@@ -34,9 +34,6 @@ const config: Config = {
           dark: '#0F241C',
           light: '#EFFFF0',
         },
-        accent: {
-          primary: '#5EFAC3', // Mint
-        },
         emerald: {
           DEFAULT: '#1C8A63',
         },
@@ -110,6 +107,7 @@ const config: Config = {
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
+          primary: '#5EFAC3', // Mint
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
