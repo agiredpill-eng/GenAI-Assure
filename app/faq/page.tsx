@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'FAQ - Frequently Asked Questions | ELSA AI',
   description: 'Frequently asked questions about ELSA AI, GenAI Assure framework, implementation, compliance, and getting started.',
   keywords: 'FAQ, AI governance FAQ, GenAI Assure questions, AI compliance questions, EU AI Act, GDPR AI',
+  alternates: {
+    canonical: 'https://elsaai.co.uk/faq',
+  },
 };
 
 export default function FAQPage() {

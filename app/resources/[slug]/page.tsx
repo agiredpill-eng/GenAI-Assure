@@ -1,6 +1,7 @@
 import { Calendar, Clock, ArrowLeft, User } from 'lucide-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 
 interface BlogPost {
   title: string;
@@ -191,6 +192,26 @@ interface PageProps {
 
 interface RelatedPost extends BlogPost {
   slug: string;
+}
+
+// Generate metadata dynamically for each blog post
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const post = blogPosts[params.slug];
+  
+  if (!post) {
+    return {
+      title: 'Post Not Found | ELSA AI',
+    };
+  }
+
+  return {
+    title: `${post.title} | ELSA AI Resources`,
+    description: `Learn about ${post.category.toLowerCase()} in AI governance. ${post.title}`,
+    keywords: `AI governance, ${post.category}, EU AI Act, GDPR compliance, GenAI Assure`,
+    alternates: {
+      canonical: `https://elsaai.co.uk/resources/${params.slug}`,
+    },
+  };
 }
 
 export default function BlogPostPage({ params }: PageProps): JSX.Element {

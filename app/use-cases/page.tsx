@@ -15,6 +15,16 @@ import {
   Workflow,
   Bot
 } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Governance Use Cases - GenAI Assure | ELSA AI',
+  description: 'Discover how GenAI Assure helps organizations govern Microsoft 365 Copilot, Google Workspace AI, customer service chatbots, and other enterprise AI tools.',
+  keywords: 'AI use cases, Microsoft Copilot governance, Google Workspace AI compliance, chatbot governance, enterprise AI controls',
+  alternates: {
+    canonical: 'https://elsaai.co.uk/use-cases',
+  },
+};
 
 export default function UseCasesPage() {
   const useCases = [

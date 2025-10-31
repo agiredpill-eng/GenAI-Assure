@@ -7,10 +7,14 @@ export const metadata: Metadata = {
   title: 'GenAI Assure - AI Governance & Compliance Framework | ELSA AI',
   description: 'GenAI Assure helps AI deployers meet EU AI Act & GDPR with enforceable controls, SIEM logging, DLP, and audit-ready evidence in 90 days.',
   keywords: 'AI governance, AI compliance, GDPR AI, EU AI Act, ISO 42001, AI risk management, AI security, enterprise AI governance',
+  alternates: {
+    canonical: 'https://elsaai.co.uk/',
+  },
   openGraph: {
     title: 'GenAI Assure - AI Governance & Compliance Framework',
     description: 'GenAI Assure helps AI deployers meet EU AI Act & GDPR with enforceable controls, SIEM logging, DLP, and audit-ready evidence in 90 days.',
     type: 'website',
+    url: 'https://elsaai.co.uk/',
   },
 };
 

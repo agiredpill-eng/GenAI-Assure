@@ -1,5 +1,15 @@
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Governance Resources & Guides | ELSA AI',
+  description: 'Expert resources on AI governance, EU AI Act compliance, GDPR requirements, shadow AI risks, and building AI governance frameworks.',
+  keywords: 'AI governance resources, EU AI Act guides, GDPR AI compliance, shadow AI articles, AI governance framework',
+  alternates: {
+    canonical: 'https://elsaai.co.uk/resources',
+  },
+};
 
 const blogPosts = [
   {

@@ -1,5 +1,15 @@
 import { Shield, Search, ClipboardList, CircleCheck as CheckCircle2 } from 'lucide-react';
 import FrameworkWheel from '@/components/FrameworkWheel';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'GenAI Assure Solution - Complete AI Governance Platform | ELSA AI',
+  description: 'End-to-end AI governance solution with technical controls, SIEM integration, DLP, transparency labels, and audit-ready documentation for EU AI Act and GDPR compliance.',
+  keywords: 'AI governance solution, GenAI Assure platform, AI compliance platform, EU AI Act solution, GDPR AI platform',
+  alternates: {
+    canonical: 'https://elsaai.co.uk/solution',
+  },
+};
 
 export default function SolutionPage() {
   return (

@@ -1,3 +1,14 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy - ELSA AI',
+  description: 'Privacy policy for ELSA AI and GenAI Assure. Learn how we collect, use, and protect your personal information.',
+  keywords: 'privacy policy, data protection, GDPR',
+  alternates: {
+    canonical: 'https://elsaai.co.uk/privacy',
+  },
+};
+
 export default function PrivacyPage() {
   return (
     <div className="w-full bg-body">
