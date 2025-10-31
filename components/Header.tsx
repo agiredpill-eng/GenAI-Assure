@@ -247,14 +247,12 @@ export default function Header() {
                 Contact
               </Link>
 
-              <a
-                href="https://elsaai.co.uk/free-assessment"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/free-assessment"
                 className="ml-auto px-5 py-2.5 text-sm font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#B9FF2C] min-h-[44px] flex items-center hover:bg-[#B9FF2C]/10"
               >
                 Get Your Readiness Assessment
-              </a>
+              </Link>
             </div>
 
             <button
@@ -271,15 +269,13 @@ export default function Header() {
           {mobileMenuOpen && (
             <div className="lg:hidden fixed inset-0 top-16 bg-body overflow-y-auto pb-6">
               <div className="px-4 py-6 space-y-4">
-                <a
-                  href="https://elsaai.co.uk/free-assessment"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/free-assessment"
                   className="block w-full px-6 py-3 text-center text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] min-h-[44px] hover:bg-[#B9FF2C]/10"
                   onClick={closeMobileMenu}
                 >
                   Get Your Readiness Assessment
-                </a>
+                </Link>
 
                 <div className="border-t borderElsa-card pt-4">
                   <button

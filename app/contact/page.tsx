@@ -266,9 +266,7 @@ export default function ContactPage() {
                 to get immediate guidance on your risks and next steps.
               </p>
               <a
-                href="https://elsaai.co.uk/free-assessment"
-                target="_blank"
-                rel="noopener noreferrer"
+              href="/free-assessment"
                 className="inline-flex items-center justify-center w-full px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
               >
                 Get Your Readiness Assessment

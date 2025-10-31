@@ -57,7 +57,7 @@ const blogPosts: Record<string, BlogPost> = {
       <h2>Bottom Line</h2>
       <p>Implementing GenAI Assure™ as written—AI‑specific logging to SIEM with integrity controls, transparency labels captured as evidence, SSO/DLP/egress protections, documented DPIA/FRIA and transfer registers, and AI incident runbooks—provides the processes and artifacts the Framework maps to Article 26 duties for deployers.</p>
 
-      <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mt-8 text-amber-900">
+      <div style="background-color: rgba(251, 191, 36, 0.2); border: 1px solid rgba(251, 191, 36, 0.5); border-radius: 0.5rem; padding: 1rem; margin-top: 2rem; color: rgb(251, 191, 36);">
         <strong>Note:</strong> The Framework does <em>not</em> prescribe fixed log‑retention durations or quote fine amounts; retention and oversight must meet provider and legal requirements.
       </div>
     `,
@@ -207,11 +207,11 @@ export default function BlogPostPage({ params }: PageProps): JSX.Element {
   }));
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="min-h-screen bg-body">
       <article className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16">
         <Link
           href="/resources"
-          className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-semibold mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-[#B9FF2C] hover:text-[#B9FF2C]/80 font-semibold mb-8 transition-colors"
         >
           <ArrowLeft className="h-5 w-5" />
           Back to Resources
@@ -219,16 +219,16 @@ export default function BlogPostPage({ params }: PageProps): JSX.Element {
 
         <header className="mb-12">
           <div className="flex items-center gap-2 mb-4">
-            <span className="px-3 py-1 bg-teal-100 text-teal-700 text-sm font-semibold rounded-full">
+            <span className="px-3 py-1 bg-[#B9FF2C] text-body text-sm font-semibold rounded-full">
               {post.category}
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
             {post.title}
           </h1>
 
-          <div className="flex flex-wrap items-center gap-6 text-gray-600">
+          <div className="flex flex-wrap items-center gap-6 text-white/80">
             <div className="flex items-center gap-2">
               <User className="h-5 w-5" />
               <span>{post.author}</span>
@@ -244,37 +244,38 @@ export default function BlogPostPage({ params }: PageProps): JSX.Element {
           </div>
         </header>
 
-        <div className="prose prose-lg prose-gray max-w-none">
+        <div className="prose prose-lg max-w-none">
           <div
             dangerouslySetInnerHTML={{ __html: post.content }}
-            className="[&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-gray-900 [&>h2]:mt-12 [&>h2]:mb-6
-                       [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:text-gray-900 [&>h3]:mt-8 [&>h3]:mb-4
-                       [&>p]:text-gray-700 [&>p]:leading-relaxed [&>p]:mb-6 [&>p]:text-lg
+            className="[&>h2]:text-3xl [&>h2]:font-bold [&>h2]:text-white [&>h2]:mt-12 [&>h2]:mb-6
+                       [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:text-white [&>h3]:mt-8 [&>h3]:mb-4
+                       [&>p]:text-white/90 [&>p]:leading-relaxed [&>p]:mb-6 [&>p]:text-lg
                        [&>ul]:list-disc [&>ul]:ml-6 [&>ul]:mb-6 [&>ul]:space-y-2
-                       [&>ul>li]:text-gray-700 [&>ul>li]:text-lg
-                       [&>strong]:font-semibold [&>strong]:text-gray-900"
+                       [&>ul>li]:text-white/90 [&>ul>li]:text-lg
+                       [&>strong]:font-semibold [&>strong]:text-white
+                       [&>code]:bg-white/10 [&>code]:text-[#B9FF2C] [&>code]:px-2 [&>code]:py-1 [&>code]:rounded"
           />
         </div>
 
         {relatedPosts.length > 0 && (
-          <div className="mt-16 pt-12 border-t border-gray-200">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
+          <div className="mt-16 pt-12 border-t border-white/20">
+            <h2 className="text-2xl font-bold text-white mb-6">Related Articles</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {relatedPosts.map((related) => (
                 <Link
                   key={related.slug}
                   href={`/resources/${related.slug}`}
-                  className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-6 border-2 border-gray-200 hover:border-teal-300"
+                  className="group bg-body rounded-xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:border-[#B9FF2C] transition-all p-6"
                 >
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="px-3 py-1 bg-teal-100 text-teal-700 text-xs font-semibold rounded-full">
+                    <span className="px-3 py-1 bg-[#B9FF2C] text-body text-xs font-semibold rounded-full">
                       {related.category}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-teal-600 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#B9FF2C] transition-colors">
                     {related.title}
                   </h3>
-                  <div className="flex items-center gap-4 text-sm text-gray-600 mt-3">
+                  <div className="flex items-center gap-4 text-sm text-white/80 mt-3">
                     <span>{related.date}</span>
                     <span>•</span>
                     <span>{related.readTime}</span>
@@ -285,18 +286,16 @@ export default function BlogPostPage({ params }: PageProps): JSX.Element {
           </div>
         )}
 
-        <div className="mt-16 bg-teal-50 border-2 border-teal-200 rounded-xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className="mt-16 bg-body border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] rounded-xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-white mb-4">
             Ready to Implement These Strategies?
           </h3>
-          <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+          <p className="text-white/90 mb-6 max-w-2xl mx-auto">
             Our team can help you put these insights into practice with a tailored AI governance solution.
           </p>
           <a
-            href="https://elsaai.co.uk/free-assessment"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-lg hover:shadow-xl"
+            href="/free-assessment"
+            className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-body bg-[#B9FF2C] hover:bg-[#B9FF2C]/90 rounded-lg transition-all shadow-lg hover:shadow-xl"
           >
             Get Your Readiness Assessment
           </a>

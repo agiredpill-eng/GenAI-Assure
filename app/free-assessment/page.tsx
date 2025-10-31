@@ -321,7 +321,7 @@ export default function FreeAssessmentPage() {
         <form onSubmit={handleSubmit} className="bg-body rounded-lg p-6 sm:p-10 space-y-10 border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
           <section className="space-y-6">
             <div className="border-b pb-3">
-              <h2 className="text-2xl font-bold text-gray-900">1) Contact Information</h2>
+              <h2 className="text-2xl font-bold text-white">1) Contact Information</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -415,14 +415,14 @@ export default function FreeAssessmentPage() {
 
           <section className="space-y-6 border-t pt-8">
             <div className="border-b pb-3">
-              <h2 className="text-2xl font-bold text-gray-900">2) Use Case (What you're doing with AI)</h2>
+              <h2 className="text-2xl font-bold text-white">2) Use Case (What you're doing with AI)</h2>
             </div>
 
             <div className="space-y-3">
               <Label>
                 Primary AI Use Cases <span className="text-red-600">*</span>
               </Label>
-              <p className="text-sm text-gray-600">Select all that apply</p>
+              <p className="text-sm text-white/80">Select all that apply</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   'Customer service chatbots',
@@ -531,7 +531,7 @@ export default function FreeAssessmentPage() {
 
           <section className="space-y-6 border-t pt-8">
             <div className="border-b pb-3">
-              <h2 className="text-2xl font-bold text-gray-900">3) Decision Impact & Output Scope</h2>
+              <h2 className="text-2xl font-bold text-white">3) Decision Impact & Output Scope</h2>
             </div>
 
             <div className="space-y-3">
@@ -591,7 +591,7 @@ export default function FreeAssessmentPage() {
 
           <section className="space-y-6 border-t pt-8">
             <div className="border-b pb-3">
-              <h2 className="text-2xl font-bold text-gray-900">4) Discovery & Incident History</h2>
+              <h2 className="text-2xl font-bold text-white">4) Discovery & Incident History</h2>
             </div>
 
             <div className="space-y-3">
@@ -623,7 +623,7 @@ export default function FreeAssessmentPage() {
 
             <div className="space-y-3">
               <Label>AI Security/Compliance Incidents (past 12 months)</Label>
-              <p className="text-sm text-gray-600">Select all that apply</p>
+              <p className="text-sm text-white/80">Select all that apply</p>
               <div className="grid grid-cols-1 gap-3">
                 {[
                   'PII leaked via prompts',
@@ -651,7 +651,7 @@ export default function FreeAssessmentPage() {
 
           <section className="space-y-6 border-t pt-8">
             <div className="border-b pb-3">
-              <h2 className="text-2xl font-bold text-gray-900">5) Vendors & Data Flows</h2>
+              <h2 className="text-2xl font-bold text-white">5) Vendors & Data Flows</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -760,13 +760,13 @@ export default function FreeAssessmentPage() {
 
           <section className="space-y-6 border-t pt-8">
             <div className="border-b pb-3">
-              <h2 className="text-2xl font-bold text-gray-900">6) Privacy & Records</h2>
+              <h2 className="text-2xl font-bold text-white">6) Privacy & Records</h2>
               <p className="text-sm text-gray-600 mt-1">(answer only if personal data is processed)</p>
             </div>
 
             <div className="space-y-3">
               <Label>Data Types</Label>
-              <p className="text-sm text-gray-600">Select all that apply</p>
+              <p className="text-sm text-white/80">Select all that apply</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   'PII',
@@ -794,7 +794,7 @@ export default function FreeAssessmentPage() {
 
             <div className="space-y-3">
               <Label>Lawful Basis</Label>
-              <p className="text-sm text-gray-600">Select all that apply</p>
+              <p className="text-sm text-white/80">Select all that apply</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   'Contract',
@@ -887,12 +887,12 @@ export default function FreeAssessmentPage() {
 
           <section className="space-y-6 border-t pt-8">
             <div className="border-b pb-3">
-              <h2 className="text-2xl font-bold text-gray-900">7) Controls & Monitoring</h2>
+              <h2 className="text-2xl font-bold text-white">7) Controls & Monitoring</h2>
             </div>
 
             <div className="space-y-3">
               <Label>Controls in Place</Label>
-              <p className="text-sm text-gray-600">Select all that apply</p>
+              <p className="text-sm text-white/80">Select all that apply</p>
               <div className="grid grid-cols-1 gap-3">
                 {[
                   'SSO/MFA on AI tools',
@@ -946,7 +946,7 @@ export default function FreeAssessmentPage() {
 
             <div className="space-y-3">
               <Label>Transparency & Evidence</Label>
-              <p className="text-sm text-gray-600">Select all that apply</p>
+              <p className="text-sm text-white/80">Select all that apply</p>
               <div className="grid grid-cols-1 gap-3">
                 {[
                   'Transparency labels/notices live in production',
@@ -971,7 +971,7 @@ export default function FreeAssessmentPage() {
 
           <section className="space-y-6 border-t pt-8">
             <div className="border-b pb-3">
-              <h2 className="text-2xl font-bold text-gray-900">8) Human Oversight & Response</h2>
+              <h2 className="text-2xl font-bold text-white">8) Human Oversight & Response</h2>
             </div>
 
             <div className="space-y-3">
@@ -1027,14 +1027,14 @@ export default function FreeAssessmentPage() {
 
           <section className="space-y-6 border-t pt-8">
             <div className="border-b pb-3">
-              <h2 className="text-2xl font-bold text-gray-900">9) Drivers & Priorities</h2>
+              <h2 className="text-2xl font-bold text-white">9) Drivers & Priorities</h2>
             </div>
 
             <div className="space-y-3">
               <Label>
                 Compliance Drivers <span className="text-red-600">*</span>
               </Label>
-              <p className="text-sm text-gray-600">Select all that apply</p>
+              <p className="text-sm text-white/80">Select all that apply</p>
               <div className="grid grid-cols-1 gap-3">
                 {[
                   'Upcoming audit (e.g., SOC 2, ISO 27001)',
@@ -1140,24 +1140,24 @@ export default function FreeAssessmentPage() {
 
           <section className="space-y-6 border-t pt-8">
             <div className="border-b pb-3">
-              <h2 className="text-2xl font-bold text-gray-900">Consent & Privacy</h2>
+              <h2 className="text-2xl font-bold text-white">Consent & Privacy</h2>
             </div>
 
-            <div className="bg-gray-50 rounded-lg p-5 space-y-4">
-              <h3 className="font-bold text-gray-900">Data Processing Notice</h3>
-              <p className="text-sm text-gray-700 leading-relaxed">
+            <div className="bg-body border border-[#B9FF2C]/30 rounded-lg p-5 space-y-4 shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
+              <h3 className="font-bold text-white">Data Processing Notice</h3>
+              <p className="text-sm text-white/90 leading-relaxed">
                 We collect business contact details and technical information about your AI usage to provide an initial risk assessment and prioritised action plan, and to follow up on findings. We retain submissions for up to 12 months for service quality and an audit trail of advice provided. We do not share your data with third parties without consent and do not use it to train AI models. See our{' '}
-                <a href="/privacy" target="_blank" className="text-teal-600 hover:text-teal-700 underline">
+                <a href="/privacy" target="_blank" className="text-[#B9FF2C] hover:text-[#B9FF2C]/80 underline">
                   Privacy Policy
                 </a>
                 {' '}for details.
               </p>
 
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 flex items-start gap-3">
-                <AlertTriangle className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
+              <div className="bg-amber-900/20 border border-amber-500 rounded-lg p-4 flex items-start gap-3">
+                <AlertTriangle className="h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-gray-900 text-sm mb-1">Security Reminder</p>
-                  <p className="text-sm text-gray-700">
+                  <p className="font-bold text-white text-sm mb-1">Security Reminder</p>
+                  <p className="text-sm text-white/90">
                     Do not share secrets, API keys, credentials, or production data in this form.
                   </p>
                 </div>
@@ -1207,7 +1207,6 @@ export default function FreeAssessmentPage() {
         <div className="text-center text-sm text-textElsa-secondary mt-8">
           <p>Questions? Contact us at <a href="mailto:contact@elsaai.co.uk" className="text-[#B9FF2C] hover:text-[#B9FF2C]/80 underline">contact@elsaai.co.uk</a></p>
         </div>
-      </div>
       </div>
     </div>
   );

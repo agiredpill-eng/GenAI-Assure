@@ -540,21 +540,21 @@ export default function SeeTheRisksPage() {
   const getRiskBadgeColor = (level: RiskLevel) => {
     switch (level) {
       case 'critical':
-        return 'bg-red-100 text-red-800 border-red-300';
+        return 'bg-red-900/40 text-red-200 border-red-500';
       case 'high':
-        return 'bg-orange-100 text-orange-800 border-orange-300';
+        return 'bg-orange-900/40 text-orange-200 border-orange-500';
       case 'medium':
-        return 'bg-yellow-100 text-yellow-800 border-yellow-300';
+        return 'bg-yellow-900/40 text-yellow-200 border-yellow-500';
       case 'low':
-        return 'bg-gray-100 text-gray-800 border-gray-300';
+        return 'bg-gray-700/40 text-gray-200 border-gray-500';
     }
   };
 
   const getControlBadge = (level: ControlLevel) => {
     const styles = {
-      high: 'bg-green-50 text-green-700 border-green-300',
-      medium: 'bg-orange-50 text-orange-700 border-orange-300',
-      low: 'bg-gray-50 text-gray-600 border-gray-300',
+      high: 'bg-green-900/40 text-green-200 border-green-500',
+      medium: 'bg-orange-900/40 text-orange-200 border-orange-500',
+      low: 'bg-gray-700/40 text-gray-200 border-gray-500',
     };
     const labels = {
       high: 'HIGH CONTROL',
@@ -645,22 +645,22 @@ export default function SeeTheRisksPage() {
           )}
         </div>
 
-        <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm shadow-md rounded-xl p-6 mb-8 border border-gray-200">
+        <div className="sticky top-0 z-10 bg-body rounded-xl p-6 mb-8 border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
           <div className="mb-4">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white/60" />
               <Input
                 type="text"
                 placeholder="Search risks..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 pr-10"
+                className="pl-10 pr-10 bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-[#B9FF2C]"
                 aria-label="Search risks"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white/60 hover:text-white"
                   aria-label="Clear search"
                 >
                   <X className="h-5 w-5" />
@@ -684,8 +684,8 @@ export default function SeeTheRisksPage() {
                   variant={activeFilter === filter.id ? 'default' : 'outline'}
                   className={`${
                     activeFilter === filter.id
-                      ? 'bg-teal-600 text-white hover:bg-teal-700'
-                      : 'bg-white hover:bg-gray-50'
+                      ? 'bg-[#B9FF2C] text-black hover:bg-[#B9FF2C]/90 border-[#B9FF2C]'
+                      : 'bg-transparent border-[#B9FF2C]/30 text-white hover:bg-[#B9FF2C]/10 hover:border-[#B9FF2C]'
                   }`}
                   role="radio"
                   aria-checked={activeFilter === filter.id}
@@ -697,36 +697,36 @@ export default function SeeTheRisksPage() {
             })}
           </div>
 
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex gap-4 flex-wrap">
               <div className="flex items-center gap-2">
-                <Badge className="bg-red-100 text-red-800 border border-red-300">Critical</Badge>
-                <span className="text-sm text-gray-600">Critical Risk</span>
+                <Badge className="bg-red-900/40 border border-red-500 text-red-200">Critical</Badge>
+                <span className="text-sm text-white/80">Critical Risk</span>
               </div>
               <div className="flex items-center gap-2">
-                <Badge className="bg-orange-100 text-orange-800 border border-orange-300">High</Badge>
-                <span className="text-sm text-gray-600">High Risk</span>
+                <Badge className="bg-orange-900/40 border border-orange-500 text-orange-200">High</Badge>
+                <span className="text-sm text-white/80">High Risk</span>
               </div>
               <div className="flex items-center gap-2">
-                <Badge className="bg-yellow-100 text-yellow-800 border border-yellow-300">Medium</Badge>
-                <span className="text-sm text-gray-600">Medium Risk</span>
+                <Badge className="bg-yellow-900/40 border border-yellow-500 text-yellow-200">Medium</Badge>
+                <span className="text-sm text-white/80">Medium Risk</span>
               </div>
               <div className="flex items-center gap-2">
-                <Badge className="bg-gray-100 text-gray-800 border border-gray-300">Low</Badge>
-                <span className="text-sm text-gray-600">Low Risk</span>
+                <Badge className="bg-gray-700/40 border border-gray-500 text-gray-200">Low</Badge>
+                <span className="text-sm text-white/80">Low Risk</span>
               </div>
             </div>
-            <div className="text-sm font-semibold text-gray-700">
+            <div className="text-sm font-semibold text-white">
               {totalVisibleRisks} {totalVisibleRisks === 1 ? 'risk' : 'risks'} shown
             </div>
           </div>
         </div>
 
         {filteredData.length === 0 ? (
-          <div className="bg-white rounded-2xl shadow-lg p-12 text-center">
-            <AlertTriangle className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">No risks match your filters</h3>
-            <p className="text-gray-600 mb-6">
+          <div className="bg-body rounded-2xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-12 text-center">
+            <AlertTriangle className="h-16 w-16 text-white/60 mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-white mb-2">No risks match your filters</h3>
+            <p className="text-white/80 mb-6">
               Try adjusting your search terms or filters to see more results.
             </p>
             <Button
@@ -735,7 +735,7 @@ export default function SeeTheRisksPage() {
                 setActiveFilter('all');
                 setActiveToolType(null);
               }}
-              className="bg-teal-600 hover:bg-teal-700"
+              className="bg-[#B9FF2C] text-black hover:bg-[#B9FF2C]/90 border-[#B9FF2C]"
             >
               Clear All Filters
             </Button>
@@ -744,7 +744,7 @@ export default function SeeTheRisksPage() {
           <div className="space-y-12">
             {filteredData.map((category) => (
               <div key={category.id} className="space-y-4">
-                <h2 className="text-3xl font-bold text-gray-900 border-b-2 border-teal-500 pb-3">
+                <h2 className="text-3xl font-bold text-white border-b-2 border-[#B9FF2C] pb-3">
                   {category.name}
                 </h2>
                 <div className="grid grid-cols-1 gap-4">
@@ -754,7 +754,7 @@ export default function SeeTheRisksPage() {
                     return (
                       <div
                         key={risk.id}
-                        className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-teal-300"
+                        className="bg-body rounded-xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:border-[#B9FF2C] transition-all duration-300"
                       >
                         <div
                           className="p-6 cursor-pointer"
@@ -768,7 +768,7 @@ export default function SeeTheRisksPage() {
                           <div className="flex items-start justify-between gap-4">
                             <div className="flex-1">
                               <div className="flex items-center gap-3 mb-3 flex-wrap">
-                                <h3 className="text-xl font-bold text-gray-900">{risk.title}</h3>
+                                <h3 className="text-xl font-bold text-white">{risk.title}</h3>
                                 <Badge className={`${getRiskBadgeColor(risk.level)} border font-semibold uppercase text-xs`}>
                                   {risk.level}
                                 </Badge>
@@ -776,50 +776,50 @@ export default function SeeTheRisksPage() {
                                   {controlBadge.label}
                                 </Badge>
                               </div>
-                              <p className="text-gray-700 leading-relaxed">{risk.description}</p>
+                              <p className="text-white/90 leading-relaxed">{risk.description}</p>
                             </div>
                             <div className="flex-shrink-0">
                               {isExpanded ? (
-                                <ChevronUp className="h-6 w-6 text-gray-600" />
+                                <ChevronUp className="h-6 w-6 text-white/80" />
                               ) : (
-                                <ChevronDown className="h-6 w-6 text-gray-600" />
+                                <ChevronDown className="h-6 w-6 text-white/80" />
                               )}
                             </div>
                           </div>
 
                           {isExpanded && (
-                            <div className="mt-6 pt-6 border-t border-gray-200 space-y-6 animate-in fade-in slide-in-from-top-2 duration-300">
+                            <div className="mt-6 pt-6 border-t border-white/20 space-y-6 animate-in fade-in slide-in-from-top-2 duration-300">
                               <div>
-                                <h4 className="font-bold text-gray-900 mb-2">Full Details</h4>
-                                <p className="text-gray-700 leading-relaxed whitespace-pre-line">{risk.details}</p>
+                                <h4 className="font-bold text-white mb-2">Full Details</h4>
+                                <p className="text-white/90 leading-relaxed whitespace-pre-line">{risk.details}</p>
                               </div>
 
                               {risk.deployerContext && (
-                                <div className="bg-teal-50 border-l-4 border-teal-500 p-4 rounded">
-                                  <h4 className="font-bold text-gray-900 mb-2">Deployer Context</h4>
-                                  <p className="text-gray-700 leading-relaxed whitespace-pre-line">{risk.deployerContext}</p>
+                                <div className="bg-[#B9FF2C]/10 border-l-4 border-[#B9FF2C] p-4 rounded">
+                                  <h4 className="font-bold text-white mb-2">Deployer Context</h4>
+                                  <p className="text-white/90 leading-relaxed whitespace-pre-line">{risk.deployerContext}</p>
                                 </div>
                               )}
 
                               <div>
-                                <h4 className="font-bold text-gray-900 mb-2">Affected Areas</h4>
+                                <h4 className="font-bold text-white mb-2">Affected Areas</h4>
                                 <ul className="list-disc list-inside space-y-1">
                                   {risk.affectedAreas.map((area, idx) => (
-                                    <li key={idx} className="text-gray-700">{area}</li>
+                                    <li key={idx} className="text-white/90">{area}</li>
                                   ))}
                                 </ul>
                               </div>
 
                               <div>
-                                <h4 className="font-bold text-gray-900 mb-2">Mitigation Strategies</h4>
-                                <p className="text-gray-700 leading-relaxed whitespace-pre-line">{risk.mitigation}</p>
+                                <h4 className="font-bold text-white mb-2">Mitigation Strategies</h4>
+                                <p className="text-white/90 leading-relaxed whitespace-pre-line">{risk.mitigation}</p>
                               </div>
 
                               <div>
-                                <h4 className="font-bold text-gray-900 mb-2">Relevant Regulations</h4>
+                                <h4 className="font-bold text-white mb-2">Relevant Regulations</h4>
                                 <div className="flex flex-wrap gap-2">
                                   {risk.regulations.map((reg, idx) => (
-                                    <Badge key={idx} variant="outline" className="bg-blue-50 text-blue-800 border-blue-300">
+                                    <Badge key={idx} variant="outline" className="bg-blue-900/40 text-blue-200 border-blue-500">
                                       {reg}
                                     </Badge>
                                   ))}
@@ -828,10 +828,10 @@ export default function SeeTheRisksPage() {
 
                               {risk.genaiAssureComponents && risk.genaiAssureComponents.length > 0 && (
                                 <div>
-                                  <h4 className="font-bold text-gray-900 mb-2">GenAI Assure Framework Components</h4>
+                                  <h4 className="font-bold text-white mb-2">GenAI Assure Framework Components</h4>
                                   <div className="flex flex-wrap gap-2">
                                     {risk.genaiAssureComponents.map((component, idx) => (
-                                      <Badge key={idx} variant="outline" className="bg-teal-50 text-teal-800 border-teal-300 font-mono">
+                                      <Badge key={idx} variant="outline" className="bg-[#B9FF2C]/20 text-[#B9FF2C] border-[#B9FF2C] font-mono">
                                         {component}
                                       </Badge>
                                     ))}
@@ -840,9 +840,9 @@ export default function SeeTheRisksPage() {
                               )}
 
                               {risk.evidence && (
-                                <div className="bg-gray-50 border-l-4 border-gray-400 p-4 rounded">
-                                  <h4 className="font-bold text-gray-900 mb-2">Evidence Requirements</h4>
-                                  <p className="text-gray-700 leading-relaxed whitespace-pre-line">{risk.evidence}</p>
+                                <div className="bg-white/10 border-l-4 border-white/30 p-4 rounded">
+                                  <h4 className="font-bold text-white mb-2">Evidence Requirements</h4>
+                                  <p className="text-white/90 leading-relaxed whitespace-pre-line">{risk.evidence}</p>
                                 </div>
                               )}
                             </div>
@@ -866,9 +866,7 @@ export default function SeeTheRisksPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://elsaai.co.uk/free-assessment"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/free-assessment"
               className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
             >
               Get Your Readiness Assessment
@@ -882,7 +880,6 @@ export default function SeeTheRisksPage() {
             </Button>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );

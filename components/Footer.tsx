@@ -50,14 +50,12 @@ export default function Footer() {
             <p className="text-sm text-textElsa-secondary mb-6 max-w-xs">
               Ethical · Legal · Societal · Accountable AI Operations
             </p>
-            <a
-              href="https://elsaai.co.uk/free-assessment"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/free-assessment"
               className="inline-flex items-center justify-center px-5 py-3 text-sm font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
             >
               Get Your Readiness Assessment
-            </a>
+            </Link>
           </div>
 
           {/* Column 2: Solutions */}
