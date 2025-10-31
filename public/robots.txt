@@ -1,0 +1,9 @@
+# robots.txt for GenAI Assure / ELSA AI
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap location
+Sitemap: https://elsaai.co.uk/sitemap.xml
+
