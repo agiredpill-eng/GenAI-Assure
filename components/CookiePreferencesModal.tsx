@@ -82,8 +82,8 @@ export default function CookiePreferencesModal() {
     <Dialog open={showPreferencesModal} onOpenChange={closePreferencesModal}>
       <DialogContent className="max-w-3xl max-h-[85vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-gray-900">Cookie Preferences</DialogTitle>
-          <DialogDescription className="text-base text-gray-700">
+          <DialogTitle className="text-2xl font-bold text-textElsa-primary">Cookie Preferences</DialogTitle>
+          <DialogDescription className="text-base text-textElsa-secondary">
             Manage your cookie preferences below. Strictly necessary cookies are always active as they are essential for the website to function.
           </DialogDescription>
         </DialogHeader>
@@ -92,7 +92,7 @@ export default function CookiePreferencesModal() {
           {cookieCategories.map((category) => (
             <div
               key={category.id}
-              className="border-2 border-gray-200 rounded-lg p-4 hover:border-teal-300 transition-colors"
+              className="border border-[#B9FF2C]/30 rounded-lg p-4 hover:border-[#B9FF2C] transition-colors"
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-start gap-3 flex-1">
@@ -101,21 +101,21 @@ export default function CookiePreferencesModal() {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <h3 className="font-bold text-gray-900">{category.title}</h3>
+                      <h3 className="font-bold text-textElsa-primary">{category.title}</h3>
                       {category.required && (
-                        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-green-100 text-green-800">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-[#B9FF2C] text-body">
                           Always Active
                         </span>
                       )}
                     </div>
-                    <p className="text-sm text-gray-700 mb-3">{category.description}</p>
+                    <p className="text-sm text-textElsa-secondary mb-3">{category.description}</p>
 
                     <details className="text-sm">
-                      <summary className="cursor-pointer text-teal-600 hover:text-teal-700 font-semibold flex items-center gap-1 mb-2">
+                      <summary className="cursor-pointer text-[#B9FF2C] hover:text-[#B9FF2C]/80 font-semibold flex items-center gap-1 mb-2">
                         <Info className="h-4 w-4" aria-hidden="true" />
                         View details
                       </summary>
-                      <div className="mt-2 pl-5 space-y-2 text-gray-600">
+                      <div className="mt-2 pl-5 space-y-2 text-textElsa-secondary">
                         <div>
                           <span className="font-semibold">Examples:</span>
                           <ul className="list-disc list-inside ml-2 mt-1">
@@ -150,10 +150,10 @@ export default function CookiePreferencesModal() {
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gray-200">
+        <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-[#B9FF2C]/30">
           <Button
             onClick={handleSave}
-            className="bg-teal hover:bg-teal-600 flex-1"
+            className="bg-[#B9FF2C] hover:bg-[#B9FF2C]/80 text-body flex-1"
             aria-label="Save cookie preferences"
           >
             Save Preferences
@@ -161,16 +161,16 @@ export default function CookiePreferencesModal() {
           <Button
             onClick={handleAcceptAll}
             variant="outline"
-            className="border-2 border-teal hover:bg-teal-50 flex-1"
+            className="border-2 border-[#B9FF2C] hover:bg-[#B9FF2C]/10 hover:text-[#B9FF2C] flex-1"
             aria-label="Accept all cookies"
           >
             Accept All
           </Button>
         </div>
 
-        <p className="text-xs text-gray-600 text-center pt-2">
+        <p className="text-xs text-textElsa-secondary text-center pt-2">
           Your preferences will be stored for 12 months. You can change them at any time from our{' '}
-          <a href="/cookies" className="text-teal-600 hover:text-teal-700 underline font-semibold">
+          <a href="/cookies" className="text-[#B9FF2C] hover:text-[#B9FF2C]/80 underline font-semibold">
             Cookies page
           </a>
           .

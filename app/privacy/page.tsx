@@ -1,14 +1,25 @@
 export default function PrivacyPage() {
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-2">
-        Privacy Policy
-      </h1>
-      <p className="text-gray-600 mb-10">
-        ELSA AI Website Privacy Statement — Effective Date: 5 October 2025
-      </p>
+    <div className="w-full bg-body">
+      <div className="relative bg-body border-b borderElsa-card overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'radial-gradient(circle at center, rgba(94,250,195,0.1) 0%, transparent 70%)',
+        }}></div>
 
-      <div className="max-w-3xl prose prose-lg text-gray-700">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-textElsa-primary mb-2">
+              <span className="text-[#B9FF2C]">Privacy Policy</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-textElsa-secondary mb-10">
+              ELSA AI Website Privacy Statement — Effective Date: 5 October 2025
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-3xl prose prose-lg text-textElsa-primary">
         <h2>Who we are</h2>
         <p>
           ELSA AI Ltd (“ELSA AI”, “we”, “us”, “our”) provides consultancy
@@ -232,6 +243,7 @@ export default function PrivacyPage() {
           See our full Privacy Policy for your rights, retention, cookies, and
           international transfers.”
         </p>
+      </div>
       </div>
     </div>
   );

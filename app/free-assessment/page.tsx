@@ -182,20 +182,20 @@ export default function FreeAssessmentPage() {
 
   if (submitStatus === 'success') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-teal-50 to-white">
+      <div className="w-full bg-body">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20">
-          <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-12 text-center">
-            <div className="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle2 className="h-10 w-10 text-teal-600" />
+          <div className="bg-body rounded-lg p-8 sm:p-12 text-center border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
+            <div className="w-20 h-20 bg-[#B9FF2C] rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle2 className="h-10 w-10 text-body" />
             </div>
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl sm:text-4xl font-bold text-textElsa-primary mb-4">
               Assessment Submitted Successfully!
             </h1>
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-textElsa-secondary mb-6">
               Our team will analyze your submission and respond within 3 business days with your personalized risk assessment, Framework tier assignment, and priority action roadmap.
             </p>
-            <p className="text-gray-600 mb-8">
-              Check your email at <strong className="text-gray-900">{formData.workEmail}</strong> for our response.
+            <p className="text-textElsa-secondary mb-8">
+              Check your email at <strong className="text-textElsa-primary">{formData.workEmail}</strong> for our response.
             </p>
             <Button
               onClick={() => {
@@ -239,7 +239,7 @@ export default function FreeAssessmentPage() {
                   consent: false,
                 });
               }}
-              className="bg-teal hover:bg-teal-600"
+              className="bg-[#B9FF2C] hover:bg-[#B9FF2C]/80 text-body"
             >
               Submit Another Assessment
             </Button>
@@ -250,43 +250,51 @@ export default function FreeAssessmentPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-10">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            GenAI Assure Emergency Risk Assessment
-          </h1>
-          <p className="text-xl text-gray-700 mb-4">
-            Discover your AI compliance gaps in 15 minutes
-          </p>
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            Our experts will analyze your setup and provide a prioritised action plan aligned to the GenAI Assure Framework. For organisations deploying third-party AI (copilots, chat assistants, workflow automations, custom agents).
-          </p>
-        </div>
+    <div className="w-full bg-body">
+      <div className="relative bg-body border-b borderElsa-card overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'radial-gradient(circle at center, rgba(94,250,195,0.1) 0%, transparent 70%)',
+        }}></div>
 
-        <div className="bg-white border-2 border-teal-200 rounded-xl p-6 mb-8">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <div className="text-center mb-10">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-textElsa-primary mb-4">
+              <span className="text-[#B9FF2C]">GenAI Assure Emergency Risk Assessment</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-textElsa-secondary mb-4">
+              Discover your AI compliance gaps in 15 minutes
+            </p>
+            <p className="text-textElsa-secondary max-w-3xl mx-auto">
+              Our experts will analyze your setup and provide a prioritised action plan aligned to the GenAI Assure Framework. For organisations deploying third-party AI (copilots, chat assistants, workflow automations, custom agents).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="bg-body border border-[#B9FF2C]/30 rounded-lg p-6 mb-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-start gap-3">
-              <Mail className="h-6 w-6 text-teal-600 flex-shrink-0 mt-0.5" />
+              <Mail className="h-6 w-6 text-[#B9FF2C] flex-shrink-0 mt-0.5" />
               <div>
-                <p className="font-bold text-gray-900 mb-1">Email</p>
-                <a href="mailto:contact@elsaai.co.uk" className="text-teal-700 hover:text-teal-800 text-sm">
+                <p className="font-bold text-textElsa-primary mb-1">Email</p>
+                <a href="mailto:contact@elsaai.co.uk" className="text-[#B9FF2C] hover:text-[#B9FF2C]/80 text-sm">
                   contact@elsaai.co.uk
                 </a>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <Clock className="h-6 w-6 text-teal-600 flex-shrink-0 mt-0.5" />
+              <Clock className="h-6 w-6 text-[#B9FF2C] flex-shrink-0 mt-0.5" />
               <div>
-                <p className="font-bold text-gray-900 mb-1">Response Time</p>
-                <p className="text-gray-700 text-sm">Within 3 business days</p>
+                <p className="font-bold text-textElsa-primary mb-1">Response Time</p>
+                <p className="text-textElsa-secondary text-sm">Within 3 business days</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <Shield className="h-6 w-6 text-teal-600 flex-shrink-0 mt-0.5" />
+              <Shield className="h-6 w-6 text-[#B9FF2C] flex-shrink-0 mt-0.5" />
               <div>
-                <p className="font-bold text-gray-900 mb-1">What to Expect</p>
-                <ul className="text-sm text-gray-700 space-y-1">
+                <p className="font-bold text-textElsa-primary mb-1">What to Expect</p>
+                <ul className="text-sm text-textElsa-secondary space-y-1">
                   <li>• Risk assessment summary</li>
                   <li>• Framework tier assignment</li>
                   <li>• Priority action roadmap</li>
@@ -296,12 +304,12 @@ export default function FreeAssessmentPage() {
           </div>
         </div>
 
-        <div className="bg-amber-50 border-2 border-amber-200 rounded-xl p-5 mb-8">
+        <div className="bg-body border border-[#B9FF2C]/30 rounded-lg p-5 mb-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
           <div className="flex items-start gap-3">
-            <AlertTriangle className="h-6 w-6 text-amber-600 flex-shrink-0 mt-0.5" />
+            <AlertTriangle className="h-6 w-6 text-[#B9FF2C] flex-shrink-0 mt-0.5" />
             <div>
-              <p className="font-bold text-gray-900 mb-2">Before you start:</p>
-              <ul className="text-sm text-gray-700 space-y-1">
+              <p className="font-bold text-textElsa-primary mb-2">Before you start:</p>
+              <ul className="text-sm text-textElsa-secondary space-y-1">
                 <li>• Do not paste secrets, credentials, or production data into this form</li>
                 <li>• If you don't process personal data for a question, choose "Not applicable"</li>
                 <li>• You can select multiple options where noted</li>
@@ -310,7 +318,7 @@ export default function FreeAssessmentPage() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-6 sm:p-10 space-y-10">
+        <form onSubmit={handleSubmit} className="bg-body rounded-lg p-6 sm:p-10 space-y-10 border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
           <section className="space-y-6">
             <div className="border-b pb-3">
               <h2 className="text-2xl font-bold text-gray-900">1) Contact Information</h2>
@@ -1189,16 +1197,17 @@ export default function FreeAssessmentPage() {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="bg-teal hover:bg-teal-600 px-16 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+              className="bg-[#B9FF2C] hover:bg-[#B9FF2C]/80 text-body px-16 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
             >
               {isSubmitting ? 'Submitting Assessment...' : 'Submit Emergency Assessment'}
             </Button>
           </div>
         </form>
 
-        <div className="text-center text-sm text-gray-600 mt-8">
-          <p>Questions? Contact us at <a href="mailto:contact@elsaai.co.uk" className="text-teal-600 hover:text-teal-700 underline">contact@elsaai.co.uk</a></p>
+        <div className="text-center text-sm text-textElsa-secondary mt-8">
+          <p>Questions? Contact us at <a href="mailto:contact@elsaai.co.uk" className="text-[#B9FF2C] hover:text-[#B9FF2C]/80 underline">contact@elsaai.co.uk</a></p>
         </div>
+      </div>
       </div>
     </div>
   );

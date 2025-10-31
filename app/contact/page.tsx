@@ -90,21 +90,21 @@ export default function ContactPage() {
 
   if (submitStatus === 'success') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-teal-50 to-white">
+      <div className="w-full bg-body">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20">
-          <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-12 text-center">
-            <div className="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle2 className="h-10 w-10 text-teal-600" />
+          <div className="bg-body rounded-lg p-8 sm:p-12 text-center border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
+            <div className="w-20 h-20 bg-[#B9FF2C] rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle2 className="h-10 w-10 text-body" />
             </div>
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl sm:text-4xl font-bold text-textElsa-primary mb-4">
               Thank You!
             </h1>
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-textElsa-secondary mb-6">
               Our representative will be in touch.
             </p>
             <Button
               onClick={() => setSubmitStatus('idle')}
-              className="bg-teal hover:bg-teal-600"
+              className="bg-[#B9FF2C] hover:bg-[#B9FF2C]/80 text-body"
             >
               Send Another Message
             </Button>
@@ -115,22 +115,30 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Contact Us
-          </h1>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            Get in touch with our team to discuss your AI governance needs. We're here to help you navigate
-            compliance challenges and secure your AI operations.
-          </p>
-        </div>
+    <div className="w-full bg-body">
+      <div className="relative bg-body border-b borderElsa-card overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'radial-gradient(circle at center, rgba(94,250,195,0.1) 0%, transparent 70%)',
+        }}></div>
 
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-textElsa-primary mb-6">
+              <span className="text-[#B9FF2C]">Contact Us</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-textElsa-secondary leading-relaxed max-w-3xl mx-auto">
+              Get in touch with our team to discuss your AI governance needs. We're here to help you navigate
+              compliance challenges and secure your AI operations.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
+            <div className="bg-body rounded-lg p-8 border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
+              <h2 className="text-2xl font-bold text-textElsa-primary mb-6">Send us a message</h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
@@ -209,7 +217,7 @@ export default function ContactPage() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-teal hover:bg-teal-600 py-6 text-lg font-semibold"
+                  className="w-full bg-[#B9FF2C] hover:bg-[#B9FF2C]/80 text-body py-6 text-lg font-semibold"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
@@ -218,42 +226,42 @@ export default function ContactPage() {
           </div>
 
           <div className="space-y-8">
-            <div className="bg-gradient-to-br from-teal-50 to-white rounded-2xl shadow-xl p-8 border-2 border-teal-200">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
+            <div className="bg-body rounded-lg p-8 border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
+              <h2 className="text-2xl font-bold text-textElsa-primary mb-6">Contact Information</h2>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-6 w-6 text-teal-600" />
+                  <div className="w-12 h-12 bg-[#B9FF2C] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail className="h-6 w-6 text-body" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Email</h3>
+                    <h3 className="font-bold text-textElsa-primary mb-1">Email</h3>
                     <a
                       href="mailto:contact@elsaai.co.uk"
-                      className="text-teal-700 hover:text-teal-800 hover:underline"
+                      className="text-[#B9FF2C] hover:text-[#B9FF2C]/80 hover:underline"
                     >
                       contact@elsaai.co.uk
                     </a>
-                    <p className="text-sm text-gray-600 mt-1">We typically respond within 1 business day</p>
+                    <p className="text-sm text-textElsa-secondary mt-1">We typically respond within 1 business day</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-teal-600" />
+                  <div className="w-12 h-12 bg-[#B9FF2C] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="h-6 w-6 text-body" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Location</h3>
-                    <p className="text-gray-700">United Kingdom</p>
-                    <p className="text-sm text-gray-600 mt-1">Serving organizations globally</p>
+                    <h3 className="font-bold text-textElsa-primary mb-1">Location</h3>
+                    <p className="text-textElsa-primary">United Kingdom</p>
+                    <p className="text-sm text-textElsa-secondary mt-1">Serving organizations globally</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Need Immediate Help?</h2>
-              <p className="text-gray-700 mb-6">
+            <div className="bg-body rounded-lg p-8 border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
+              <h2 className="text-xl font-bold text-textElsa-primary mb-4">Need Immediate Help?</h2>
+              <p className="text-textElsa-secondary mb-6">
                 If you're facing an urgent AI compliance or security issue, consider our free emergency assessment
                 to get immediate guidance on your risks and next steps.
               </p>
@@ -261,7 +269,7 @@ export default function ContactPage() {
                 href="https://elsaai.co.uk/free-assessment"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-md hover:shadow-lg"
+                className="inline-flex items-center justify-center w-full px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
               >
                 Get Your Readiness Assessment
               </a>

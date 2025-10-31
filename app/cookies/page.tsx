@@ -8,49 +8,59 @@ export default function CookiesPage() {
   const { openPreferencesModal, preferences } = useCookieConsent();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="w-full bg-body">
+      <div className="relative bg-body border-b borderElsa-card overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'radial-gradient(circle at center, rgba(94,250,195,0.1) 0%, transparent 70%)',
+        }}></div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <Cookie className="h-10 w-10 text-[#B9FF2C]" />
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-textElsa-primary">Cookies & Preferences</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <Cookie className="h-10 w-10 text-teal-600" />
-            <h1 className="text-4xl font-bold text-gray-900">Cookies & Preferences</h1>
-          </div>
-
-          <div className="bg-teal-50 border-2 border-teal-200 rounded-xl p-6 mb-8">
+          <div className="bg-body border border-[#B9FF2C]/30 rounded-lg p-6 mb-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <h2 className="text-lg font-bold text-gray-900 mb-2">Manage Your Cookie Preferences</h2>
-                <p className="text-sm text-gray-700">
+                <h2 className="text-lg font-bold text-textElsa-primary mb-2">Manage Your Cookie Preferences</h2>
+                <p className="text-sm text-textElsa-secondary">
                   Control which cookies we can use to improve your experience. You can change your preferences at any time.
                 </p>
               </div>
               <Button
                 onClick={openPreferencesModal}
-                className="bg-teal hover:bg-teal-600 whitespace-nowrap"
+                className="bg-[#B9FF2C] hover:bg-[#B9FF2C]/80 text-body whitespace-nowrap"
               >
                 <SettingsIcon className="h-4 w-4 mr-2" />
                 Manage Cookies
               </Button>
             </div>
 
-            <div className="mt-4 pt-4 border-t border-teal-200">
-              <h3 className="text-sm font-semibold text-gray-900 mb-2">Your Current Settings:</h3>
+            <div className="mt-4 pt-4 border-t border-[#B9FF2C]/30">
+              <h3 className="text-sm font-semibold text-textElsa-primary mb-2">Your Current Settings:</h3>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 <div className="flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${preferences.strictlyNecessary ? 'bg-green-500' : 'bg-gray-300'}`}></div>
-                  <span className="text-xs text-gray-700">Strictly Necessary</span>
+                  <div className={`w-2 h-2 rounded-full ${preferences.strictlyNecessary ? 'bg-[#B9FF2C]' : 'bg-gray-400'}`}></div>
+                  <span className="text-xs text-textElsa-secondary">Strictly Necessary</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${preferences.preferences ? 'bg-green-500' : 'bg-gray-300'}`}></div>
-                  <span className="text-xs text-gray-700">Preferences</span>
+                  <div className={`w-2 h-2 rounded-full ${preferences.preferences ? 'bg-[#B9FF2C]' : 'bg-gray-400'}`}></div>
+                  <span className="text-xs text-textElsa-secondary">Preferences</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${preferences.analytics ? 'bg-green-500' : 'bg-gray-300'}`}></div>
-                  <span className="text-xs text-gray-700">Analytics</span>
+                  <div className={`w-2 h-2 rounded-full ${preferences.analytics ? 'bg-[#B9FF2C]' : 'bg-gray-400'}`}></div>
+                  <span className="text-xs text-textElsa-secondary">Analytics</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${preferences.marketing ? 'bg-green-500' : 'bg-gray-300'}`}></div>
-                  <span className="text-xs text-gray-700">Marketing</span>
+                  <div className={`w-2 h-2 rounded-full ${preferences.marketing ? 'bg-[#B9FF2C]' : 'bg-gray-400'}`}></div>
+                  <span className="text-xs text-textElsa-secondary">Marketing</span>
                 </div>
               </div>
             </div>
@@ -58,20 +68,20 @@ export default function CookiesPage() {
 
           <div className="prose prose-lg max-w-none">
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are Cookies?</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <h2 className="text-2xl font-bold text-textElsa-primary mb-4">What Are Cookies?</h2>
+              <p className="text-textElsa-secondary leading-relaxed mb-4">
                 Cookies are small text files that are placed on your device when you visit a website. They are widely used to make
                 websites work more efficiently and provide information to the owners of the site.
               </p>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-textElsa-secondary leading-relaxed">
                 We use cookies to enhance your browsing experience, analyze site traffic, and serve personalized content. This page
                 explains what cookies we use, why we use them, and how you can control them.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Cookie Categories</h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <h2 className="text-2xl font-bold text-textElsa-primary mb-4">Cookie Categories</h2>
+              <p className="text-textElsa-secondary leading-relaxed mb-6">
                 We categorize cookies into four types based on their purpose. You can control your preferences for each category
                 except strictly necessary cookies, which are essential for the website to function.
               </p>

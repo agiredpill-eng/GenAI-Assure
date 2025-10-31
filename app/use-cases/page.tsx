@@ -133,65 +133,61 @@ export default function UseCasesPage() {
     }
   ];
 
-  const getColorClasses = (color: string) => {
-    const colors: Record<string, { bg: string; border: string; icon: string }> = {
-      blue: { bg: "from-blue-50 to-white", border: "border-blue-200", icon: "bg-blue-100 text-blue-600" },
-      teal: { bg: "from-teal-50 to-white", border: "border-teal-200", icon: "bg-teal-100 text-teal-600" },
-      green: { bg: "from-green-50 to-white", border: "border-green-200", icon: "bg-green-100 text-green-600" },
-      orange: { bg: "from-orange-50 to-white", border: "border-orange-200", icon: "bg-orange-100 text-orange-600" },
-      red: { bg: "from-red-50 to-white", border: "border-red-200", icon: "bg-red-100 text-red-600" }
-    };
-    return colors[color] || colors.blue;
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            High-Impact Use Cases
-          </h1>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
-            GenAI Assure supports organizations across diverse AI deployment scenarios—from productivity tools
-            to custom agents—with security-led guardrails, operational visibility, and audit-ready evidence.
-          </p>
-        </div>
+    <div className="w-full bg-body">
+      <div className="relative bg-body border-b borderElsa-card overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'radial-gradient(circle at center, rgba(94,250,195,0.1) 0%, transparent 70%)',
+        }}></div>
 
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-textElsa-primary mb-6">
+              <span className="text-[#B9FF2C]">High-Impact Use Cases</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-textElsa-secondary leading-relaxed max-w-4xl mx-auto">
+              GenAI Assure supports organizations across diverse AI deployment scenarios—from productivity tools
+              to custom agents—with security-led guardrails, operational visibility, and audit-ready evidence.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <section className="mb-20">
           <div className="grid gap-8">
             {useCases.map((useCase, index) => {
               const Icon = useCase.icon;
-              const colorClasses = getColorClasses(useCase.color);
 
               return (
                 <div
                   key={index}
                   id={useCase.id}
-                  className={`bg-gradient-to-br ${colorClasses.bg} rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 ${colorClasses.border} p-8 scroll-mt-24`}
+                  className="group relative bg-body rounded-lg p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.6),0_0_24px_rgba(94,250,195,0.45)] transition-all duration-300 border border-[#B9FF2C]/30 hover:border-[#B9FF2C] transform hover:-translate-y-0.5 scroll-mt-24"
                 >
                   <div className="flex items-start gap-6">
-                    <div className={`w-12 h-12 ${colorClasses.icon} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                      <Icon className="h-6 w-6" />
+                    <div className="w-12 h-12 bg-[#B9FF2C] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon className="h-6 w-6 text-body" />
                     </div>
 
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                      <h3 className="text-2xl font-bold text-textElsa-primary mb-3">
                         {index + 1}. {useCase.title}
                       </h3>
 
                       <div className="mb-4">
-                        <p className="text-base font-semibold text-gray-900 mb-2">Value:</p>
-                        <p className="text-gray-700 leading-relaxed">{useCase.value}</p>
+                        <p className="text-base font-semibold text-[#B9FF2C] mb-2">Value:</p>
+                        <p className="text-textElsa-primary leading-relaxed">{useCase.value}</p>
                       </div>
 
                       <div>
-                        <p className="text-base font-semibold text-gray-900 mb-2">How GenAI Assure helps:</p>
-                        <p className="text-gray-700 leading-relaxed">{useCase.howAssureHelps}</p>
+                        <p className="text-base font-semibold text-[#B9FF2C] mb-2">How GenAI Assure helps:</p>
+                        <p className="text-textElsa-primary leading-relaxed">{useCase.howAssureHelps}</p>
                       </div>
 
                       {useCase.note && (
-                        <div className="mt-4 pt-4 border-t border-gray-300">
-                          <p className="text-sm italic text-gray-600">{useCase.note}</p>
+                        <div className="mt-4 pt-4 border-t border-[#B9FF2C]/30">
+                          <p className="text-sm italic text-textElsa-secondary">{useCase.note}</p>
                         </div>
                       )}
                     </div>
@@ -203,60 +199,60 @@ export default function UseCasesPage() {
         </section>
 
         <section className="mb-20">
-          <div className="bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl shadow-2xl p-8 sm:p-12 text-white">
+          <div className="bg-body rounded-2xl shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-8 sm:p-12 border border-[#B9FF2C]/30">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
-                <Shield className="h-6 w-6 text-white" />
+              <div className="w-12 h-12 bg-[#B9FF2C] rounded-lg flex items-center justify-center">
+                <Shield className="h-6 w-6 text-body" />
               </div>
-              <h2 className="text-3xl font-bold">Why Businesses Adopt GenAI Assure for These Areas</h2>
+              <h2 className="text-3xl font-bold text-textElsa-primary">Why Businesses Adopt GenAI Assure for These Areas</h2>
             </div>
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <CheckCircle2 className="h-6 w-6 text-white flex-shrink-0 mt-1" strokeWidth={2.5} />
+                <CheckCircle2 className="h-6 w-6 text-[#B9FF2C] flex-shrink-0 mt-1" strokeWidth={2.5} />
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Risk reduced, adoption unlocked</h3>
-                  <p className="text-white/95 leading-relaxed">
+                  <h3 className="text-xl font-bold text-[#B9FF2C] mb-2">Risk reduced, adoption unlocked</h3>
+                  <p className="text-textElsa-primary leading-relaxed">
                     Security-led guardrails (identity, secrets, DLP, egress) let teams ship AI use cases confidently.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <CheckCircle2 className="h-6 w-6 text-white flex-shrink-0 mt-1" strokeWidth={2.5} />
+                <CheckCircle2 className="h-6 w-6 text-[#B9FF2C] flex-shrink-0 mt-1" strokeWidth={2.5} />
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Operational visibility</h3>
-                  <p className="text-white/95 leading-relaxed">
+                  <h3 className="text-xl font-bold text-[#B9FF2C] mb-2">Operational visibility</h3>
+                  <p className="text-textElsa-primary leading-relaxed">
                     The AI event schema gives uniform logs across tools (prompts, outputs, uploads, webhooks, decisions, tokens).
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <CheckCircle2 className="h-6 w-6 text-white flex-shrink-0 mt-1" strokeWidth={2.5} />
+                <CheckCircle2 className="h-6 w-6 text-[#B9FF2C] flex-shrink-0 mt-1" strokeWidth={2.5} />
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Regulatory alignment</h3>
-                  <p className="text-white/95 leading-relaxed">
+                  <h3 className="text-xl font-bold text-[#B9FF2C] mb-2">Regulatory alignment</h3>
+                  <p className="text-textElsa-primary leading-relaxed">
                     Deployer duties (EU AI Act), GDPR/UK GDPR artefacts (DPIA/RoPA/transfers), ISO/IEC 42001 AIMS cycle—all baked into the Evidence Pack.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <CheckCircle2 className="h-6 w-6 text-white flex-shrink-0 mt-1" strokeWidth={2.5} />
+                <CheckCircle2 className="h-6 w-6 text-[#B9FF2C] flex-shrink-0 mt-1" strokeWidth={2.5} />
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Audit-ready by design</h3>
-                  <p className="text-white/95 leading-relaxed">
+                  <h3 className="text-xl font-bold text-[#B9FF2C] mb-2">Audit-ready by design</h3>
+                  <p className="text-textElsa-primary leading-relaxed">
                     WORM/object storage, SHA-256 hashes, correlation keys (use_case_id, control_id, vendor_id, etc.) make proof easy.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <CheckCircle2 className="h-6 w-6 text-white flex-shrink-0 mt-1" strokeWidth={2.5} />
+                <CheckCircle2 className="h-6 w-6 text-[#B9FF2C] flex-shrink-0 mt-1" strokeWidth={2.5} />
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Time-boxed execution</h3>
-                  <p className="text-white/95 leading-relaxed">
+                  <h3 className="text-xl font-bold text-[#B9FF2C] mb-2">Time-boxed execution</h3>
+                  <p className="text-textElsa-primary leading-relaxed">
                     A practical 30-60-90 plan with clear milestones (policy, SSO/DLP/SIEM, triage playbook, dashboards, evidence).
                   </p>
                 </div>
@@ -265,15 +261,15 @@ export default function UseCasesPage() {
           </div>
         </section>
 
-        <section className="bg-white rounded-2xl shadow-xl p-8 sm:p-12 text-center">
+        <section className="bg-body rounded-2xl shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-8 sm:p-12 text-center border border-[#B9FF2C]/30">
           <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center">
-              <FileCheck className="h-6 w-6 text-teal-600" />
+            <div className="w-12 h-12 bg-[#B9FF2C] rounded-lg flex items-center justify-center">
+              <FileCheck className="h-6 w-6 text-body" />
             </div>
-            <h2 className="text-3xl font-bold text-gray-900">Ready to Get Started?</h2>
+            <h2 className="text-3xl font-bold text-textElsa-primary">Ready to Get Started?</h2>
           </div>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-textElsa-secondary leading-relaxed mb-8 max-w-3xl mx-auto">
             Whether you're deploying Microsoft Copilot, custom agents, or workflow automations,
             GenAI Assure provides the governance framework to move fast while staying compliant.
           </p>
@@ -283,13 +279,13 @@ export default function UseCasesPage() {
               href="https://elsaai.co.uk/free-assessment"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal hover:bg-teal-600 rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
             >
               Get Your Readiness Assessment
             </a>
             <a
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal bg-white hover:bg-gray-50 rounded-lg transition-all border-2 border-teal shadow-sm hover:shadow-md"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
             >
               Contact Us
             </a>

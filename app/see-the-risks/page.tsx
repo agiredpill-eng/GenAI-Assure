@@ -583,22 +583,30 @@ export default function SeeTheRisksPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            GenAI Assure Enterprise Defense for AI Risks
-          </h1>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
-            The AI risk landscape is evolving rapidly. From prompt injection attacks to compliance gaps under the EU AI Act, organizations face unprecedented challenges in securing their AI operations. Our comprehensive catalog of 25+ critical risks helps you identify, understand, and mitigate the threats that matter most to your business using the GenAI Assure framework.
-          </p>
-        </div>
+    <div className="w-full bg-body">
+      <div className="relative bg-body border-b borderElsa-card overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'radial-gradient(circle at center, rgba(94,250,195,0.1) 0%, transparent 70%)',
+        }}></div>
 
-        <div className="mb-12 bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-8 border-2 border-teal-200">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-textElsa-primary mb-6">
+              <span className="text-[#B9FF2C]">GenAI Assure Enterprise Defense for AI Risks</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-textElsa-secondary leading-relaxed max-w-4xl mx-auto">
+              The AI risk landscape is evolving rapidly. From prompt injection attacks to compliance gaps under the EU AI Act, organizations face unprecedented challenges in securing their AI operations. Our comprehensive catalog of 25+ critical risks helps you identify, understand, and mitigate the threats that matter most to your business using the GenAI Assure framework.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mb-12 bg-body rounded-lg p-8 border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
+          <h2 className="text-2xl font-bold text-textElsa-primary mb-6 flex items-center gap-2">
             <span className="text-3xl">🛠️</span> Risks by AI Tool Type
           </h2>
-          <p className="text-gray-700 mb-6">Different AI tools have different risk profiles. Select your deployment type:</p>
+          <p className="text-textElsa-secondary mb-6">Different AI tools have different risk profiles. Select your deployment type:</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {toolTypes.map((tool) => {
@@ -607,18 +615,18 @@ export default function SeeTheRisksPage() {
                 <button
                   key={tool.id}
                   onClick={() => setActiveToolType(activeToolType === tool.id ? null : tool.id)}
-                  className={`text-left p-6 rounded-xl transition-all border-2 ${
+                  className={`text-left p-6 rounded-lg transition-all border ${
                     activeToolType === tool.id
-                      ? 'bg-white border-teal-500 shadow-lg scale-105'
-                      : 'bg-white/50 border-transparent hover:border-teal-200 hover:shadow-md'
+                      ? 'bg-body border-[#B9FF2C] shadow-lg scale-105'
+                      : 'bg-body/50 border-[#B9FF2C]/30 hover:border-[#B9FF2C] hover:shadow-md'
                   }`}
                 >
                   <div className="flex items-center gap-2 mb-3">
-                    <Icon className="h-6 w-6 text-teal-600" />
-                    <h3 className="font-bold text-gray-900">{tool.name}</h3>
+                    <Icon className="h-6 w-6 text-[#B9FF2C]" />
+                    <h3 className="font-bold text-textElsa-primary">{tool.name}</h3>
                   </div>
-                  <p className="text-sm text-gray-600 mb-3">{tool.examples}</p>
-                  <p className="text-xs text-gray-500">
+                  <p className="text-sm text-textElsa-secondary mb-3">{tool.examples}</p>
+                  <p className="text-xs text-textElsa-secondary">
                     <span className="font-semibold">Top Risks:</span> {tool.topRisks}
                   </p>
                 </button>
@@ -629,7 +637,7 @@ export default function SeeTheRisksPage() {
             <div className="mt-4 text-center">
               <button
                 onClick={() => setActiveToolType(null)}
-                className="text-sm text-teal-600 hover:text-teal-700 font-semibold"
+                className="text-sm text-[#B9FF2C] hover:text-[#B9FF2C]/80 font-semibold"
               >
                 Clear tool type filter
               </button>
@@ -849,11 +857,11 @@ export default function SeeTheRisksPage() {
           </div>
         )}
 
-        <div className="mt-16 bg-teal-50 border-2 border-teal-200 rounded-xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className="mt-16 bg-body border border-[#B9FF2C]/30 rounded-lg p-8 text-center shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
+          <h3 className="text-2xl font-bold text-textElsa-primary mb-4">
             Need Help Addressing These Risks?
           </h3>
-          <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+          <p className="text-textElsa-secondary mb-6 max-w-2xl mx-auto">
             Our team can help you assess your current AI risk exposure and develop a comprehensive mitigation strategy tailored to your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -861,19 +869,20 @@ export default function SeeTheRisksPage() {
               href="https://elsaai.co.uk/free-assessment"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white text-lg px-8 py-6 rounded-md transition-colors"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
             >
               Get Your Readiness Assessment
             </a>
             <Button
               onClick={() => (window.location.href = '/contact')}
               variant="outline"
-              className="border-2 border-teal-600 text-teal-600 hover:bg-teal-50 text-lg px-8 py-6"
+              className="border-2 border-[#B9FF2C] text-textElsa-primary hover:bg-[#B9FF2C]/10 hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:text-[#B9FF2C] text-lg px-8 py-6"
             >
               Contact Our Experts
             </Button>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
