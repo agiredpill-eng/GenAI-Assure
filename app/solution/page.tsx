@@ -153,7 +153,7 @@ export default function SolutionPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-              href="/free-assessment"
+              href="/get-your-readiness-assessment"
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-teal bg-white hover:bg-gray-100 rounded-lg transition-all shadow-lg hover:shadow-xl"
               >
                 Get Your Readiness Assessment

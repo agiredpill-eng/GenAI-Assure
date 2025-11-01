@@ -315,7 +315,7 @@ export default function BlogPostPage({ params }: PageProps): JSX.Element {
             Our team can help you put these insights into practice with a tailored AI governance solution.
           </p>
           <a
-            href="/free-assessment"
+            href="/get-your-readiness-assessment"
             className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-body bg-[#B9FF2C] hover:bg-[#B9FF2C]/90 rounded-lg transition-all shadow-lg hover:shadow-xl"
           >
             Get Your Readiness Assessment

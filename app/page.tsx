@@ -1,7 +1,6 @@
 import { TriangleAlert as AlertTriangle, Shield, FileCheck, Search, Lock, CircleCheck as CheckCircle2, ClipboardList, ShieldCheck, Eye, Scale, ShieldAlert, DollarSign, Rocket } from 'lucide-react';
 import FrameworkWheel from '@/components/FrameworkWheel';
 import { Metadata } from 'next';
-import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'GenAI Assure - AI Governance & Compliance Framework | ELSA AI',
@@ -27,7 +26,7 @@ export default function Home() {
         }}></div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-textElsa-primary leading-tight">
                 <span className="text-[#B9FF2C]">Every AI Prompt Your Team Makes Is Audit Evidence.</span> Can You Prove You Had Controls?
@@ -37,9 +36,9 @@ export default function Home() {
                 The EU AI Act Article 26 holds deployers liable—not vendors. Fines reach €35M or 7% of global revenue, and vendor frameworks won't protect you when regulators arrive. GenAI Assure delivers deployer-first controls and audit-ready documentation in 90 days, built by the director who secured 20+ high-stakes enterprises.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center">
                 <a
-                  href="/free-assessment"
+                  href="/get-your-readiness-assessment"
                   className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
                 >
                   Get Your Readiness Assessment
@@ -52,19 +51,6 @@ export default function Home() {
                 >
                   See My AI Deployer Exposures
                 </a>
-              </div>
-            </div>
-
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-lg">
-                <Image 
-                  src="/GenAI_Assure_Hero.png" 
-                  alt="GenAI Assure - AI Governance & Compliance Framework" 
-                  width={800}
-                  height={800}
-                  className="w-full h-auto rounded-lg shadow-2xl"
-                  priority
-                />
               </div>
             </div>
           </div>
@@ -347,7 +333,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <a
-              href="/free-assessment"
+              href="/get-your-readiness-assessment"
               className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
             >
               Get Your Readiness Assessment
@@ -499,7 +485,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <a
-              href="/free-assessment"
+              href="/get-your-readiness-assessment"
               className="inline-flex items-center justify-center px-5 py-3 text-base font-semibold text-textElsa-primary bg-transparent border border-[#B9FF2C] hover:text-[#B9FF2C] hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] hover:drop-shadow-[0_0_10px_rgba(185,255,44,0.8)] rounded-sm transition-all shadow-sm hover:shadow-[0_0_20px_rgba(185,255,44,0.6)] transform hover:scale-[1.02] hover:bg-[#B9FF2C]/10"
             >
               Get Your Readiness Assessment
