@@ -21,6 +21,11 @@ export default function Home() {
   return (
     <div className="w-full bg-body">
       <section className="relative bg-body border-b borderElsa-card overflow-hidden">
+        <div className="absolute inset-0 opacity-30" style={{
+          backgroundImage: 'url("/hero_background.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}></div>
         <div className="absolute inset-0 opacity-10" style={{
           backgroundImage: 'radial-gradient(circle at center, rgba(94,250,195,0.1) 0%, transparent 70%)',
         }}></div>
