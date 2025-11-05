@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy - ELSA AI',
-  description: 'Privacy policy for ELSA AI and GenAI Assure. Learn how we collect, use, and protect your personal information.',
+  description: 'Privacy policy for ELSA AI and GenAI Assure™. Learn how we collect, use, and protect your personal information.',
   keywords: 'privacy policy, data protection, GDPR',
   alternates: {
     canonical: 'https://elsaai.co.uk/privacy',
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
         <h2>Who we are</h2>
         <p>
           ELSA AI Ltd (“ELSA AI”, “we”, “us”, “our”) provides consultancy
-          services to help organisations implement the GenAI Assure methodology.
+          services to help organisations implement the GenAI Assure™ methodology.
         </p>
 
         <h2>1) Data Controller &amp; Contact</h2>
@@ -114,7 +114,7 @@ export default function PrivacyPage() {
         <h2>5) AI-Specific Disclosures</h2>
         <p>
           We may process business contact details and communications to deliver
-          GenAI Assure services (e.g., drafting policies, risk registers,
+          GenAI Assure™ services (e.g., drafting policies, risk registers,
           evidence maps).
         </p>
         <p>If we use AI tooling in delivery, we:</p>
@@ -250,7 +250,7 @@ export default function PrivacyPage() {
         <p>
           “By submitting this form, you acknowledge ELSA AI will process your
           details to respond to your enquiry and, if you opt in, to send updates
-          about GenAI Assure. We won’t sell your data. You can opt out anytime.
+          about GenAI Assure™. We won’t sell your data. You can opt out anytime.
           See our full Privacy Policy for your rights, retention, cookies, and
           international transfers.”
         </p>

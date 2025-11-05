@@ -3,8 +3,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About ELSA AI - Ethical, Legal, Societal, Accountable AI | ELSA AI',
-  description: 'Learn about ELSA AI and our mission to help organizations operationalize responsible AI using the GenAI Assure framework.',
-  keywords: 'about ELSA AI, responsible AI, ethical AI, AI governance company, GenAI Assure framework',
+  description: 'Learn about ELSA AI and our mission to help organizations operationalize responsible AI using the GenAI Assure™ framework.',
+  keywords: 'about ELSA AI, responsible AI, ethical AI, AI governance company, GenAI Assure™ framework',
   alternates: {
     canonical: 'https://elsaai.co.uk/about',
   },

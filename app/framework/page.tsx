@@ -200,7 +200,7 @@ export default function FrameworkPage() {
 
                     <h3 className="text-xl font-bold text-white mb-4">1.1 Purpose and Scope</h3>
 
-                    <p className="mb-4"><strong>Purpose.</strong> GenAI Assure is a concise, security-led governance framework for organisations that deploy third-party AI tools and services. It links core principles → actionable controls → measurable evidence, enabling auditable adoption and a pragmatic 30–60–90-day implementation path for SMBs through to enterprises.</p>
+                    <p className="mb-4"><strong>Purpose.</strong> GenAI Assure™ is a concise, security-led governance framework for organisations that deploy third-party AI tools and services. It links core principles → actionable controls → measurable evidence, enabling auditable adoption and a pragmatic 30–60–90-day implementation path for SMBs through to enterprises.</p>
 
                     <p className="mb-4 text-white/90">This Framework provides guidance only. Clients retain full responsibility for implementing and operating all required technologies. ELSA AI delivers governance oversight, reviews, and approvals through structured change management processes. We do not directly deploy, configure, or administer systems.</p>
 
@@ -913,7 +913,7 @@ manifest_sha256: "<hash>"`}
                     <div className="bg-white/10 border border-[#B9FF2C]/30 rounded-lg p-6 mb-6">
                       <h3 className="font-bold text-white mb-3">Required citation:</h3>
                       <p className="font-mono text-sm text-white/90 bg-white/10 p-3 rounded border border-[#B9FF2C]/30">
-                        Ali, F. (2025). GenAI Assure Framework v1.0. ELSA AI LTD.<br />
+                        Ali, F. (2025). GenAI Assure™ Framework v1.0. ELSA AI LTD.<br />
                         Available at: www.elsaai.co.uk
                       </p>
                     </div>
@@ -942,7 +942,7 @@ manifest_sha256: "<hash>"`}
         <div className="mt-12 bg-body border border-[#B9FF2C]/30 rounded-xl p-8 shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Implement the Framework?</h3>
           <p className="text-white/90 mb-6 text-lg leading-relaxed">
-            Our team can help you implement the GenAI Assure Framework in your organization and achieve compliance in 90 days.
+            Our team can help you implement the GenAI Assure™ Framework in your organization and achieve compliance in 90 days.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a

@@ -207,7 +207,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${post.title} | ELSA AI Resources`,
     description: `Learn about ${post.category.toLowerCase()} in AI governance. ${post.title}`,
-    keywords: `AI governance, ${post.category}, EU AI Act, GDPR compliance, GenAI Assure`,
+    keywords: `AI governance, ${post.category}, EU AI Act, GDPR compliance, GenAI Assure™`,
     alternates: {
       canonical: `https://elsaai.co.uk/resources/${params.slug}`,
     },

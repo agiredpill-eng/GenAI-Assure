@@ -91,7 +91,7 @@ export default function FrameworkDownloadModal({ isOpen, onClose, onDownloadSucc
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-gray-900 flex items-center gap-2">
             <Download className="h-6 w-6 text-teal-600" />
-            Download GenAI Assure Framework
+            Download GenAI Assure™ Framework
           </DialogTitle>
           <DialogDescription className="text-base text-gray-700">
             Please provide the following information to download the framework PDF. This helps us understand how our framework is being used.

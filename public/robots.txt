@@ -1,4 +1,4 @@
-# robots.txt for GenAI Assure / ELSA AI
+# robots.txt for GenAI Assure™ / ELSA AI
 User-agent: *
 Allow: /
 Disallow: /api/

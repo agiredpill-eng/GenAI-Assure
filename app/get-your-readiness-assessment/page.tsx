@@ -259,13 +259,13 @@ export default function FreeAssessmentPage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <div className="text-center mb-10">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-textElsa-primary mb-4">
-              <span className="text-[#B9FF2C]">GenAI Assure Emergency Risk Assessment</span>
+              <span className="text-[#B9FF2C]">GenAI Assure™ Emergency Risk Assessment</span>
             </h1>
             <p className="text-lg sm:text-xl text-textElsa-secondary mb-4">
               Discover your AI compliance gaps in 15 minutes
             </p>
             <p className="text-textElsa-secondary max-w-3xl mx-auto">
-              Our experts will analyze your setup and provide a prioritised action plan aligned to the GenAI Assure Framework. For organisations deploying third-party AI (copilots, chat assistants, workflow automations, custom agents).
+              Our experts will analyze your setup and provide a prioritised action plan aligned to the GenAI Assure™ Framework. For organisations deploying third-party AI (copilots, chat assistants, workflow automations, custom agents).
             </p>
           </div>
         </div>

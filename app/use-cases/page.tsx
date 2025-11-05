@@ -18,8 +18,8 @@ import {
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Governance Use Cases - GenAI Assure | ELSA AI',
-  description: 'Discover how GenAI Assure helps organizations govern Microsoft 365 Copilot, Google Workspace AI, customer service chatbots, and other enterprise AI tools.',
+  title: 'AI Governance Use Cases - GenAI Assure™ | ELSA AI',
+  description: 'Discover how GenAI Assure™ helps organizations govern Microsoft 365 Copilot, Google Workspace AI, customer service chatbots, and other enterprise AI tools.',
   keywords: 'AI use cases, Microsoft Copilot governance, Google Workspace AI compliance, chatbot governance, enterprise AI controls',
   alternates: {
     canonical: 'https://elsaai.co.uk/use-cases',
@@ -156,7 +156,7 @@ export default function UseCasesPage() {
               <span className="text-[#B9FF2C]">High-Impact Use Cases</span>
             </h1>
             <p className="text-lg sm:text-xl text-textElsa-secondary leading-relaxed max-w-4xl mx-auto">
-              GenAI Assure supports organizations across diverse AI deployment scenarios—from productivity tools
+              GenAI Assure™ supports organizations across diverse AI deployment scenarios—from productivity tools
               to custom agents—with security-led guardrails, operational visibility, and audit-ready evidence.
             </p>
           </div>
@@ -191,7 +191,7 @@ export default function UseCasesPage() {
                       </div>
 
                       <div>
-                        <p className="text-base font-semibold text-[#B9FF2C] mb-2">How GenAI Assure helps:</p>
+                        <p className="text-base font-semibold text-[#B9FF2C] mb-2">How GenAI Assure™ helps:</p>
                         <p className="text-textElsa-primary leading-relaxed">{useCase.howAssureHelps}</p>
                       </div>
 
@@ -214,7 +214,7 @@ export default function UseCasesPage() {
               <div className="w-12 h-12 bg-[#B9FF2C] rounded-lg flex items-center justify-center">
                 <Shield className="h-6 w-6 text-body" />
               </div>
-              <h2 className="text-3xl font-bold text-textElsa-primary">Why Businesses Adopt GenAI Assure for These Areas</h2>
+              <h2 className="text-3xl font-bold text-textElsa-primary">Why Businesses Adopt GenAI Assure™ for These Areas</h2>
             </div>
 
             <div className="space-y-6">
@@ -281,7 +281,7 @@ export default function UseCasesPage() {
 
           <p className="text-lg text-textElsa-secondary leading-relaxed mb-8 max-w-3xl mx-auto">
             Whether you're deploying Microsoft Copilot, custom agents, or workflow automations,
-            GenAI Assure provides the governance framework to move fast while staying compliant.
+            GenAI Assure™ provides the governance framework to move fast while staying compliant.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

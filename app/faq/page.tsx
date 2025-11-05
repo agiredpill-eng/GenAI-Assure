@@ -3,8 +3,8 @@ import { HelpCircle, Mail, Globe, Linkedin } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'FAQ - Frequently Asked Questions | ELSA AI',
-  description: 'Frequently asked questions about ELSA AI, GenAI Assure framework, implementation, compliance, and getting started.',
-  keywords: 'FAQ, AI governance FAQ, GenAI Assure questions, AI compliance questions, EU AI Act, GDPR AI',
+  description: 'Frequently asked questions about ELSA AI, GenAI Assure™ framework, implementation, compliance, and getting started.',
+  keywords: 'FAQ, AI governance FAQ, GenAI Assure™ questions, AI compliance questions, EU AI Act, GDPR AI',
   alternates: {
     canonical: 'https://elsaai.co.uk/faq',
   },
@@ -57,29 +57,29 @@ export default function FAQPage() {
             </div>
           </section>
 
-          {/* About GenAI Assure */}
+          {/* About GenAI Assure™ */}
           <section>
             <h2 className="text-2xl font-bold text-white mb-6 pb-2 border-b-2 border-[#B9FF2C]">
-              About GenAI Assure
+              About GenAI Assure™
             </h2>
             <div className="space-y-6">
               <div className="bg-body rounded-xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-6">
-                <h3 className="text-lg font-bold text-white mb-3">What is GenAI Assure?</h3>
+                <h3 className="text-lg font-bold text-white mb-3">What is GenAI Assure™?</h3>
                 <p className="text-white/90 leading-relaxed">
-                  GenAI Assure is ELSA AI's governance framework that provides a pragmatic 30‑60‑90‑day implementation pathway for organisations using third‑party AI tools. It links principles → controls → evidence across security, regulatory, ethics, operations, and culture.
+                  GenAI Assure™ is ELSA AI's governance framework that provides a pragmatic 30‑60‑90‑day implementation pathway for organisations using third‑party AI tools. It links principles → controls → evidence across security, regulatory, ethics, operations, and culture.
                 </p>
               </div>
 
               <div className="bg-body rounded-xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-6">
-                <h3 className="text-lg font-bold text-white mb-3">What's the relationship between ELSA AI and GenAI Assure?</h3>
+                <h3 className="text-lg font-bold text-white mb-3">What's the relationship between ELSA AI and GenAI Assure™?</h3>
                 <ul className="text-white/90 leading-relaxed space-y-2 list-disc list-inside">
-                  <li><strong>GenAI Assure</strong> = the framework (the what)</li>
+                  <li><strong>GenAI Assure™</strong> = the framework (the what)</li>
                   <li><strong>ELSA AI</strong> = the advisory services that help you implement it (the who)</li>
                 </ul>
               </div>
 
               <div className="bg-body rounded-xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-6">
-                <h3 className="text-lg font-bold text-white mb-3">Who is GenAI Assure designed for?</h3>
+                <h3 className="text-lg font-bold text-white mb-3">Who is GenAI Assure™ designed for?</h3>
                 <p className="text-white/90 leading-relaxed mb-3">
                   AI deployers—organisations using third‑party AI services such as:
                 </p>
@@ -92,7 +92,7 @@ export default function FAQPage() {
               </div>
 
               <div className="bg-body rounded-xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-6">
-                <h3 className="text-lg font-bold text-white mb-3">What problems does GenAI Assure address?</h3>
+                <h3 className="text-lg font-bold text-white mb-3">What problems does GenAI Assure™ address?</h3>
                 <ul className="text-white/90 leading-relaxed space-y-2 list-disc list-inside">
                   <li>Shadow AI without oversight</li>
                   <li>Data leakage and misuse via prompts/automations</li>
@@ -151,7 +151,7 @@ export default function FAQPage() {
               </div>
 
               <div className="bg-body rounded-xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-6">
-                <h3 className="text-lg font-bold text-white mb-3">Is GenAI Assure software or a managed service?</h3>
+                <h3 className="text-lg font-bold text-white mb-3">Is GenAI Assure™ software or a managed service?</h3>
                 <p className="text-white/90 leading-relaxed">
                   Neither. It's a framework and advisory methodology. We provide blueprints, control designs, validation, and evidence structures. Your teams implement and operate the technology.
                 </p>
@@ -194,9 +194,9 @@ export default function FAQPage() {
             </h2>
             <div className="space-y-6">
               <div className="bg-body rounded-xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-6">
-                <h3 className="text-lg font-bold text-white mb-3">What frameworks and regulations does GenAI Assure map to?</h3>
+                <h3 className="text-lg font-bold text-white mb-3">What frameworks and regulations does GenAI Assure™ map to?</h3>
                 <p className="text-white/90 leading-relaxed mb-3">
-                  GenAI Assure maps to major frameworks and regulations:
+                  GenAI Assure™ maps to major frameworks and regulations:
                 </p>
                 <ul className="text-white/90 leading-relaxed space-y-2 list-disc list-inside">
                   <li><strong>EU AI Act (Article 26)</strong> — deployer duties: logging, transparency, human oversight</li>
@@ -320,7 +320,7 @@ export default function FAQPage() {
               </div>
 
               <div className="bg-body rounded-xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-6">
-                <h3 className="text-lg font-bold text-white mb-3">Does GenAI Assure cover model development or fine‑tuning?</h3>
+                <h3 className="text-lg font-bold text-white mb-3">Does GenAI Assure™ cover model development or fine‑tuning?</h3>
                 <p className="text-white/90 leading-relaxed">
                   No. The framework is for AI deployers using third‑party tools; model building or fine‑tuning is out of scope.
                 </p>
@@ -335,13 +335,21 @@ export default function FAQPage() {
             </h2>
             <div className="space-y-6">
               <div className="bg-body rounded-xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-6">
-                <h3 className="text-lg font-bold text-white mb-3">How is GenAI Assure licensed?</h3>
-                <p className="text-white/90 leading-relaxed mb-3">
-                  GenAI Assure is proprietary methodology and documentation owned by ELSA AI Ltd (version 1.0).
-                </p>
-                <p className="text-white/90 leading-relaxed">
-                  When we work with you, we give you the framework, controls, and evidence pack for your internal use so you can meet regulatory and audit obligations as an AI deployer. External redistribution or reuse outside your organisation isn't permitted unless agreed in your Statement of Work.
-                </p>
+                <h3 className="text-lg font-bold text-white mb-3">How is GenAI Assure™ licensed?</h3>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-white mb-2">Licensing & Use</h4>
+                    <p className="text-white/90 leading-relaxed">
+                      GenAI Assure™ Framework v1.0 is © ELSA AI LTD and released under CC BY-ND 4.0. You may share the framework unchanged, including commercially, with attribution to ELSA AI LTD and a link to the license. No derivatives or modified versions may be distributed. Trademarks (e.g., GenAI Assure™) are not licensed by CC; please use the name to reference the framework, not to brand your own services.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white mb-2">Scope of Services</h4>
+                    <p className="text-white/90 leading-relaxed">
+                      ELSA AI provides advisory governance only: oversight, reviews, approvals, and audit-readiness validation via structured change management. We do not deploy, configure, or operate systems—your teams (or your MSPs) implement the controls we specify.
+                    </p>
+                  </div>
+                </div>
               </div>
 
               <div className="bg-body rounded-xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-6">
@@ -360,7 +368,7 @@ export default function FAQPage() {
             </h2>
             <div className="space-y-6">
               <div className="bg-body rounded-xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-6">
-                <h3 className="text-lg font-bold text-white mb-3">How do we know if we need GenAI Assure?</h3>
+                <h3 className="text-lg font-bold text-white mb-3">How do we know if we need GenAI Assure™?</h3>
                 <p className="text-white/90 leading-relaxed mb-3">
                   You likely do if:
                 </p>

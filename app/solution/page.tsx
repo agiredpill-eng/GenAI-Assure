@@ -3,9 +3,9 @@ import FrameworkWheel from '@/components/FrameworkWheel';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'GenAI Assure Solution - Complete AI Governance Platform | ELSA AI',
+  title: 'GenAI Assure™ Solution - Complete AI Governance Platform | ELSA AI',
   description: 'End-to-end AI governance solution with technical controls, SIEM integration, DLP, transparency labels, and audit-ready documentation for EU AI Act and GDPR compliance.',
-  keywords: 'AI governance solution, GenAI Assure platform, AI compliance platform, EU AI Act solution, GDPR AI platform',
+  keywords: 'AI governance solution, GenAI Assure™ platform, AI compliance platform, EU AI Act solution, GDPR AI platform',
   alternates: {
     canonical: 'https://elsaai.co.uk/solution',
   },
@@ -17,10 +17,10 @@ export default function SolutionPage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            The GenAI Assure Solution
+            The GenAI Assure™ Solution
           </h1>
           <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
-            GenAI Assure provides a comprehensive, audit-ready framework for managing AI deployments across your organization.
+            GenAI Assure™ provides a comprehensive, audit-ready framework for managing AI deployments across your organization.
             We combine technical controls, governance processes, and compliance documentation to deliver end-to-end AI risk management
             that meets the demands of GDPR, the EU AI Act, and industry standards like ISO/IEC 42001 and SOC 2.
           </p>
@@ -29,7 +29,7 @@ export default function SolutionPage() {
         <section className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              The GenAI Assure Framework
+              The GenAI Assure™ Framework
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               Our framework addresses the complete lifecycle of AI governance, from discovery and risk assessment

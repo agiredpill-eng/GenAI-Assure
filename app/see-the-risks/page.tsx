@@ -592,10 +592,10 @@ export default function SeeTheRisksPage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <div className="text-center mb-12">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-textElsa-primary mb-6">
-              <span className="text-[#B9FF2C]">GenAI Assure Enterprise Defense for AI Risks</span>
+              <span className="text-[#B9FF2C]">GenAI Assure™ Enterprise Defense for AI Risks</span>
             </h1>
             <p className="text-lg sm:text-xl text-textElsa-secondary leading-relaxed max-w-4xl mx-auto">
-              The AI risk landscape is evolving rapidly. From prompt injection attacks to compliance gaps under the EU AI Act, organizations face unprecedented challenges in securing their AI operations. Our comprehensive catalog of 25+ critical risks helps you identify, understand, and mitigate the threats that matter most to your business using the GenAI Assure framework.
+              The AI risk landscape is evolving rapidly. From prompt injection attacks to compliance gaps under the EU AI Act, organizations face unprecedented challenges in securing their AI operations. Our comprehensive catalog of 25+ critical risks helps you identify, understand, and mitigate the threats that matter most to your business using the GenAI Assure™ framework.
             </p>
           </div>
         </div>
@@ -828,7 +828,7 @@ export default function SeeTheRisksPage() {
 
                               {risk.genaiAssureComponents && risk.genaiAssureComponents.length > 0 && (
                                 <div>
-                                  <h4 className="font-bold text-white mb-2">GenAI Assure Framework Components</h4>
+                                  <h4 className="font-bold text-white mb-2">GenAI Assure™ Framework Components</h4>
                                   <div className="flex flex-wrap gap-2">
                                     {risk.genaiAssureComponents.map((component, idx) => (
                                       <Badge key={idx} variant="outline" className="bg-[#B9FF2C]/20 text-[#B9FF2C] border-[#B9FF2C] font-mono">

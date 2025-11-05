@@ -3,15 +3,15 @@ import FrameworkWheel from '@/components/FrameworkWheel';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'GenAI Assure - AI Governance & Compliance Framework | ELSA AI',
-  description: 'GenAI Assure helps AI deployers meet EU AI Act & GDPR with enforceable controls, SIEM logging, DLP, and audit-ready evidence in 90 days.',
+  title: 'GenAI Assure™ - AI Governance & Compliance Framework | ELSA AI',
+  description: 'GenAI Assure™ helps AI deployers meet EU AI Act & GDPR with enforceable controls, SIEM logging, DLP, and audit-ready evidence in 90 days.',
   keywords: 'AI governance, AI compliance, GDPR AI, EU AI Act, ISO 42001, AI risk management, AI security, enterprise AI governance',
   alternates: {
     canonical: 'https://elsaai.co.uk/',
   },
   openGraph: {
-    title: 'GenAI Assure - AI Governance & Compliance Framework',
-    description: 'GenAI Assure helps AI deployers meet EU AI Act & GDPR with enforceable controls, SIEM logging, DLP, and audit-ready evidence in 90 days.',
+    title: 'GenAI Assure™ - AI Governance & Compliance Framework',
+    description: 'GenAI Assure™ helps AI deployers meet EU AI Act & GDPR with enforceable controls, SIEM logging, DLP, and audit-ready evidence in 90 days.',
     type: 'website',
     url: 'https://elsaai.co.uk/',
   },
@@ -38,7 +38,7 @@ export default function Home() {
               </h1>
 
               <p className="text-lg sm:text-xl text-textElsa-secondary leading-relaxed">
-                The EU AI Act Article 26 holds deployers liable—not vendors. Fines reach €35M or 7% of global revenue, and vendor frameworks won't protect you when regulators arrive. GenAI Assure delivers deployer-first controls and audit-ready documentation in 90 days, built by the director who secured 20+ high-stakes enterprises.
+                The EU AI Act Article 26 holds deployers liable—not vendors. Fines reach €35M or 7% of global revenue, and vendor frameworks won't protect you when regulators arrive. GenAI Assure™ delivers deployer-first controls and audit-ready documentation in 90 days, built by the director who secured 20+ high-stakes enterprises.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center">
@@ -90,14 +90,14 @@ export default function Home() {
                   <iframe
                     className="absolute inset-0 w-full h-full"
                     src="https://www.youtube.com/embed/_EdCkza4vTQ?rel=0&modestbranding=1"
-                    title="GenAI Assure Framework Overview"
+                    title="GenAI Assure™ Framework Overview"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                   ></iframe>
                 </div>
                 <p className="text-center text-sm text-gray-600 mt-3 group-hover:text-teal-600 transition-colors">
-                  Watch: GenAI Assure Framework Overview
+                  Watch: GenAI Assure™ Framework Overview
                 </p>
               </a>
             </div>
@@ -177,10 +177,10 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 space-y-4">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-textElsa-primary">
-              How GenAI Assure Works: Our 3-Step Path to Confident AI Adoption
+              How GenAI Assure™ Works: Our 3-Step Path to Confident AI Adoption
             </h2>
             <p className="text-lg text-textElsa-secondary max-w-4xl mx-auto leading-relaxed mt-3">
-              GenAI Assure turns governance into a practical advantage by linking <span className="text-[#B9FF2C]">principles → controls → evidence</span> on a 30-60-90 plan with defined milestones and artifacts.
+              GenAI Assure™ turns governance into a practical advantage by linking <span className="text-[#B9FF2C]">principles → controls → evidence</span> on a 30-60-90 plan with defined milestones and artifacts.
             </p>
           </div>
 
@@ -359,10 +359,10 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 space-y-4">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-textElsa-primary">
-              Benefits of GenAI Assure for Your Business
+              Benefits of GenAI Assure™ for Your Business
             </h2>
             <p className="text-lg text-textElsa-secondary max-w-4xl mx-auto leading-relaxed mt-3">
-              GenAI Assure delivers more than compliance. <span className="text-[#B9FF2C]">It provides a practical pathway to safe, auditable, value-driven AI adoption</span>—so you can accelerate innovation while maintaining trust and resilience.
+              GenAI Assure™ delivers more than compliance. <span className="text-[#B9FF2C]">It provides a practical pathway to safe, auditable, value-driven AI adoption</span>—so you can accelerate innovation while maintaining trust and resilience.
             </p>
           </div>
 
@@ -522,7 +522,7 @@ export default function Home() {
               </div>
               <div className="text-center lg:text-left mt-5 group cursor-pointer">
                 <p className="text-textElsa-primary font-semibold transition-colors duration-200 group-hover:text-[#B9FF2C]">— Faisal Ali CISM, CRISC</p>
-                <p className="text-textElsa-secondary text-sm transition-colors duration-200 group-hover:text-[#B9FF2C]">Founder, ELSA AI · Director, GenAI Assure Framework</p>
+                <p className="text-textElsa-secondary text-sm transition-colors duration-200 group-hover:text-[#B9FF2C]">Founder, ELSA AI · Director, GenAI Assure™ Framework</p>
                 <p className="text-textElsa-secondary text-xs mt-2 transition-colors duration-200 group-hover:text-[#B9FF2C]">30 Years Securing High-Stakes Enterprises</p>
               </div>
             </div>
@@ -535,7 +535,7 @@ export default function Home() {
               <div className="space-y-6">
                 <div className="border-l-4 border-[#B9FF2C] pl-6 py-3 bg-cardElsa-dark/50 rounded-r-lg">
                   <p className="text-textElsa-secondary leading-relaxed">
-                    Faisal Ali didn't build GenAI Assure in a lab. He built it after 30 years in the trenches—leading cybersecurity programs, navigating audits, and implementing controls at organizations where a single failure could mean regulatory action, board-level crisis, or operational catastrophe.
+                    Faisal Ali didn't build GenAI Assure™ in a lab. He built it after 30 years in the trenches—leading cybersecurity programs, navigating audits, and implementing controls at organizations where a single failure could mean regulatory action, board-level crisis, or operational catastrophe.
                   </p>
                 </div>
 
@@ -579,7 +579,7 @@ export default function Home() {
                     What That Experience Revealed:
                   </h3>
                   <p className="text-textElsa-secondary leading-relaxed">
-                    Boards don't want theory. Auditors don't want promises. Deployers need controls that work this quarter—and evidence that survives scrutiny. GenAI Assure is built on that reality: 30 years of operational pressure, regulatory scrutiny, and high-stakes delivery.
+                    Boards don't want theory. Auditors don't want promises. Deployers need controls that work this quarter—and evidence that survives scrutiny. GenAI Assure™ is built on that reality: 30 years of operational pressure, regulatory scrutiny, and high-stakes delivery.
                   </p>
                 </div>
               </div>
