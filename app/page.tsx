@@ -529,47 +529,50 @@ export default function Home() {
 
             <div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-textElsa-primary tracking-tight mb-6">
-                AI Governance Built by Someone Who Secured the World's Most Scrutinized Enterprises
+                AI Governance Built on 30 Years of Operational Reality - Not Theory
               </h2>
               
               <div className="space-y-6">
                 <div className="border-l-4 border-[#B9FF2C] pl-6 py-3 bg-cardElsa-dark/50 rounded-r-lg">
                   <p className="text-textElsa-secondary leading-relaxed">
-                    Faisal Ali didn't build GenAI Assure™ in a lab. He built it after 30 years in the trenches—leading cybersecurity programs, navigating audits, and implementing controls at organizations where a single failure could mean regulatory action, board-level crisis, or operational catastrophe.
+                    Faisal Ali didn't build GenAI Assure™ in a lab. He built it after 30 years implementing security controls at organisations where a single failure could mean regulatory action, board-level crisis, or operational catastrophe.
+                  </p>
+                  <p className="text-textElsa-secondary leading-relaxed mt-4">
+                    The pattern was always the same: frameworks provided theory, auditors demanded evidence, and engineering teams needed answers by end of quarter.
                   </p>
                 </div>
 
                 <div className="border border-[#B9FF2C]/30 rounded-lg p-6 bg-cardElsa-dark/30 hover:border-[#B9FF2C]/50 transition-all">
                   <h3 className="text-lg font-bold text-[#B9FF2C] mb-3">
-                    Where the Framework Was Forged:
+                    Where the Controls Were Stress-Tested:
                   </h3>
-                  <p className="text-textElsa-secondary mb-4 text-sm">
-                    30 years securing operations where failure meant front-page crisis:
+                  <p className="text-textElsa-secondary mb-4 text-sm font-semibold">
+                    Three decades securing operations where failure meant front-page crisis:
                   </p>
                   <ul className="space-y-2 text-textElsa-secondary text-sm">
                     <li className="flex items-start">
-                      <span className="text-[#B9FF2C] mr-3 mt-1">▸</span>
-                      <span>Financial institutions managing billions in daily transactions (Barclays, Lloyds, British Business Bank)</span>
+                      <span className="text-[#B9FF2C] mr-3 mt-1">•</span>
+                      <span>Financial institutions managing billions in daily transactions under PCI-DSS and FCA scrutiny (Barclaycard, Lloyds, British Business Bank)</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-[#B9FF2C] mr-3 mt-1">▸</span>
-                      <span>Defense contractors protecting classified systems (BAE Systems, Lockheed Martin)</span>
+                      <span className="text-[#B9FF2C] mr-3 mt-1">•</span>
+                      <span>Defense contractors protecting classified systems under NISPOM and ITAR requirements (BAE Systems, Lockheed Martin)</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-[#B9FF2C] mr-3 mt-1">▸</span>
-                      <span>Retail and supply chain platforms at global scale (Walmart, Premier Farnell, Burberry, Applegate)</span>
+                      <span className="text-[#B9FF2C] mr-3 mt-1">•</span>
+                      <span>Retail and supply chain platforms operating at global scale with 24/7 availability demands (Walmart, Burberry)</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-[#B9FF2C] mr-3 mt-1">▸</span>
-                      <span>National infrastructure and public services under taxpayer accountability (Capita, OVO Energy, Smart DCC, BWDC, The Insolvency Service)</span>
+                      <span className="text-[#B9FF2C] mr-3 mt-1">•</span>
+                      <span>National infrastructure and public services under taxpayer accountability and regulatory supervision (Smart DCC, OVO Energy, SEFE Energy)</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-[#B9FF2C] mr-3 mt-1">▸</span>
-                      <span>Manufacturing and global logistics (Bombardier, Volkswagen, Maersk, American President Line, National Saudi Shipping Line)</span>
+                      <span className="text-[#B9FF2C] mr-3 mt-1">•</span>
+                      <span>Manufacturing and global logistics coordinating operations across sovereign jurisdictions (Bombardier, Volkswagen)</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-[#B9FF2C] mr-3 mt-1">▸</span>
-                      <span>Healthcare systems safeguarding patient data (Newcross Healthcare)</span>
+                      <span className="text-[#B9FF2C] mr-3 mt-1">•</span>
+                      <span>Healthcare systems safeguarding patient data under HIPAA and GDPR (Newcross Healthcare)</span>
                     </li>
                   </ul>
                 </div>
@@ -578,9 +581,20 @@ export default function Home() {
                   <h3 className="text-lg font-bold text-textElsa-primary mb-2">
                     What That Experience Revealed:
                   </h3>
-                  <p className="text-textElsa-secondary leading-relaxed">
-                    Boards don't want theory. Auditors don't want promises. Deployers need controls that work this quarter—and evidence that survives scrutiny. GenAI Assure™ is built on that reality: 30 years of operational pressure, regulatory scrutiny, and high-stakes delivery.
-                  </p>
+                  <div className="space-y-3 text-textElsa-secondary">
+                    <p className="leading-relaxed">
+                      <strong className="font-semibold text-textElsa-primary">Boards need risk quantification in fiduciary language</strong> - not 200-page AI ethics documents.
+                    </p>
+                    <p className="leading-relaxed">
+                      <strong className="font-semibold text-textElsa-primary">Auditors need control evidence mapped to frameworks</strong> - not vendor promises about "responsible AI."
+                    </p>
+                    <p className="leading-relaxed">
+                      <strong className="font-semibold text-textElsa-primary">Engineering teams need implementation guides that work this quarter</strong> - not consultant roadmaps spanning six months.
+                    </p>
+                    <p className="leading-relaxed mt-4 font-semibold text-textElsa-primary">
+                      GenAI Assure™ delivers all three: 30 years of security patterns applied to AI governance - compressed into controls that survive board scrutiny, pass audits, and deploy in sprints.
+                    </p>
+                  </div>
                 </div>
               </div>
 
