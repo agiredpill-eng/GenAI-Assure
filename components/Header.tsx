@@ -5,26 +5,35 @@ import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 
+/** Anchors match `id` on /use-cases (Use Case Library — 21 scenarios) */
 const solutionsMenu = {
-  'Productivity & Ops': [
-    { name: 'Microsoft 365 / Workspace AI', href: '/use-cases#microsoft-365' },
-    { name: 'ITSM Copilots', href: '/use-cases#itsm' },
-    { name: 'Knowledge Assistants', href: '/use-cases#knowledge' },
-    { name: 'Content Supply Chain', href: '/use-cases#content' }
+  'Productivity & collaboration': [
+    { name: 'Microsoft 365 Copilot & Workspace AI', href: '/use-cases#microsoft-365-copilot-google-workspace' },
+    { name: 'Public AI Chatbots (ChatGPT, Gemini…)', href: '/use-cases#public-ai-chatbots' },
+    { name: 'Service Desk & ITSM Copilots', href: '/use-cases#service-desk-itsm' },
+    { name: 'Knowledge Bases & Enterprise RAG', href: '/use-cases#enterprise-rag' },
+    { name: 'Marketing Content Generation', href: '/use-cases#marketing-content-scale' },
+    { name: 'Contact Centre AI Augmentation', href: '/use-cases#contact-centre-ai' },
+    { name: 'Workflow Automation & Orchestrators', href: '/use-cases#workflow-orchestrators' },
   ],
-  'Customer & Growth': [
-    { name: 'CRM & Sales AI', href: '/use-cases#crm' },
-    { name: 'Contact Center', href: '/use-cases#contact-center' },
-    { name: 'HR & People Ops', href: '/use-cases#hr' }
+  'CRM, finance & risk': [
+    { name: 'CRM & Sales AI', href: '/use-cases#crm-sales-ai' },
+    { name: 'AI in People Decisions (HR, performance)', href: '/use-cases#ai-people-decisions' },
+    { name: 'Legal & Document Review', href: '/use-cases#legal-document-review' },
+    { name: 'Finance & Reporting Copilots', href: '/use-cases#finance-reporting-copilots' },
+    { name: 'Procurement & Supply Chain AI', href: '/use-cases#procurement-supply-chain-ai' },
+    { name: 'AI Video & Avatar Content', href: '/use-cases#ai-video-avatar' },
+    { name: 'Patient-Facing Healthcare AI', href: '/use-cases#patient-facing-healthcare-ai' },
   ],
-  'Platform & Control': [
-    { name: 'Workflow Automation', href: '/use-cases#workflow' },
-    { name: 'Custom Agents', href: '/use-cases#agents' },
-    { name: 'Data Pipelines / LLM Gateways', href: '/use-cases#pipelines' },
-    { name: 'Low-Code Apps', href: '/use-cases#low-code' },
-    { name: 'Finance Copilots', href: '/use-cases#finance' },
-    { name: 'Legal Support', href: '/use-cases#legal' }
-  ]
+  'Platform & governance': [
+    { name: 'Data Pipelines & LLM Gateways', href: '/use-cases#data-pipelines-llm-gateways' },
+    { name: 'Low-Code AI App Builders', href: '/use-cases#low-code-ai-builders' },
+    { name: 'AI Agents & Autonomous Workflows', href: '/use-cases#ai-agents-autonomous' },
+    { name: 'Cross-Border AI Deployments', href: '/use-cases#cross-border-ai' },
+    { name: 'Third-Party AI Vendor Due Diligence', href: '/use-cases#third-party-vendor-diligence' },
+    { name: 'SOC 2 / ISO 27001 Audit (AI in Scope)', href: '/use-cases#soc2-iso-audit-ai' },
+    { name: 'Building an AI Governance Function', href: '/use-cases#ai-governance-from-scratch' },
+  ],
 };
 
 const resourcesMenu = [
@@ -150,18 +159,34 @@ export default function Header() {
                   aria-expanded={solutionsOpen}
                   aria-controls="solutions-menu"
                   aria-haspopup="true"
+                  title="Use Case Library — 21 real-world scenarios"
                 >
-                  Solutions
+                  <span className="flex items-center gap-1.5">
+                    Solutions
+                    <span
+                      className="rounded px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide bg-[#B9FF2C]/15 text-[#B9FF2C] border border-[#B9FF2C]/30"
+                      aria-hidden="true"
+                    >
+                      21
+                    </span>
+                  </span>
                   <ChevronDown className={`h-4 w-4 transition-transform ${solutionsOpen ? 'rotate-180' : ''}`} />
                 </button>
 
                 {solutionsOpen && (
                   <div
                     id="solutions-menu"
-                    className="absolute left-0 top-full mt-2 w-[800px] bg-cardElsa-dark rounded-lg shadow-[0_16px_40px_rgba(0,0,0,0.6)] border borderElsa-card p-6 animate-in fade-in slide-in-from-top-2 duration-200"
+                    className="absolute left-0 top-full mt-2 w-[min(100vw-2rem,920px)] max-w-[920px] bg-cardElsa-dark rounded-lg shadow-[0_16px_40px_rgba(0,0,0,0.6)] border borderElsa-card p-6 animate-in fade-in slide-in-from-top-2 duration-200"
                     onMouseEnter={handleSolutionsMouseEnter}
                     onMouseLeave={handleSolutionsMouseLeave}
                   >
+                    <div className="mb-6 pb-5 border-b borderElsa-card">
+                      <p className="text-xs font-bold uppercase tracking-wider text-[#B9FF2C] mb-1">GenAI Assure™</p>
+                      <p className="text-base font-bold text-textElsa-primary">Use Case Library</p>
+                      <p className="text-sm text-textElsa-secondary mt-1">
+                        21 real-world scenarios where AI governance matters — jump to a scenario below or browse the full library.
+                      </p>
+                    </div>
                     <div className="grid grid-cols-3 gap-8">
                       {Object.entries(solutionsMenu).map(([category, items]) => (
                         <div key={category}>
@@ -188,7 +213,7 @@ export default function Header() {
                         href="/use-cases"
                         className="inline-flex items-center text-sm font-semibold text-[#B9FF2C] hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#B9FF2C] rounded px-2 py-1"
                       >
-                        View All Solutions →
+                        View full Use Case Library (21 scenarios) →
                       </Link>
                     </div>
                   </div>
@@ -282,13 +307,26 @@ export default function Header() {
                     onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
                     className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-textElsa-primary hover:text-[#B9FF2C] hover:bg-cardElsa-dark hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] rounded-lg transition-all min-h-[44px]"
                     aria-expanded={mobileSolutionsOpen}
+                    title="Use Case Library — 21 real-world scenarios"
                   >
-                    Solutions
+                    <span className="flex items-center gap-2">
+                      Solutions
+                      <span className="rounded px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide bg-[#B9FF2C]/15 text-[#B9FF2C] border border-[#B9FF2C]/30">
+                        21
+                      </span>
+                    </span>
                     <ChevronDown className={`h-5 w-5 transition-transform ${mobileSolutionsOpen ? 'rotate-180' : ''}`} />
                   </button>
 
                   {mobileSolutionsOpen && (
                     <div className="mt-2 pl-4 space-y-4">
+                      <div className="px-4 py-3 rounded-lg bg-cardElsa-dark/80 border border-[#B9FF2C]/20 mb-2">
+                        <p className="text-xs font-bold uppercase tracking-wider text-[#B9FF2C]">Use Case Library</p>
+                        <p className="text-sm font-semibold text-textElsa-primary mt-0.5">21 real-world scenarios</p>
+                        <p className="text-xs text-textElsa-secondary mt-1 leading-snug">
+                          AI governance across productivity, CRM, platforms, and compliance.
+                        </p>
+                      </div>
                       {Object.entries(solutionsMenu).map(([category, items]) => (
                         <div key={category}>
                           <h3 className="text-xs font-bold text-textElsa-secondary uppercase tracking-wider mb-2 px-4">
@@ -314,7 +352,7 @@ export default function Header() {
                         className="block px-4 py-2 text-sm font-semibold text-[#B9FF2C] hover:text-[#B9FF2C] hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] transition-all min-h-[44px] flex items-center"
                         onClick={closeMobileMenu}
                       >
-                        View All Solutions →
+                        View full Use Case Library (21 scenarios) →
                       </Link>
                     </div>
                   )}
