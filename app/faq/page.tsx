@@ -37,14 +37,14 @@ export default function FAQPage() {
               <div className="bg-body rounded-xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-6">
                 <h3 className="text-lg font-bold text-white mb-3">What is ELSA AI?</h3>
                 <p className="text-white/90 leading-relaxed">
-                  ELSA AI is an advisory firm specialising in AI governance for organisations that deploy third‑party AI tools. We make adoption safe, compliant, and auditable by turning principles into controls and controls into evidence—without building or operating your systems. (Advisory‑only scope; your teams implement technology.)
+                  ELSA AI is an advisory firm specialising in AI governance for organisations that deploy third‑party AI tools. We make adoption safe, compliant, and auditable by turning principles into controls and controls into evidence-without building or operating your systems. (Advisory‑only scope; your teams implement technology.)
                 </p>
               </div>
 
               <div className="bg-body rounded-xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-6">
                 <h3 className="text-lg font-bold text-white mb-3">Are you the same as ELSA Speak (the English‑learning app)?</h3>
                 <p className="text-white/90 leading-relaxed">
-                  No. We are ELSA AI—a governance, security, and assurance consultancy for enterprise AI deployers. ELSA Speak is a consumer language‑learning app. Different brands; different services.
+                  No. We are ELSA AI-a governance, security, and assurance consultancy for enterprise AI deployers. ELSA Speak is a consumer language‑learning app. Different brands; different services.
                 </p>
               </div>
 
@@ -81,7 +81,7 @@ export default function FAQPage() {
               <div className="bg-body rounded-xl border border-[#B9FF2C]/30 shadow-[0_16px_40px_rgba(0,0,0,0.6)] p-6">
                 <h3 className="text-lg font-bold text-white mb-3">Who is GenAI Assure™ designed for?</h3>
                 <p className="text-white/90 leading-relaxed mb-3">
-                  AI deployers—organisations using third‑party AI services such as:
+                  AI deployers-organisations using third‑party AI services such as:
                 </p>
                 <ul className="text-white/90 leading-relaxed space-y-1 list-disc list-inside ml-4">
                   <li>Copilots (e.g., Microsoft 365 Copilot, GitHub Copilot)</li>
@@ -199,12 +199,12 @@ export default function FAQPage() {
                   GenAI Assure™ maps to major frameworks and regulations:
                 </p>
                 <ul className="text-white/90 leading-relaxed space-y-2 list-disc list-inside">
-                  <li><strong>EU AI Act (Article 26)</strong> — deployer duties: logging, transparency, human oversight</li>
-                  <li><strong>GDPR/UK GDPR</strong> — lawful basis, DPIA/FRIA, rights handling, transfers (SCC/IDTA)</li>
-                  <li><strong>ISO/IEC 42001</strong> — AI Management System (Plan‑Do‑Check‑Act)</li>
-                  <li><strong>NIST AI RMF</strong> — Govern, Map, Measure, Manage</li>
-                  <li><strong>NIST CSF 2.0</strong> — Identify/Protect/Detect/Respond/Recover</li>
-                  <li><strong>SOC 2</strong> — Security, Availability, Confidentiality</li>
+                  <li><strong>EU AI Act (Article 26)</strong> - deployer duties: logging, transparency, human oversight</li>
+                  <li><strong>GDPR/UK GDPR</strong> - lawful basis, DPIA/FRIA, rights handling, transfers (SCC/IDTA)</li>
+                  <li><strong>ISO/IEC 42001</strong> - AI Management System (Plan‑Do‑Check‑Act)</li>
+                  <li><strong>NIST AI RMF</strong> - Govern, Map, Measure, Manage</li>
+                  <li><strong>NIST CSF 2.0</strong> - Identify/Protect/Detect/Respond/Recover</li>
+                  <li><strong>SOC 2</strong> - Security, Availability, Confidentiality</li>
                 </ul>
               </div>
 
@@ -315,7 +315,7 @@ export default function FAQPage() {
                   </div>
                 </div>
                 <p className="text-white/90 leading-relaxed mt-4 italic">
-                  We adapt to your environment—not the other way around.
+                  We adapt to your environment-not the other way around.
                 </p>
               </div>
 
@@ -346,7 +346,7 @@ export default function FAQPage() {
                   <div>
                     <h4 className="font-semibold text-white mb-2">Scope of Services</h4>
                     <p className="text-white/90 leading-relaxed">
-                      ELSA AI provides advisory governance only: oversight, reviews, approvals, and audit-readiness validation via structured change management. We do not deploy, configure, or operate systems—your teams (or your MSPs) implement the controls we specify.
+                      ELSA AI provides advisory governance only: oversight, reviews, approvals, and audit-readiness validation via structured change management. We do not deploy, configure, or operate systems-your teams (or your MSPs) implement the controls we specify.
                     </p>
                   </div>
                 </div>

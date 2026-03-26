@@ -23,7 +23,7 @@ export default function PrivacyPage() {
               <span className="text-[#B9FF2C]">Privacy Policy</span>
             </h1>
             <p className="text-lg sm:text-xl text-textElsa-secondary mb-10">
-              ELSA AI Website Privacy Statement — Effective Date: 5 October 2025
+              ELSA AI Website Privacy Statement - Effective Date: 5 October 2025
             </p>
           </div>
         </div>
@@ -86,27 +86,27 @@ export default function PrivacyPage() {
         <ul>
           <li>
             <strong>Provide and improve our services</strong> (consulting
-            delivery, support, QA) — <em>Performance of contract</em> /{" "}
+            delivery, support, QA) - <em>Performance of contract</em> /{" "}
             <em>Legitimate interests</em>.
           </li>
           <li>
             <strong>Pre-sales &amp; enquiries</strong> (responding to requests,
-            demos, proposals) — <em>Legitimate interests</em>.
+            demos, proposals) - <em>Legitimate interests</em>.
           </li>
           <li>
-            <strong>Meetings, events, newsletters</strong> — <em>Consent</em>{" "}
+            <strong>Meetings, events, newsletters</strong> - <em>Consent</em>{" "}
             (where required) / <em>Legitimate interests</em>.
           </li>
           <li>
-            <strong>Billing &amp; accounting</strong> — <em>Legal obligation</em>{" "}
+            <strong>Billing &amp; accounting</strong> - <em>Legal obligation</em>{" "}
             / <em>Performance of contract</em>.
           </li>
           <li>
-            <strong>Security, fraud prevention, service integrity</strong> —{" "}
+            <strong>Security, fraud prevention, service integrity</strong> -{" "}
             <em>Legitimate interests</em> / <em>Legal obligation</em>.
           </li>
           <li>
-            <strong>Recruitment</strong> — <em>Legitimate interests</em> /{" "}
+            <strong>Recruitment</strong> - <em>Legitimate interests</em> /{" "}
             <em>Consent</em> (where required).
           </li>
         </ul>
@@ -193,7 +193,7 @@ export default function PrivacyPage() {
             the footer and/or your browser settings.
           </li>
         </ul>
-        <p>Summary of tools (examples—replace with your stack):</p>
+        <p>Summary of tools (examples-replace with your stack):</p>
         <ul>
           <li>
             <strong>Analytics:</strong> [e.g., Plausible/GA4] (IP truncation;

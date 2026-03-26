@@ -56,7 +56,7 @@ const blogPosts: Record<string, BlogPost> = {
       <p>The Evidence Pack (GA‑DC‑001) and evidence‑automation pattern specify sources (SIEM, DLP, CASB/Proxy, IdP, vendor portals), WORM/object storage with SHA‑256, and correlation keys (<code>use_case_id</code>, <code>control_id</code>, <code>vendor_id</code>, <code>token_id</code>, etc.).</p>
 
       <h2>Bottom Line</h2>
-      <p>Implementing GenAI Assure™ as written—AI‑specific logging to SIEM with integrity controls, transparency labels captured as evidence, SSO/DLP/egress protections, documented DPIA/FRIA and transfer registers, and AI incident runbooks—provides the processes and artifacts the Framework maps to Article 26 duties for deployers.</p>
+      <p>Implementing GenAI Assure™ as written-AI‑specific logging to SIEM with integrity controls, transparency labels captured as evidence, SSO/DLP/egress protections, documented DPIA/FRIA and transfer registers, and AI incident runbooks-provides the processes and artifacts the Framework maps to Article 26 duties for deployers.</p>
 
       <div style="background-color: rgba(251, 191, 36, 0.2); border: 1px solid rgba(251, 191, 36, 0.5); border-radius: 0.5rem; padding: 1rem; margin-top: 2rem; color: rgb(251, 191, 36);">
         <strong>Note:</strong> The Framework does <em>not</em> prescribe fixed log‑retention durations or quote fine amounts; retention and oversight must meet provider and legal requirements.
@@ -70,7 +70,7 @@ const blogPosts: Record<string, BlogPost> = {
     category: 'Security',
     author: 'ELSA AI Team',
     content: `
-      <p><strong>Shadow AI</strong> is any <strong>unsanctioned AI tool</strong> discovered outside your approved catalog. In GenAI Assure™, Shadow AI is handled through a formal <strong>Operations Playbook</strong> with time‑boxed actions, evidence requirements, and dashboards—so you can control risk without blocking safe adoption.</p>
+      <p><strong>Shadow AI</strong> is any <strong>unsanctioned AI tool</strong> discovered outside your approved catalog. In GenAI Assure™, Shadow AI is handled through a formal <strong>Operations Playbook</strong> with time‑boxed actions, evidence requirements, and dashboards-so you can control risk without blocking safe adoption.</p>
 
       <h2>How GenAI Assure™ Manages Shadow AI</h2>
 
@@ -103,12 +103,12 @@ const blogPosts: Record<string, BlogPost> = {
 
       <h2>Where This Sits in the 30‑60‑90 Plan</h2>
       <ul>
-        <li><strong>Days 1—30:</strong> Shadow‑AI discovery, sanctioned catalog, SIEM routing (WORM), baseline DLP.</li>
-        <li><strong>Days 31—60:</strong> Shadow‑AI Triage Playbook and GA‑PG/TP/DM/DC/RR/RB controls.</li>
-        <li><strong>Days 61—90:</strong> Automate discovery, enable dashboards, build Evidence Packs to SLA.</li>
+        <li><strong>Days 1-30:</strong> Shadow‑AI discovery, sanctioned catalog, SIEM routing (WORM), baseline DLP.</li>
+        <li><strong>Days 31-60:</strong> Shadow‑AI Triage Playbook and GA‑PG/TP/DM/DC/RR/RB controls.</li>
+        <li><strong>Days 61-90:</strong> Automate discovery, enable dashboards, build Evidence Packs to SLA.</li>
       </ul>
 
-      <p><strong>Bottom line:</strong> Shadow AI is a governed workflow, not a grey area. GenAI Assure™ gives you discovery, triage with SLAs, enforcement controls, audit‑ready evidence, and measurable KPIs—so you can reduce real risk while enabling safe AI adoption.</p>
+      <p><strong>Bottom line:</strong> Shadow AI is a governed workflow, not a grey area. GenAI Assure™ gives you discovery, triage with SLAs, enforcement controls, audit‑ready evidence, and measurable KPIs-so you can reduce real risk while enabling safe AI adoption.</p>
     `,
   },
   'building-ai-governance-framework-90-days': {
@@ -120,7 +120,7 @@ const blogPosts: Record<string, BlogPost> = {
     content: `
       <p>GenAI Assure™ provides a pragmatic <strong>30‑60‑90 day plan</strong> that links governance policies, technical controls, monitoring, and evidence into an auditable operating model for organisations that deploy third‑party AI tools.</p>
 
-      <h2>Days 1—30 — Foundation</h2>
+      <h2>Days 1-30 - Foundation</h2>
       <ul>
         <li>Sponsor identification and charter establishment</li>
         <li>AI Use Policy development and approval</li>
@@ -136,7 +136,7 @@ const blogPosts: Record<string, BlogPost> = {
         <li>Trust & Safety awareness campaign launch</li>
       </ul>
 
-      <h2>Days 31—60 — Core Controls</h2>
+      <h2>Days 31-60 - Core Controls</h2>
       <ul>
         <li>DPIAs for top 10 use cases</li>
         <li>Vendor risk assessments and reviews</li>
@@ -148,7 +148,7 @@ const blogPosts: Record<string, BlogPost> = {
         <li>Transparency labels deployed to production</li>
       </ul>
 
-      <h2>Days 61—90 — Optimization & Scale</h2>
+      <h2>Days 61-90 - Optimization & Scale</h2>
       <ul>
         <li>Discovery process automation</li>
         <li>Dashboards: deployment and configuration</li>
@@ -161,12 +161,12 @@ const blogPosts: Record<string, BlogPost> = {
 
       <h2>Controls & Evidence in GenAI Assure™</h2>
       <ul>
-        <li><strong>GA‑PG‑001 Policy & Governance</strong> — policy, lifecycle gates, exception workflow</li>
-        <li><strong>GA‑TP‑001 Technical Protection</strong> — SSO/MFA, SCIM, vaulted secrets & ≤90‑day token rotation, AI‑aware DLP, egress allow‑list, webhook blocking, TLS/KMS baselines</li>
-        <li><strong>GA‑DM‑001 Detect & Monitor</strong> — AI event schema; detections for PII, new/changed webhooks, bulk transfers; dashboards incl. Shadow‑AI coverage & policy‑violation trends</li>
-        <li><strong>GA‑DC‑001 Documentation & Compliance</strong> — tiered Evidence Pack contents incl. policies/approvals, RoPA, DPIA/FRIA, transfer register, notices, SIEM/DLP exports, WORM proof, sanctioned catalog, discovery results, vendor files, labels/screenshots, explainability profiles</li>
-        <li><strong>GA‑RR‑001 Response & Remediation</strong> — AI‑specific runbooks; redress</li>
-        <li><strong>GA‑RB‑001 Resilience & Business Continuity</strong> — fallback modes, continuity testing</li>
+        <li><strong>GA‑PG‑001 Policy & Governance</strong> - policy, lifecycle gates, exception workflow</li>
+        <li><strong>GA‑TP‑001 Technical Protection</strong> - SSO/MFA, SCIM, vaulted secrets & ≤90‑day token rotation, AI‑aware DLP, egress allow‑list, webhook blocking, TLS/KMS baselines</li>
+        <li><strong>GA‑DM‑001 Detect & Monitor</strong> - AI event schema; detections for PII, new/changed webhooks, bulk transfers; dashboards incl. Shadow‑AI coverage & policy‑violation trends</li>
+        <li><strong>GA‑DC‑001 Documentation & Compliance</strong> - tiered Evidence Pack contents incl. policies/approvals, RoPA, DPIA/FRIA, transfer register, notices, SIEM/DLP exports, WORM proof, sanctioned catalog, discovery results, vendor files, labels/screenshots, explainability profiles</li>
+        <li><strong>GA‑RR‑001 Response & Remediation</strong> - AI‑specific runbooks; redress</li>
+        <li><strong>GA‑RB‑001 Resilience & Business Continuity</strong> - fallback modes, continuity testing</li>
       </ul>
 
       <h2>Evidence Automation Pattern</h2>

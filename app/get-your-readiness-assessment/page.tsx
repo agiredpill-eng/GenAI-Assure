@@ -1078,15 +1078,15 @@ export default function FreeAssessmentPage() {
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="critical" id="urgency-critical" />
-                      <Label htmlFor="urgency-critical" className="font-normal cursor-pointer">Critical—now</Label>
+                      <Label htmlFor="urgency-critical" className="font-normal cursor-pointer">Critical-now</Label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="high" id="urgency-high" />
-                      <Label htmlFor="urgency-high" className="font-normal cursor-pointer">High—next 3 months</Label>
+                      <Label htmlFor="urgency-high" className="font-normal cursor-pointer">High-next 3 months</Label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="medium" id="urgency-medium" />
-                      <Label htmlFor="urgency-medium" className="font-normal cursor-pointer">Medium—next 6 months</Label>
+                      <Label htmlFor="urgency-medium" className="font-normal cursor-pointer">Medium-next 6 months</Label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="low" id="urgency-low" />

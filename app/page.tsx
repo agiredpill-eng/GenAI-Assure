@@ -38,7 +38,7 @@ export default function Home() {
               </h1>
 
               <p className="text-lg sm:text-xl text-textElsa-secondary leading-relaxed">
-                The EU AI Act Article 26 holds deployers liable—not vendors. Fines reach €35M or 7% of global revenue, and vendor frameworks won't protect you when regulators arrive. GenAI Assure™ delivers deployer-first controls and audit-ready documentation in 90 days, built by the director who secured 20+ high-stakes enterprises.
+                The EU AI Act Article 26 holds deployers liable-not vendors. Fines reach €35M or 7% of global revenue, and vendor frameworks won't protect you when regulators arrive. GenAI Assure™ delivers deployer-first controls and audit-ready documentation in 90 days, built by the director who secured 20+ high-stakes enterprises.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center">
@@ -71,7 +71,7 @@ export default function Home() {
               Controls You Can Enforce. Evidence Auditors Accept.
             </h2>
             <p className="text-lg text-textElsa-secondary max-w-4xl mx-auto leading-relaxed mt-3">
-              A deployer-first framework that links <span className="text-[#B9FF2C]">principles → controls → evidence</span> for third-party AI—on your existing stack (e.g., SSO/DLP + SIEM prompt/output logs). It delivers Evidence Packs with tiered retrieval SLAs, mapped to <span className="text-[#B9FF2C]">EU AI Act Article 26, GDPR, ISO/IEC 42001, and NIST AI RMF</span>.
+              A deployer-first framework that links <span className="text-[#B9FF2C]">principles → controls → evidence</span> for third-party AI-on your existing stack (e.g., SSO/DLP + SIEM prompt/output logs). It delivers Evidence Packs with tiered retrieval SLAs, mapped to <span className="text-[#B9FF2C]">EU AI Act Article 26, GDPR, ISO/IEC 42001, and NIST AI RMF</span>.
             </p>
           </div>
 
@@ -297,7 +297,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-white transition-colors">Achieve Audit-Ready Assurance (Days 61–90)</h3>
                 <p className="text-white/90 leading-relaxed mb-4 text-sm group-hover:text-white transition-colors">
-                  Outcome: Safe, compliant, and audit-ready AI—delivered in 90 days.
+                  Outcome: Safe, compliant, and audit-ready AI-delivered in 90 days.
                 </p>
               </div>
 
@@ -362,7 +362,7 @@ export default function Home() {
               Benefits of GenAI Assure™ for Your Business
             </h2>
             <p className="text-lg text-textElsa-secondary max-w-4xl mx-auto leading-relaxed mt-3">
-              GenAI Assure™ delivers more than compliance. <span className="text-[#B9FF2C]">It provides a practical pathway to safe, auditable, value-driven AI adoption</span>—so you can accelerate innovation while maintaining trust and resilience.
+              GenAI Assure™ delivers more than compliance. <span className="text-[#B9FF2C]">It provides a practical pathway to safe, auditable, value-driven AI adoption</span>-so you can accelerate innovation while maintaining trust and resilience.
             </p>
           </div>
 
@@ -507,7 +507,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Meet Faisal Ali — final section before footer */}
+      {/* Meet Faisal Ali - final section before footer */}
       <section className="relative bg-body py-20 lg:py-28 border-t borderElsa-card overflow-hidden">
         <div className="pointer-events-none absolute inset-0 opacity-10" style={{
           backgroundImage: 'radial-gradient(circle at 20% 20%, rgba(94,250,195,0.15), transparent 50%), radial-gradient(circle at 80% 60%, rgba(185,255,44,0.15), transparent 40%)'
@@ -521,7 +521,7 @@ export default function Home() {
                 <span className="absolute -inset-2 rounded-full ring-1 ring-[#B9FF2C]/30"></span>
               </div>
               <div className="text-center lg:text-left mt-5 group cursor-pointer">
-                <p className="text-textElsa-primary font-semibold transition-colors duration-200 group-hover:text-[#B9FF2C]">— Faisal Ali CISM, CRISC</p>
+                <p className="text-textElsa-primary font-semibold transition-colors duration-200 group-hover:text-[#B9FF2C]">- Faisal Ali CISM, CRISC</p>
                 <p className="text-textElsa-secondary text-sm transition-colors duration-200 group-hover:text-[#B9FF2C]">Founder, ELSA AI · Director, GenAI Assure™ Framework</p>
                 <p className="text-textElsa-secondary text-xs mt-2 transition-colors duration-200 group-hover:text-[#B9FF2C]">30 Years Securing High-Stakes Enterprises</p>
               </div>

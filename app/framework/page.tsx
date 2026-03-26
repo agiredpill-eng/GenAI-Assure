@@ -161,7 +161,7 @@ export default function FrameworkPage() {
               
               <div className="bg-[#B9FF2C]/10 border-l-4 border-[#B9FF2C] p-4 mt-4 rounded-r-lg">
                 <p className="text-[#B9FF2C] text-sm">
-                  You're viewing a tabbed preview of the framework—not the full document.
+                  You're viewing a tabbed preview of the framework-not the full document.
                   <br />
                   Download the complete PDF to read the entire framework{' '}
                   <button
@@ -900,13 +900,13 @@ manifest_sha256: "<hash>"`}
 
                       <h3 className="font-bold text-white mb-2">You are free to:</h3>
                       <ul className="list-disc list-inside mb-4 text-white/90">
-                        <li><strong>Share</strong> — copy and redistribute the material in any medium or format for any purpose</li>
+                        <li><strong>Share</strong> - copy and redistribute the material in any medium or format for any purpose</li>
                       </ul>
 
                       <h3 className="font-bold text-white mb-2">Under the following terms:</h3>
                       <ul className="list-disc list-inside mb-4 text-white/90">
-                        <li><strong>Attribution</strong> — You must give appropriate credit, provide a link to the license, and indicate if changes were made</li>
-                        <li><strong>NoDerivatives</strong> — You may not modify, transform, or build upon this material</li>
+                        <li><strong>Attribution</strong> - You must give appropriate credit, provide a link to the license, and indicate if changes were made</li>
+                        <li><strong>NoDerivatives</strong> - You may not modify, transform, or build upon this material</li>
                       </ul>
                     </div>
 

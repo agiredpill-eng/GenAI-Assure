@@ -334,7 +334,7 @@ const riskData: RiskCategory[] = [
       },
       {
         id: 'meeting-comms-consent',
-        title: 'Meeting/Comms AI — Consent & Wiretapping Exposure',
+        title: 'Meeting/Comms AI - Consent & Wiretapping Exposure',
         level: 'high',
         controlLevel: 'high',
         description: 'Unlawful recording; cross-tenant transcript exposure.',

@@ -26,7 +26,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'GenAI Assure™ Use Case Library | ELSA AI',
   description:
-    '21 real-world scenarios where AI governance matters — from Microsoft 365 Copilot and public chatbots to agents, healthcare AI, and audit readiness.',
+    '21 real-world scenarios where AI governance matters - from Microsoft 365 Copilot and public chatbots to agents, healthcare AI, and audit readiness.',
   keywords:
     'AI use cases, Microsoft Copilot governance, Google Workspace AI compliance, chatbot governance, enterprise AI controls, EU AI Act',
   alternates: {
@@ -51,7 +51,7 @@ export default function UseCasesPage() {
       title: 'Microsoft 365 Copilot & Google Workspace AI',
       icon: Briefcase,
       scenario:
-        'Your organisation is rolling out Copilot or Gemini across Docs, Sheets, Email, Teams, and Chat. Sensitive documents, financial data, and HR records are now accessible through natural language prompts — but your DLP policies were never designed for AI-assisted retrieval.',
+        'Your organisation is rolling out Copilot or Gemini across Docs, Sheets, Email, Teams, and Chat. Sensitive documents, financial data, and HR records are now accessible through natural language prompts - but your DLP policies were never designed for AI-assisted retrieval.',
       keyConcern:
         'Uncontrolled data exposure through AI-assisted search across overprivileged document libraries',
       howAssureHelps:
@@ -110,7 +110,7 @@ export default function UseCasesPage() {
       keyConcern:
         'Professional privilege exposure, sensitive document leakage, and absent provenance controls',
       howAssureHelps:
-        'DLP redaction and vault-managed tokens (GA-TP), logging of retrieval sources and decisions (GA-DM), Evidence Pack with transparency screenshots, vendor files, and DPA repository (GA-DC). Advisory tooling for counsel — not a substitute for legal advice.',
+        'DLP redaction and vault-managed tokens (GA-TP), logging of retrieval sources and decisions (GA-DM), Evidence Pack with transparency screenshots, vendor files, and DPA repository (GA-DC). Advisory tooling for counsel - not a substitute for legal advice.',
     },
     {
       id: 'finance-reporting-copilots',
@@ -238,7 +238,7 @@ export default function UseCasesPage() {
       title: 'Cross-Border AI Deployments',
       icon: Globe2,
       scenario:
-        'Your organisation uses AI tools that process data across multiple jurisdictions — EU, UK, US, or Asia-Pacific. Transfer mechanisms, sub-processor locations, and jurisdiction-specific obligations remain undocumented and unmonitored.',
+        'Your organisation uses AI tools that process data across multiple jurisdictions - EU, UK, US, or Asia-Pacific. Transfer mechanisms, sub-processor locations, and jurisdiction-specific obligations remain undocumented and unmonitored.',
       keyConcern:
         'Non-compliant cross-border data transfers and unmapped jurisdictional obligations',
       howAssureHelps:
@@ -260,7 +260,7 @@ export default function UseCasesPage() {
       title: 'Preparing for SOC 2 or ISO 27001 Audit with AI in Scope',
       icon: Shield,
       scenario:
-        'Your auditors have confirmed that AI tool usage falls within the audit boundary. You need retrievable evidence packs covering access controls, DLP effectiveness, logging integrity, and vendor due diligence — and you need them within defined SLAs.',
+        'Your auditors have confirmed that AI tool usage falls within the audit boundary. You need retrievable evidence packs covering access controls, DLP effectiveness, logging integrity, and vendor due diligence - and you need them within defined SLAs.',
       keyConcern:
         'Audit evidence gaps for AI-specific controls and inability to meet evidence retrieval timelines',
       howAssureHelps:
@@ -301,7 +301,7 @@ export default function UseCasesPage() {
               21 Real-World Scenarios Where AI Governance Matters
             </p>
             <p className="text-lg sm:text-xl text-textElsa-secondary leading-relaxed max-w-4xl mx-auto">
-              Every organisation deploying AI faces governance gaps — from shadow AI and data leakage to regulatory
+              Every organisation deploying AI faces governance gaps - from shadow AI and data leakage to regulatory
               exposure and audit readiness. GenAI Assure™ provides the security-led framework, operational controls, and
               evidence automation to close these gaps. The following scenarios represent the situations our clients
               encounter most frequently.
@@ -384,7 +384,7 @@ export default function UseCasesPage() {
                 <div>
                   <h3 className="text-xl font-bold text-[#B9FF2C] mb-2">Operational visibility</h3>
                   <p className="text-textElsa-primary leading-relaxed">
-                    The AI event schema gives uniform logs across tools — prompts, outputs, uploads, webhooks, decisions,
+                    The AI event schema gives uniform logs across tools - prompts, outputs, uploads, webhooks, decisions,
                     and tokens.
                   </p>
                 </div>
@@ -396,7 +396,7 @@ export default function UseCasesPage() {
                   <h3 className="text-xl font-bold text-[#B9FF2C] mb-2">Regulatory alignment</h3>
                   <p className="text-textElsa-primary leading-relaxed">
                     Deployer duties (EU AI Act), GDPR/UK GDPR artefacts (DPIA/RoPA/transfers), and the ISO/IEC 42001 AIMS
-                    cycle — all baked into the Evidence Pack.
+                    cycle - all baked into the Evidence Pack.
                   </p>
                 </div>
               </div>

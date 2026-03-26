@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 
-/** Anchors match `id` on /use-cases (Use Case Library — 21 scenarios) */
+/** Anchors match `id` on /use-cases (Use Case Library - 21 scenarios) */
 const solutionsMenu = {
   'Productivity & collaboration': [
     { name: 'Microsoft 365 Copilot & Workspace AI', href: '/use-cases#microsoft-365-copilot-google-workspace' },
@@ -159,7 +159,7 @@ export default function Header() {
                   aria-expanded={solutionsOpen}
                   aria-controls="solutions-menu"
                   aria-haspopup="true"
-                  title="Use Case Library — 21 real-world scenarios"
+                  title="Use Case Library - 21 real-world scenarios"
                 >
                   <span className="flex items-center gap-1.5">
                     Solutions
@@ -184,7 +184,7 @@ export default function Header() {
                       <p className="text-xs font-bold uppercase tracking-wider text-[#B9FF2C] mb-1">GenAI Assure™</p>
                       <p className="text-base font-bold text-textElsa-primary">Use Case Library</p>
                       <p className="text-sm text-textElsa-secondary mt-1">
-                        21 real-world scenarios where AI governance matters — jump to a scenario below or browse the full library.
+                        21 real-world scenarios where AI governance matters - jump to a scenario below or browse the full library.
                       </p>
                     </div>
                     <div className="grid grid-cols-3 gap-8">
@@ -307,7 +307,7 @@ export default function Header() {
                     onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
                     className="flex items-center justify-between w-full px-4 py-3 text-base font-medium text-textElsa-primary hover:text-[#B9FF2C] hover:bg-cardElsa-dark hover:drop-shadow-[0_0_8px_rgba(185,255,44,0.6)] rounded-lg transition-all min-h-[44px]"
                     aria-expanded={mobileSolutionsOpen}
-                    title="Use Case Library — 21 real-world scenarios"
+                    title="Use Case Library - 21 real-world scenarios"
                   >
                     <span className="flex items-center gap-2">
                       Solutions
